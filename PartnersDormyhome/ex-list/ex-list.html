@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประเภทห้องพัก</title>
+    <link href="./ex-list.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logodorymyเล็ก.png">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./adddetails.html"><img src="../images/logo home-Photoroom.png" alt="dorymy"></a>
+            </div>
+            <div class="menu-buttons">
+                <a href="#"><button>รายการ</button></a>
+                <a href="#"><button>ข้อมูลหอพัก</button></a>
+                <a href="#"><button>รายได้เดือนนี้</button></a>
+            </div>
+            <div class="icon-buttons">
+                <a href="#"><button style="background: #8D6E63;color: #ffffff; width: 45px; font-size: 25px;"><i class='bx bx-bell'></i></button></a>
+                <a href="#"><button><i class='bx bxs-user-circle'></i></button></a>
+                <a href="../login/login.html"><button style="border-radius: 10px; background: #20B2AA;">ชื่อ:xxxxxx xxxxxxx</button></a>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="title">ประเภทห้องพัก</div>
+        <div class="subtitle">ห้องพักประเภทxxx 
+            <p style="font-size: 20px; margin-left: 10px; margin: 10px; font-weight: 400;">จำนวนห้องพัก x ห้อง</p>
+        </div>
+        <div class="mainbox">
+            <div class="images">
+                <div id="preview1"></div>
+                <div style="display: flex; gap: 10px;">
+                    <div id="preview2"></div>
+                    <div id="preview3"></div>
+                </div>
+            </div>
+            <div class="details">
+                <h2>ห้องพักประเภทxxxxx</h2>
+                <p>รายละเอียดห้องพัก: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            </div>
+            <div class="price">฿X,XXX.XX</div>
+        </div>
+        <div class="btn">
+            <button class="delete-btn" onclick="deleteRoom()">ลบห้องพักนี้</button>
+            <a href="../adddetails-owner/adddetails-owner.html"><button class="edit-btn">แก้ไขห้องพัก</button></a>
+        </div>
+    </div>
+</body>
+<script src="./ex-list.js"></script>
+</html>

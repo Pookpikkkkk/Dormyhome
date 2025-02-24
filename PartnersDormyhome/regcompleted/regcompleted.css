@@ -1,0 +1,84 @@
+/*body*/
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FADEC8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FADEC8;
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 150px;
+    height: auto;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.bx-globe{
+    font-size: 23px;
+    margin-right: 5%;
+}
+/*body*/
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.partnerdoom p {
+    margin: 5px;
+    margin-right: 70px;
+}
+
+.left {
+    width: 50%;
+    margin-top: 20%;
+}
+.left button{
+    border-radius: 100px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background: #20B2AA;
+    color: #FFFFFF;
+    height: 50px;
+    width: 250px;
+    margin-top: 15px;
+    margin-left: 20.5%;
+    cursor: pointer;
+}
+.left, .right {
+    display: flex;
+    flex-direction: column;
+}
+.right {
+    width: 50%;
+    margin-top: 25%;
+}
+.right img{
+    width: 500px;
+    margin-left: 100px;
+}

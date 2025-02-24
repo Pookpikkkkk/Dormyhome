@@ -1,0 +1,112 @@
+body {
+    font-family: 'Inknut Antiqua', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(../images/พื้นหลังหลักของเว็บ.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 150px;
+    height: auto;
+}
+.main{
+    width: 55%;
+    text-align: center;
+    margin-top: 5%;
+    height: 600px;
+    background: #FADEC8;
+    border-radius: 10px;
+}
+.maintitle{
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 4%;
+}
+.mainsub-title{
+    text-align: left;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+.mainsub-title input{
+    width: 80%;
+    height: 40px;
+    margin-left: 4%;
+    border-radius: 10px;
+    border: none;
+}
+.btn button{
+    width: 180px;
+    height: 50px;
+    margin-top: 4%;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.summit-btn{
+    background-color:#098a84;
+    color: white;
+}
+.summit-btn:hover{
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out;
+}
+.email{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    width: 80%;
+    margin-left: 4%;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 10px;
+    align-items: center;
+    font-size: 17px;
+}
+.password-container {
+    position: relative;
+    width: 100%;
+}
+.password-container input {
+    border-radius: 10px;
+    font-size: 16px;
+}
+.password-container i {
+    position: absolute;
+    right: 140px;
+    top: 58%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+}

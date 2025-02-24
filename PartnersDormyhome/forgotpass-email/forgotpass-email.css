@@ -1,0 +1,85 @@
+body {
+    font-family: 'Inknut Antiqua', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(../images/พื้นหลังหลักของเว็บ.jpg);
+    backdrop-filter: blur(3px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 150px;
+    height: auto;
+}
+.main{
+    width: 55%;
+    text-align: center;
+    margin-top: 10%;
+    height: 100dvh;
+}
+.maintitle{
+    font-size: 38px;
+    font-weight: bold;
+}
+.mainsub-title{
+    text-align: left;
+    font-size: 28px;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+}
+.mainsub-title input{
+    width: 80%;
+    height: 40px;
+    margin-left: 4%;
+    border-radius: 10px;
+    border: none;
+}
+.btn button{
+    width: 130px;
+    height: 50px;
+    margin-top: 4%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.summit-btn{
+    background-color:#098a84;
+    color: white;
+}
+.cancel-btn:hover{
+    background-color: red;
+    color: white;
+}
+.summit-btn:hover{
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}

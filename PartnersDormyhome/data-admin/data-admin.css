@@ -1,0 +1,220 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FADEC8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FADEC8;
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 150px;
+    height: auto;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+button:hover {
+    color: #007aff; 
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out; 
+}
+button:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+}
+.bx-globe{
+    font-size: 23px;
+    margin-right: 5%;
+}
+/*body*/
+.main{
+    width: 60%;
+    margin-top: 7%;
+}
+.mainbox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.maintitle{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.mainsub-titile {
+    font-size: 20px;
+}
+.main_group{
+    text-align: left;
+}
+.main-grid{
+    display: grid;
+    gap: 20px;
+}
+input, button, select {
+    width: 65%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 20px;
+    height: 35px;
+}
+.main-story{
+    margin-top: 20px;
+    text-align: left;
+    display: flex;
+}
+.next-bnt{
+    display: flex;
+    justify-content: center;
+}
+.next-bnt button{
+    margin: 15px;
+    width: 220px;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    background: rgba(128, 128, 128, 0.55);
+    color: white;
+    font-size: 22px;
+    cursor: not-allowed;
+    transition: 0.3s;
+    height: 50px;
+}
+.next-bnt button.active {
+    background-color: #20B2AA;
+    cursor: pointer;
+}
+.input-group {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    background: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.089);
+}
+.input-group input {
+    width: 27px;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 16px;
+    background: transparent; 
+    color: black;
+    outline: none; 
+    transition: border-color 0.3s ease, border-bottom-width 0.3s ease; 
+}
+.input-group input:focus {
+    border-bottom: 3px solid rgba(255, 255, 255, 1); 
+}
+.input-group input:not(:placeholder-shown) {
+    background: white;
+    margin: 2px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+.input-group input::placeholder {
+    color: transparent; 
+}
+.st-titile{
+    display: flex;
+    flex-direction: column;
+}
+.th-bnt{
+    width: 65%;
+    text-align: right;
+    font-size: 20px;
+    background: white;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.password-container {
+    position: relative;
+    width: 100%;
+}
+.password-container input {
+    border-radius: 10px;
+    font-size: 16px;
+}
+.password-container i {
+    position: absolute;
+    right: 10px;
+    top: 58%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    width: 34%;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+.dropdown img {
+    width: 30px;
+    height: auto;
+}
+.bank-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+.dropdown {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    left: 780px;
+    top: 740px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown button {
+    border: none;
+    cursor: pointer;
+    background: white;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    align-items: center;
+}
+.bnk{
+    width: 100%;
+    display: flex;
+    text-align: left;
+    color: black;
+}
+.th-bnt{
+    color: #757575;
+}

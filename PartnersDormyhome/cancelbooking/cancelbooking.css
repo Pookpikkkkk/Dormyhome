@@ -1,0 +1,158 @@
+/*boby*/
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FADEC8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 140px;
+    height: auto;
+}
+a {
+    color: 
+    rgb(0, 0, 0);
+    text-decoration: none;
+  }
+a:hover{
+    color: #007aff;
+}
+.menu-buttons {
+    display: flex;
+    gap: 120px;
+}
+.menu-buttons button {
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+}
+.icon-buttons {
+    display: flex;
+    gap: 10px;
+}
+.icon-buttons button {
+    background: none;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+.bxs-user-circle{
+    background: none;
+    color: black;
+    font-size: 55px;
+}
+#account-btn{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+button:hover {
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out; 
+}
+button:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+}
+/*boby*/
+.main{
+    width: 80%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+.title{
+    font-size: 32px;
+    font-weight: bold;
+}
+table {
+    width: 950px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 18px;
+    text-align: left;
+    margin-top: 2%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center
+}
+th {
+    background-color: #757575;
+    color: white;
+}
+tr {
+    background-color: #ffffff;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.sum-btn{
+    width: 220px;
+    height: 50px;
+    margin-right: 10px;
+    background: #8D6E63;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+.back-btn{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: none;
+    background: #bebaba;
+    color: #ffffff;
+    border: 0.25px solid #d9d9d9;
+}
+.back-btn:hover{
+    background-color: #20B2AA;
+    border: none;
+}

@@ -1,0 +1,140 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FADEC8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 150px;
+    height: auto;
+}
+.main{
+    width: 60%;
+    margin: 15% 0;
+}
+.mainbox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.maintitle{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.mainsub-titile {
+    font-size: 20px;
+    margin-top: 15px;
+}
+.main_group{
+    text-align: left;
+}
+.main-grid{
+    display: grid;
+    gap: 20px;
+}
+input, button {
+    width: 65%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 0.25px solid #007BFF;
+    border-radius: 10px;
+    font-size: 18px;
+    color:#ffffff;
+    margin-left: 20px;
+    height: 35px;
+    background-color: #007BFF;
+}
+.next-bnt{
+    display: flex;
+    justify-content: center;
+}
+.next-bnt button{
+    margin: 15px;
+    width: 220px;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    background: rgba(128, 128, 128, 0.55);
+    color: white;
+    font-size: 22px;
+    cursor: not-allowed;
+    transition: 0.3s;
+    height: 50px;
+}
+.next-bnt button.active {
+    background-color: #20B2AA;
+    cursor: pointer;
+}
+.input-group {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    background: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.089);
+}
+.input-group input {
+    width: 27px;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 16px;
+    background: transparent; 
+    color: black;
+    outline: none; 
+    transition: border-color 0.3s ease, border-bottom-width 0.3s ease; 
+}
+.input-group input:focus {
+    border-bottom: 3px solid rgba(255, 255, 255, 1); 
+}
+.input-group input:not(:placeholder-shown) {
+    background: white;
+    margin: 2px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+.input-group input::placeholder {
+    color: transparent; 
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+button#otp-button {
+    height: 57px;
+    width: 20%;
+}
+.otp-container {
+    display: flex;
+    justify-content: center;
+}
+.email{
+    font-size: 22px;
+}

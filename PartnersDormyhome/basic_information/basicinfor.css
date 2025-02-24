@@ -1,0 +1,125 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FADEC8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FADEC8;
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 150px;
+    height: auto;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+button:hover {
+    color: #007aff; 
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out; 
+}
+button:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+}
+.bx-globe{
+    font-size: 23px;
+    margin-right: 5%;
+}
+/*body*/
+.main{
+    width: 60%;
+    margin-top: 10.5%;
+}
+.mainbox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.maintitle{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.mainsub-titile {
+    font-size: 20px;
+}
+.main_group{
+    text-align: left;
+}
+.main-grid{
+    display: grid;
+    gap: 20px;
+}
+h1 {
+    font-size: 24px;
+}
+input, button {
+    width: 75%;
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+}
+.submit-btn:hover {
+    background: #23998F;
+}
+input, button, select {
+    width: 65%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 20px;
+
+}
+.main-story{
+    margin-top: 20px;
+    text-align: left;
+    display: flex;
+}
+.st-rd{
+    margin-left: 0px;
+    width: 30px;
+    accent-color: green;
+}
+.next-bnt button{
+    margin-top: 50px;
+    width: 220px;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    background: rgba(128, 128, 128, 0.55);
+    color: white;
+    font-size: 22px;
+    cursor: not-allowed;
+    transition: 0.3s;
+}
+.next-bnt button.active {
+    background-color: #20B2AA;
+    cursor: pointer;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-inDormy Home</title>
+    <link href="./log-in.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../images/logodorymyเล็ก.png">
+</head>
+<body>
+    <div class="main">
+        <div class="mainimg">
+            <img src="../images/logo home-Photoroom.png">
+        </div>
+        <div class="main-grid">
+            <div class="main-item">
+                <div class="main-name">
+                    Email
+                </div>
+                <input type="email" id="email" placeholder="Enter e-mail" oninput="validateEmail()">
+                <small id="email-error" class="error-message"></small>
+            </div>
+            <small id="email-error" class="error-message"></small>
+            <div class="password-container">
+                <div class="main-name">
+                    Password
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" id="password" placeholder="Enter Password" oninput="validatePassword()">
+                    <i class='bx bx-hide' id="toggle-password"></i>
+                </div>
+            </div>
+            <small id="password-error" class="error-message"></small>            
+            <a href="../forgotpassword/forgotpassword.html"><div class="main-name" style="font-size: 11px; text-decoration: underline;">Forgot password?</div></a>
+            <div class="next-bnt"> 
+                <button id="nextBtn" onclick="login()">เข้าสู่ระบบDormy Home</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./log-in.js"></script>
+</html>

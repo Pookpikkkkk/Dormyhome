@@ -1,0 +1,210 @@
+/*boby*/
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FADEC8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 140px;
+    height: auto;
+}
+a {
+    color: 
+    rgb(0, 0, 0);
+    text-decoration: none;
+  }
+a:hover{
+    color: #007aff;
+}
+.menu-buttons {
+    display: flex;
+    gap: 120px;
+}
+.menu-buttons button {
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+}
+.icon-buttons {
+    display: flex;
+    gap: 10px;
+}
+.icon-buttons button {
+    background: none;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+.bxs-user-circle{
+    background: none;
+    color: black;
+    font-size: 55px;
+}
+#account-btn{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+button:hover {
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out; 
+}
+button:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+}
+/*navber*/
+.main{
+    text-align: center;
+    width: 50%;
+}
+.main-title{
+    font-size: 36px;
+    font-weight: bold;
+}
+.main-sub{
+    font-size: 14px;
+    margin-bottom: 5%;
+}
+.main-grid{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-name{
+    font-size: 26px;
+    font-weight: 800;
+}
+.row {
+    display: flex;
+    gap: 10px;
+}
+.column {
+    flex: 1;
+}
+.group-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+    font-size: 40px;
+}
+.input-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.089);
+}
+.input-group input {
+    width: 20px;
+    height: 20px;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 16px;
+    background: transparent;
+    color: black;
+    outline: none;
+    transition: border-color 0.3s ease, border-bottom-width 0.3s ease;
+}
+.input-group input:focus {
+    border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
+.input-group input:not(:placeholder-shown) {
+    background: white;
+    margin: 2px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+.input-group input::placeholder {
+    color: transparent;
+}
+.main-subname{
+    display: flex;
+    align-items: center;
+}
+.bxs-toggle-left{
+    font-size: 50px;
+    margin-left: 50px;
+    color: #797979;
+    cursor: pointer;
+}
+.bxs-toggle-right{
+    font-size: 50px;
+    margin-left: 50px;
+    color: #14AE5C;
+    cursor: pointer; 
+}
+
+input{
+    width: 240px;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 15px;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+.button {
+    margin: 40px;
+    width: 250px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    background: rgba(128, 128, 128, 0.55);
+    cursor: not-allowed;
+    transition: 0.3s;
+}
+.button.active {
+    background-color: #20B2AA;
+    cursor: pointer;
+}

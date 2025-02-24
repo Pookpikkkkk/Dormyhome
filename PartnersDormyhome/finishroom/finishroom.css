@@ -1,0 +1,135 @@
+/*boby*/
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FADEC8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 140px;
+    height: auto;
+}
+a {
+    color: 
+    rgb(0, 0, 0);
+    text-decoration: none;
+  }
+a:hover{
+    color: #007aff;
+}
+.menu-buttons {
+    display: flex;
+    gap: 120px;
+}
+.menu-buttons button {
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+}
+.icon-buttons {
+    display: flex;
+    gap: 10px;
+}
+.icon-buttons button {
+    background: none;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+.bxs-user-circle{
+    background: none;
+    color: black;
+    font-size: 55px;
+}
+#account-btn{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+button:hover {
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out; 
+}
+button:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+}
+/*boby*/
+.main{
+    background-color: #ffffff;
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    align-content: center;
+    margin-top: -130px;
+    border: none;
+    border-radius: 15px;
+}
+.maintitle{
+    font-size: 56px;
+    font-weight: bold;
+}
+.subtitile{
+    font-size: 20px;
+    font-weight: 100;
+    margin: 20px 10px; 
+
+}
+.btn{
+    margin-top: 40px;
+}
+.btn button{
+    background-color: white;
+    color: black;
+    border-radius: 100px;
+    border-width: 0.5px;
+    width: 250px;
+    height: 70px;
+    font-size: 20px;
+}
+.cancel-btn:hover{
+    background-color: rgb(247, 28, 28);
+    color: white;
+}
+.summit-btn:hover{
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out;
+}

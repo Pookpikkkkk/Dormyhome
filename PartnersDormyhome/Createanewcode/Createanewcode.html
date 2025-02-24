@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forgotpassword</title>
+    <link href="./Createanewcode.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../images/logodorymyเล็ก.png">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="../images/logo home-Photoroom.png" alt="DORMYHome"></a>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="maintitle">สร้างรหัสใหม่</div>
+        <div class="mainsub-title">Email
+            <div class="email" id="emailbt"></div>
+        </div>
+        <div class="mainsub-title">Password
+            <div class="password-container">
+            <input type="password" id="password" placeholder="กรุณากรอกรหัสผ่าน" oninput="validatePassword()">
+            <i class='bx bx-hide' id="toggle-password"></i>
+        </div>
+        <small id="password-error" class="error-message"></small>
+        </div>
+        <div class="mainsub-title"> Confirm password
+            <div class="password-container">
+            <input type="password" id="confirm-password" placeholder="กรุณายืนยันรหัสผ่าน" oninput="validateconfirmPassword()">
+            <i class='bx bx-hide' id="toggle-confirm-password"></i>
+        </div>
+        <small id="confirm-password-error" class="error-message"></small>
+        </div>
+        
+        <div class="btn">
+            <button class="summit-btn" id="login" onclick="login()">สร้างรหัสใหม่</button> 
+        </div>
+        
+    </div>
+</body>
+<script src="./Createanewcode.js"></script>
+</html>

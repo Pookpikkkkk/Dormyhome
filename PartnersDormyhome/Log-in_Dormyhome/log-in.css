@@ -1,0 +1,82 @@
+body {
+    font-family: 'Inknut Antiqua', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(../images/พื้นหลังหลักของเว็บ.jpg);
+    backdrop-filter: blur(3px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+}
+.mainimg{
+    margin: 30px auto;
+    width: 20%;
+}
+.main-grid{
+    display: grid;
+    margin-left: 30%;
+}
+.main-name{
+    font-size: 30px;
+}
+input{
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+}
+.next-bnt{
+    margin: 10px 15%;
+}
+.next-bnt button{
+    width: 280px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    background-color: #20B2AA;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.password-container {
+    position: relative;
+    width: 49%;
+}
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+.input-wrapper input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding-right: 0px; 
+}
+input#email {
+    border: none;
+}
+.bx {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    background: none;
+    border: none;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+}

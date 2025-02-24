@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กรอกช่อมูลส่วนตัว</title>
+    <link href="./OTP-Email.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../images/logodorymyเล็ก.png">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./OTP-Email.html"><img src="../images/logo home-Photoroom.png" alt="DORMYHome"></a>
+    </header>
+    <div class="main">
+        <div class="mainbox">
+            <div class="maintitle">Enter the code that was sent to</div>
+            <div class="email" id="emailbt"></div>
+            <div class="mainsub-titile">Enter 6-digit Code  we have sand to you </div>
+            <div class="otp-container">
+                <div class="input-group">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                </div>
+                <button type="button" id="otp-button" onclick="sendOtp()">รับรหัส OTP</button>
+            </div>
+            <small id="otp-error" class="error-message"></small>
+        </div>
+        <div class="next-bnt"> 
+            <a href="../Upload-images/Upload-images.html"><button id="nextBtn" disabled>ต่อไป</button></a>
+        </div>
+    </div>
+</body>
+<script src="./OTP-Email.js"></script>
+</html>

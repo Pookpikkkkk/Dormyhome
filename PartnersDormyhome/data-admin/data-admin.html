@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กรอกช่อมูลส่วนตัว</title>
+    <link href="./data-admin.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../images/logodorymyเล็ก.png">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="../images/logo home-Photoroom.png" alt="DORMYHome"></a>
+            </div>
+                <i class='bx bx-globe'>  Thai</i>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="mainbox">
+            <div class="maintitle">เข้าร่วมเป็นพาร์ทเนอร์หอพัก Dormy Home</div>
+            <div class="mainsub-titile">กรอกข้อมูลเบื้องต้นสำหรับผู้สมัครเข้าร่วมพาร์ทเนอร์หอพัก</div>
+            <div class="main-story">
+                <div class="main-grid">
+                    <div class="st-titile">ชื่อ-นามสกุลเจ้าของหอพัก ตามบัตรประชาชน
+                        <input type="text" id="nameInput" name="name-type" placeholder="กรุณากรอกชื่อ - สกุล" class="th">
+                    </div>
+                    <div class="st-titile">เลขบัตรประชาชน(13หลัก)
+                        <div class="input-group" id="input-group-IDCard">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*" style="margin-right: 15px;">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*"style="margin-right: 15px;">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*"style="margin-right: 15px;">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="IDCard" inputmode="numeric" pattern="[0-9]*">
+                        </div>
+                    </div>
+                    <div class="st-titile">E-mail
+                        <input type="text" id="email" name="email" placeholder="กรุณากรอกเบอร์โทรศัพท์หรืออีเมล" oninput="validateEmail()" class="th">
+                        <small id="email-error" class="error-message"></small>
+                    </div>
+                    <div class="st-titile">Password
+                        <div class="password-container">
+                            <input type="password" id="password" name="password" placeholder="กรุณากรอกรหัสผ่าน" oninput="validatePassword()">
+                            <i class='bx bx-hide' id="toggle-password"></i>
+                        </div>
+                        <small id="password-error" class="error-message"></small>
+                    <div class="st-titile">Confirm password
+                        <div class="password-container">
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="กรุณายืนยันรหัสผ่าน" oninput="validateconfirmPassword()">
+                            <i class='bx bx-hide' id="toggle-confirm-password"></i>
+                        </div>
+                        <small id="confirm-password-error" class="error-message"></small>
+                    </div>
+                    <div class="st-titile">
+                        <div class="bank-container"></div>ชื่อธนาคาร
+                            <button class="th-bnt" id="main-btn" name="bank">เลือกธนาคาร<i class='bx bx-caret-right'></i></button>
+
+                            <div class="dropdown" id="bank-list">
+                                <button class="bank-option" data-image="../icon การจ่ายเงิน/กรุงไทย.png"><img src="../icon การจ่ายเงิน/กรุงไทย.png" alt="กรุงไทย" style="margin-right:15px ;">Krungthai NEXT</button>
+                                <button class="bank-option" data-image="../icon การจ่ายเงิน/SCB.png"><img src="../icon การจ่ายเงิน/SCB.png" alt="SCB" style="margin-right:15px ;">SCB Easy</button>
+                                <button class="bank-option" data-image="../icon การจ่ายเงิน/กสิกร.png"><img src="../icon การจ่ายเงิน/กสิกร.png" alt="KBANK" style="margin-right:15px ;">K PLUS</button>
+        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="st-titile">เลขบัญชีธนาคาร
+                        <div class="input-group" id="input-group">
+                            <input type="text" maxlength="1" name="bank-account" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="bank-account" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="bank-account" inputmode="numeric" pattern="[0-9]*">-
+                            <input type="text" maxlength="1" name="bank-account" inputmode="numeric" pattern="[0-9]*">-
+                            <input type="text" maxlength="1" name="bank-account" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="bank-account" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="bank-account" inputmode="numeric" pattern="[0-9]*">
+                            <input type="text" maxlength="1" name="bank-account" inputmode="numeric" pattern="[0-9]*">-
+                            <input type="text" maxlength="1" name="bank-account" inputmode="numeric" pattern="[0-9]*">
+                        </div>
+                        <small id="otp-error" class="error-message"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="next-bnt"> 
+            <a href="../OTP-Email/OTP-Email.html"><button id="nextBtn" disabled>ต่อไป</button></a>
+        </div>
+    </div>
+</body>
+<script src="./data-admin.js"></script>
+</html>

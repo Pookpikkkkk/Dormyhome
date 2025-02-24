@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adddetails</title>
+    <link href="./adddetails.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logodorymyเล็ก.png">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./adddetails.html"><img src="../images/logo home-Photoroom.png" alt="dorymy"></a>
+            </div>
+            <div class="menu-buttons">
+                <a href="#"><button>รายการ</button></a>
+                <a href="#"><button>ข้อมูลหอพัก</button></a>
+                <a href="#"><button>รายได้เดือนนี้</button></a>
+            </div>
+            <div class="icon-buttons">
+                <a href="#"><button style="background: #8D6E63;color: #ffffff; width: 45px; font-size: 25px;"><i class='bx bx-bell'></i></button></a>
+                <a href="#"><button><i class='bx bxs-user-circle'></i></button></a>
+                <a href="../login/login.html"><button style="border-radius: 10px; background: #20B2AA;">ชื่อ:xxxxxx xxxxxxx</button></a>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main-title">เพิ่มรายละเอียดหอพัก</div>
+        <div class="main-sub">โปรดตรวจสอบข้อมูลพื้นฐานให้ถูกต้องข้อมูลเหล่านี้สามารถแก้ไขได้ในภายหลัง</div>
+        <div class="main-grid">
+            <div class="main-item">
+                <div class="main-name">ชื่อหอพัก</div>
+                <input type="text" placeholder="ระบุชื่อหอพัก" id="doom">
+                <div class="main-name">จำนวนห้องพัก</div>
+                <input type="number" placeholder="ระบุจำนวนห้องพัก" id="room" min="0">
+                <div class="main-name">เลือกเวลาที่ผู้เช่าสามารถเช็คอินได้</div>
+                <div class="form-group row">
+                    <div class="column">จาก</div>
+                    <div class="column">ถึง</div>
+                </div>
+                <div class="group-container">
+                    <div class="input-group" id="time">
+                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">:
+                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">-
+                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">:
+                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                    </div>
+                </div>
+                <div class="main-subname">สามารถเช็คอินได้ 24 ชั่วโมง<i class='bx bxs-toggle-left' id="toggle-hour"></i></div>
+            </div>
+            <div class="main-item">
+                <div class="main-name">เบอร์โทรของหอพัก</div>
+                <div class="main-subname">เบอร์โทรที่ให้ลูกค้าเห็น</div>
+                <input type="text" placeholder="ระบุเบอร์โทร" id="phone" oninput="validatePhone()">
+                <small id="phone-error" class="error-message"></small>
+            </div>
+            <div class="main-item">
+                <div class="main-name">สถานที่ใกล้เคียงหอพัก</div>
+                <input type="text" placeholder="ระบุสถานที่ใกล้เคียง" id="nearbyPlace">
+            </div>
+            <div class="main-item">
+                <div class="main-name">การแจ้งเตือน</div>
+                <div class="main-subname">คุณจำเป็นต้องได้รับการแจ้งเตือนล่วงหน้านานเพียงใดก่อนผู้เช่ามาถึง</div>
+                <input type="number" placeholder="วัน" min="0" id="notification">
+            </div>
+            <div class="main-item">
+                <div class="main-name">ผู้เช่าสามารถจองที่พักล่วงหน้าได้นานเท่าใด</div>
+                <input type="number" placeholder="เดือน" min="0" id="booking">
+            </div>
+            <div class="main-item">
+                <div class="main-name">ระยะเวลาของสัญญาเช่าเท่าใด</div>
+                <input type="number" placeholder="เดือน" min="0" id="contract">
+            </div>
+        </div>
+        <button class="button" id="nextBtn" disabled>บันทึกและถัดไป</button>
+    </div>
+</body>
+<script src="./adddetails.js"></script>
+</html>

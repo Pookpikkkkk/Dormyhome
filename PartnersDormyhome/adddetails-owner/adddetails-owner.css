@@ -1,0 +1,240 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FADEC8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 140px;
+    height: auto;
+}
+a {
+    color: 
+    rgb(0, 0, 0);
+    text-decoration: none;
+  }
+a:hover{
+    color: #007aff;
+}
+.menu-buttons {
+    display: flex;
+    gap: 120px;
+}
+.menu-buttons button {
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+}
+.icon-buttons {
+    display: flex;
+    gap: 10px;
+}
+.icon-buttons button {
+    background: none;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+.bxs-user-circle{
+    background: none;
+    color: black;
+    font-size: 55px;
+}
+#account-btn{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+button:hover {
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out; 
+}
+button:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+}
+/*boby*/
+.main{
+    text-align: center;
+    width: 50%;
+    margin-top: 22%;
+}
+.main-title{
+    font-size: 36px;
+    font-weight: bold;
+}
+.main-sub{
+    font-size: 14px;
+    margin-bottom: 5%;
+}
+.main-g{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-grid{
+    display: grid;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+.main-name{
+    font-size: 28px;
+    font-weight: 700;
+}
+.preview-container {
+    background: #D9D9D9;
+    width: 141px;
+    height: 119px;
+    margin-left: 1%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+.preview-image {
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;
+    margin: 5px;
+}
+.preview-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+.preview-container .preview-image {
+    font-size: 20px;
+    color: #000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.preview-container.has-image .preview-image {
+    display: none;
+}
+
+.preview-container.has-image img {
+    display: block;
+}
+.image-upload{
+    margin-top: 10px;
+}
+.file-upload {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.file-upload input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.currency-input {
+    position: relative;
+}
+.currency-input::before {
+    content: "฿ ";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #000;
+    border: gray;
+}
+input[type="number"] {
+    padding-left: 30px;
+    border: none;
+    height: 40px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+#priceInput{
+    width: 25%;
+    border-radius: 10px;
+}
+#descriptionInput,#securityInput,#rulesInput{
+    width: 50%;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.st-rd{
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 0px;
+    width: 30px;
+    accent-color: green;
+}
+.btn{
+    margin-top: 40px;
+}
+.btn button{
+    background-color: #D9D9D9;
+    color: rgb(255, 255, 255);
+    border-radius: 100px;
+    border-width: 0.25px;
+    width: 250px;
+    height: 65px;
+    font-size: 20px;
+    margin: 20px 30px;
+    cursor: not-allowed;
+    transition: 0.3s;
+}
+.button-add button.active {
+    background-color: #20B2AA;
+    cursor: pointer;
+    color: #000;
+}
+.next-bnt button.active {
+    background-color: #8D6E63;
+    cursor: pointer;
+    color: #ffffff;
+}

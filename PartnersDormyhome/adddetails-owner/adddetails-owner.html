@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adddetails Owner</title>
+    <link href="./adddetails-owner.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/logodorymyเล็ก.png">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./adddetails.html"><img src="../images/logo home-Photoroom.png" alt="dorymy"></a>
+            </div>
+            <div class="menu-buttons">
+                <a href="#"><button>รายการ</button></a>
+                <a href="#"><button>ข้อมูลหอพัก</button></a>
+                <a href="#"><button>รายได้เดือนนี้</button></a>
+            </div>
+            <div class="icon-buttons">
+                <a href="#"><button style="background: #8D6E63;color: #ffffff; width: 45px; font-size: 25px;"><i class='bx bx-bell'></i></button></a>
+                <a href="#"><button><i class='bx bxs-user-circle'></i></button></a>
+                <a href="../login/login.html"><button style="border-radius: 10px; background: #20B2AA;">ชื่อ:xxxxxx xxxxxxx</button></a>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main-title">เพิ่มรายละเอียดหอพัก</div>
+        <div class="main-sub">โปรดตรวจสอบข้อมูลพื้นฐานให้ถูกต้องข้อมูลเหล่านี้สามารถแก้ไขได้ในภายหลัง</div>
+        <div class="main-grid">
+            <div class="main-item">
+                <div class="main-name">เพิ่มรายการห้องพัก</div>
+                <div class="main-subname">คุณสามารถแก้ไขรายการได้ภายหลัง</div>
+                <div class="image-upload">
+                    <label class="file-upload">
+                        <input type="file" id="menu-image1" accept="image/*" onchange="previewImage(event, 'preview1')">
+                        <div class="preview-container" id="preview1">
+                            <i class="bx bx-plus-circle preview-image"></i>
+                        </div>
+                    </label>                    
+                    <label class="file-upload">
+                        <input type="file" id="menu-image2" accept="image/*" onchange="previewImage(event, 'preview2')">
+                        <div class="preview-container" id="preview2">
+                            <i class="bx bx-plus-circle preview-image" id="preview-icon2"></i>
+                        </div>
+                    </label>
+                    <label class="file-upload">
+                        <input type="file" id="menu-image3" accept="image/*" onchange="previewImage(event, 'preview3')">
+                        <div class="preview-container" id="preview3">
+                            <i class="bx bx-plus-circle preview-image" id="preview-icon3"></i>
+                        </div>
+                    </label>
+                    <label class="file-upload">
+                        <input type="file" id="menu-image4" accept="image/*" onchange="previewImage(event, 'preview4')">
+                        <div class="preview-container" id="preview4">
+                            <i class="bx bx-plus-circle preview-image" id="preview-icon4"></i>
+                        </div>
+                    </label>
+                    <label class="file-upload">
+                        <input type="file" id="menu-image5" accept="image/*" onchange="previewImage(event, 'preview5')">
+                        <div class="preview-container" id="preview5">
+                            <i class="bx bx-plus-circle preview-image" id="preview-icon5"></i>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="main-item">
+                <div class="main-name">เพิ่มคำบรรยายหอพักของคุณให้ผู้เช่าทราบ</div>
+                <input type="text" placeholder="เพิ่มคำอธิบาย" id="descriptionInput">
+            </div>
+            <div class="main-item">
+                <div class="main-name">กำหนดราคาเช่าต่อเดือน</div>
+                <div class="currency-input">
+                    <input type="number" placeholder="เพิ่มราคา XXXX" id="priceInput" min="0" max="15000">
+                </div>
+            </div>
+            <div class="main-item">
+                <div class="main-name">เพิ่มในประเภทห้องพัก</div>
+                <input type="radio" class="st-rd"  value="type"> ประเภทxxxxxxx<br>
+            </div>
+            <div class="main-item">
+                <div class="main-name">เพิ่มสิ่งอำนวยความสะดวก</div>
+                <input type="checkbox" class="st-rd"  value="facilities"> เตียง
+                <input type="checkbox" class="st-rd"  value="facilities"> ตู้เย็น
+                <input type="checkbox" class="st-rd"  value="facilities"> พัดลม
+                <input type="checkbox" class="st-rd"  value="facilities"> เก้าอี้
+                <input type="checkbox" class="st-rd"  value="facilities"> แอร์
+                <input type="checkbox" class="st-rd"  value="facilities"> ตู้เสื้อผ้า
+                <input type="checkbox" class="st-rd"  value="facilities"> โต๊ะเขียนหนังสือ <br>
+                <input type="checkbox" class="st-rd"  value="facilities"> เครื่องทำน้ำอุ่น
+                <input type="checkbox" class="st-rd"  value="facilities"> โต๊ะเครื่องแป้ง
+                <input type="checkbox" class="st-rd"  value="facilities"> โต๊ะ
+                <input type="checkbox" class="st-rd"  value="facilities"> ชั้นวางหนังสือ
+                <input type="checkbox" class="st-rd"  value="facilities"> Wifi
+            </div>
+            <div class="main-item">
+                <div class="main-name">เพิ่มการรักษาความปลอดภัยภายในหอพัก</div>
+                <input type="text" placeholder="เพิ่มการรักษาความปลอดภัยภายในหอพัก" id="securityInput">
+            </div>
+            <div class="main-item">
+                <div class="main-name">เพิ่มกฎระเบียบของหอพัก</div>
+                <input type="text" placeholder="เพิ่มกฎระเบียบของหอพัก" id="rulesInput">
+            </div>
+        </div> 
+        <div class="btn">
+            <a href="../ex/ex.html"><button class="button-ex" id="nextBtn" disabled>ดูตัวอย่าง</button></a>
+            <a href="../finishroom/finishroom.html"><button class="button-add" id="nextBtn" disabled>ลงประกาศที่พัก</button></a>
+        </div>
+    </div>     
+</body>
+<script src="./adddetails-owner.js"></script>
+</html>

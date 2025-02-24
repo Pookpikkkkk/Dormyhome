@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ขั้นตอนที่6ข้อมูลบัญชีธนาคาร</title>
+    <link href="bankaccount.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../images/logodorymyเล็ก.png">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./profile.html"><img src="../../images/logo home-Photoroom.png" alt="DORMYHome"></a>
+            </div>
+            <div class="menu-partner">
+                <button id="createpartner">สมัครเป็นพาร์ทเนอร์<i class='bx bxs-chevron-right' id="toggle-createpartner"></i></button>
+                <a href="#"><div id="tooltip" class="tooltip">
+                       ตัวอย่างเอกสาร
+                </div></a>
+                <style>
+                    .tooltip {
+                        display: none;
+                        position: absolute;
+                        background: #f5f5f5;
+                        color: rgb(0, 0, 0);
+                        padding: 10px;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                        width: 150px;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                    .tooltip:hover{
+                        transform: scale(1.05);
+                        transition: all 0.3s ease-in-out; 
+                    }
+                </style>
+                <i class='bx bx-globe'>  Thai</i>
+            </div>
+        </div>
+    </header>
+    <div class="area">
+        <div class="area-content">
+            <div class="left">
+                <div class="left-giid">
+                    <div class="left-item">
+                        <a href="../1profilre/profile.html"><button>
+                            ขั้นตอนที่1<br>รูปโปรไฟล์
+                        </button></a>
+                    </div>
+                    <div class="left-item">
+                        <a href="../2thailid/thailid.html"><button>
+                            ขั้นตอนที่2<br>บัตรประจำตัวประชาชน
+                        </button></a>
+                    </div>
+                    <div class="left-item">
+                        <a href="../3Permission_form/permission.html"><button>
+                            ขั้นตอนที่3<br>ใบอนุญาตประกอบกิจการหอพัก
+                        </button></a>
+                    </div>
+                    <div class="left-item">
+                        <a href="../4property_document/propertydocument.html"><button>
+                            ขั้นตอนที่4<br>เอกสารสิทธิ์ในทรัพย์สิน
+                        </button></a>
+                    </div>
+                    <div class="left-item">
+                        <a href="../5dbd/dbd.html"><button>
+                            ขั้นตอนที่5<br>หนังสือรับรองการจดทะเบียนบริษัท
+                        </button></a>
+                    </div>
+                    <div class="left-item">
+                        <a href="../6bankaccount/bankaccount.html"><button>
+                            ขั้นตอนที่6<br>ข้อมูลบัญชีธนาคาร
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="b-title">ข้อมูลบัญชีธนาคาร</div>
+                <div class="b">
+                    <div class="b-topic">รูปแรกของสมุดบัญชีธนาคารที่ถูกต้อง
+                        <hr>
+                        <div class="b-sub">
+                            หากไม่ส่งข้อมูลบัญชีธนาคารจะไม่สามารถถอนเงินออกจากระบบได้สมุดบัญชีที่ถูกต้อง ควรมีลักษณะดังนี้:
+                            <ul>
+                                <li>ชื่อเจ้าของบัญชีจะต้องตรงตามผู้สมัคร</li>
+                                <li>ต้องเป็นสมุดบัญชีธนาคาร</li>
+                                <li>เห็นข้อมูลชัดเจน (ชื่อและเลขบัญชี)</li>
+                                <li>ไม่แก้ไขและตกแต่งรูป</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="ex-img">ตัวอย่างรูปเอกสารข้อมูลสมุดบัญชีที่ถูกต้อง:</div>
+                <img src="../../images/บัญชีธนาคาร.png">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./bankaccount.js"></script>
+</html>

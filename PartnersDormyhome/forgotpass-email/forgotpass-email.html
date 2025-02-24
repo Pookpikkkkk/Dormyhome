@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forgotpassword</title>
+    <link href="./forgotpass-email.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../images/logodorymyเล็ก.png">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="../images/logo home-Photoroom.png" alt="DORMYHome"></a>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="maintitle">Forgot password</div>
+        <div class="mainsub-title">Email
+            <input type="email" id="email" name="email" placeholder="กรอกอีเมลที่ลงทะเบียนไว้" oninput="validateEmail()" class="th">
+            <small id="email-error" class="error-message"></small>
+        </div>
+        <div class="btn">
+            <a href="../Log-in_Dormyhome/log-in.html"><button class="cancel-btn">ยกเลิก</button></a>
+            <button class="summit-btn" id="login" onclick="login()">รีเซ็ตรหัสผ่าน</button> 
+        </div>
+    </div>
+    
+</body>
+<script src="./forgotpass-email.js"></script>
+</html>
