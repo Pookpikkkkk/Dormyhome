@@ -5,7 +5,7 @@ function loadImagesOnOtherPage() {
         if (savedImage) {
             const imageContainer = document.getElementById(previewId);
             if (imageContainer) {
-                imageContainer.innerHTML = `<img src="${savedImage}" alt="Saved Image" style="max-width: 100%; height: auto;">`;
+                imageContainer.innerHTML = `<img src="${savedImage}" alt="Saved Image">`;
             }
         }
     }
