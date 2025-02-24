@@ -6,14 +6,14 @@
     <title>รายการ</title>
     <link href="./personalinformation.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/logodorymyเล็ก.png">
 </head>
 <body>
     <header class="header">
         <div class="navbar">
             <div class="logo">
-                <a href="./Halls.html"><img src="../images/logo home-Photoroom.png" alt="dorymy"></a>
+                <a href="./personalinformation.html"><img src="../images/logo home-Photoroom.png" alt="dorymy"></a>
             </div>
             <div class="menu-buttons">
                 <a href="#"><button>รายการ</button></a>
@@ -32,25 +32,19 @@
             <div class="left">
                 <div class="left-grid">
                     <div class="item-left">
-                        <div class="sub">
-                            <i class='bx bx-calendar-event' style="color: black;"></i>การจองวันนี้
-                        </div>
+                        <div class="sub"><i class='bx bx-calendar-event'></i> การจองวันนี้</div>
                     </div>
                     <div class="item-left">
-                        <div class="sub">
-                            <i class='bx bxs-star' style='color:#ffeb00'></i>รีวิวและคะแนน
-                        </div>
+                        <div class="sub"><i class='bx bxs-star' style='color:#ffeb00'></i> รีวิวและคะแนน</div>
                     </div>
                     <div class="item-left" style="background: #BEBABA; color: #ffffff;">
-                        <div class="sub">
-                            <i class='bx bx-user-circle' style="color: #000000;"></i>ข้อมูลส่วนตัว
-                        </div>
+                        <div class="sub"><i class='bx bx-user-circle'></i> ข้อมูลส่วนตัว</div>
                     </div>
                 </div>
             </div>
             <div class="right">
                 <div class="main-title">
-                    <i class='bx bx-left-arrow-alt' style="color: #000000; margin-left: 10px; margin-right: 30%;"></i>ข้อมูลส่วนตัวหอพักxxxxx
+                    <i class='bx bx-left-arrow-alt' style="color: #000000; margin-left: 10px; margin-right: 30%;"></i>ข้อมูลส่วนตัวหอพัก<span id="dormTitle">xxxxx</span>
                 </div>
                 <hr>
                 <div class="main-un">
@@ -61,51 +55,52 @@
                         <div class="main-un-right">
                             <div class="main2">
                                 <div class="main-name">ชื่อหอพัก</div>
-                                <div class="main-sub" id="dormName">xxxxxxxx</div>
+                                <div class="main-sub" id="dormName"></div>
                             </div>
-                            <div class="edit" id="editButton">แก้ไข</div>
+                            <div class="edit" onclick="toggleEdit('dormName')">แก้ไข</div>
                         </div>
                     </div>
                     <div class="main-grid">
                         <div class="main-right">
                             <div class="main2">
                                 <div class="main-name">เวลาที่ผู้เช่าสามารถเช็คอิน</div>
-                                <div class="main-sub" id="checkInTime">จากHH:MM ถึงHH:MM</div>
+                                <div class="main-sub" id="checkInTime"></div>
                             </div>
-                            <div class="edit">แก้ไข</div>
+                            <div class="edit" onclick="toggleEdit('checkInTime')">แก้ไข</div>
                         </div>
                         <div class="main-right">
                             <div class="main2">
                                 <div class="main-name">เบอร์โทรศัพท์</div>
-                                <div class="main-sub" id="phoneNumber">0123456789</div>
+                                <div class="main-sub" id="phoneNumber"></div>
                             </div>
+                            <div class="edit" onclick="toggleEdit('phoneNumber')">แก้ไข</div>
                         </div>
                         <div class="main-right">
                             <div class="main2">
                                 <div class="main-name">การแจ้งเตือนก่อนที่ผู้เช่าจะเข้ามาพัก</div>
-                                <div class="main-sub" id="notificationDays">x วัน</div>
+                                <div class="main-sub" id="notificationDays"></div>
                             </div>
-                            <div class="edit">แก้ไข</div>
+                            <div class="edit" onclick="toggleEdit('notificationDays')">แก้ไข</div>
                         </div>
                         <div class="main-right">
                             <div class="main2">
-                                <div class="main-name">ผู้เช่าสามารถจองล่วงหน้าได้นานเท่าได</div>
-                                <div class="main-sub" id="bookingMonths">x เดือน</div>
+                                <div class="main-name">ผู้เช่าสามารถจองล่วงหน้าได้นานเท่าใด</div>
+                                <div class="main-sub" id="bookingMonths"></div>
                             </div>
-                            <div class="edit">แก้ไข</div>
+                            <div class="edit" onclick="toggleEdit('bookingMonths')">แก้ไข</div>
                         </div>
                         <div class="main-right" style="margin-bottom: 20px;">
                             <div class="main2">
                                 <div class="main-name">ระยะเวลาของสัญญา</div>
-                                <div class="main-sub" id="contractDuration">x ปี x เดือน</div>
+                                <div class="main-sub" id="contractDuration"></div>
                             </div>
-                            <div class="edit">แก้ไข</div>
+                            <div class="edit" onclick="toggleEdit('contractDuration')">แก้ไข</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 </body>
 <script src="./personalinformation.js"></script>
 </html>
