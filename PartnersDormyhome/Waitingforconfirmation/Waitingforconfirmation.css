@@ -143,8 +143,12 @@ button:active {
     border-radius: 5px;
     margin-top: 20px;
 }
+.bx-left-arrow-alt{
+    font-size: 25px;
+    margin-left: 10px;
+}
 .main-top{
-    margin-top: 10%;
+    margin-top: 2%;
     width: 100%;
     display: flex;
 }
@@ -165,7 +169,6 @@ button:active {
 .main-gridright{
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(2, 0.2fr);
     align-items: flex-start;
     text-align: left;
 }
@@ -173,51 +176,6 @@ button:active {
     width: 200px;
     height: 130px;
     border-radius: 10px;
-}
-.item-right:hover{
-    background: #BEBABA;
-    border: 0.025px solid #D9D9D9;
-    color: white;
-}
-.subtitle{
-    font-size: 28px;
-    font-weight: 500;
-    margin-top: 15px;
-}
-.mainbox {
-    background-color: white;
-    width: 85%;
-    display: flex;
-    align-items:  flex-start;
-    padding: 20px;
-    border-radius: 10px;
-    justify-content: space-between;
-    border: 1px solid #000000;
-    margin: 20px 5%;
-    text-align: left;
-}
-.images {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.images img {
-    width: 200px;
-    border-radius: 10px;
-}
-.details {
-    flex: 1;
-    padding: 0 30px;
-    margin-top: 40px;
-}
-.details h2 {
-    margin: 0;
-    font-size: 32px;
-}
-.price {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 50px;
 }
 #preview1 img{
     width: 290px; 
@@ -231,9 +189,21 @@ button:active {
     width: 141px;
     height: 79.31px;
 }
-.subb{
+.main-un-title{
+    font-size: 30px;
+    font-weight: 500;
+}
+.main-name{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.main-un-left,.main-un-right{
+    background: #8D6E63;
+    color: #ffffff;
+    text-align: left;
+    margin: 20px 10%;
+    padding: 20px;
+    border-radius: 10px;
     font-size: 18px;
-    font-weight: 300;
-    margin-bottom: 5px;
-    margin-left: 15px;
+    width: 30%;
 }
