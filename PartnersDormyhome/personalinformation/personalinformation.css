@@ -185,6 +185,7 @@ button:active {
 .edit{
     color: #007aff;
     text-decoration: underline;
+    cursor: pointer;
 }
 .main-grid{
     display: grid;
