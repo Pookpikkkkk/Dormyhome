@@ -46,8 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("nextBtn").addEventListener("click", () => {
         let doomInput = document.getElementById("doom").value.trim();
         localStorage.setItem("doom", doomInput);
-        // Redirect to next page
-        window.location.href = "./personalinformation.html";
+        window.location.href = "../personalinformation/personalinformation.html";
     });
 
     function validatePhone() {
