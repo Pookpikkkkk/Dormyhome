@@ -38,7 +38,9 @@
                         <div class="sub"><i class='bx bxs-star' style='color:#ffeb00'></i> รีวิวและคะแนน</div>
                     </div>
                     <div class="item-left" style="background: #BEBABA; color: #ffffff;">
-                        <div class="sub"><i class='bx bx-user-circle'></i> ข้อมูลส่วนตัว</div>
+                        <div class="sub">
+                            <i class='bx bx-user-circle' style="color: #000000;"></i>ข้อมูลส่วนตัว
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,12 +80,12 @@
                                 </div>
                                 <div class="main-subname">สามารถเช็คอินได้ 24 ชั่วโมง<i class='bx bxs-toggle-left' id="toggle-hour"></i></div>
                             </div>
-                            <div class="edit" onclick="toggleEdit('checkInTime')">แก้ไข</div>
+                            <div class="edit" id="checkInTime" onclick="toggleEdit('checkInTime')">แก้ไข</div>
                         </div>
                         <div class="main-right">
                             <div class="main2">
                                 <div class="main-name">เบอร์โทรศัพท์</div>
-                                <input type="text" placeholder="ระบุเบอร์โทร" id="phone" maxlength="10" oninput="validatePhone()"  readonly>
+                                <input type="text" placeholder="ระบุเบอร์โทร" id="phone" maxlength="10" oninput="validatePhone()" readonly>
                             </div>
                             <div class="edit" onclick="toggleEdit('phone')">แก้ไข</div>
                         </div>
@@ -113,6 +115,6 @@
             </div>
         </div>
     </main>
+    <script src="./personalinformation.js"></script>
 </body>
-<script src="./personalinformation.js"></script>
 </html>

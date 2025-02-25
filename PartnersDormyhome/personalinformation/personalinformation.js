@@ -10,21 +10,14 @@ function loadImagesOnOtherPage() {
         }
     }
 }
-function validatePhone() {
-    let phoneInput = document.getElementById("phone");
-    let phonePattern = /^0[0-9]{9}$/;
-    if (phonePattern.test(phoneInput.value) || phoneInput.value === "") {
-        phoneInput.style.border = "1px solid #ccc";
-        errorMessage.innerText = "";
-    } else {
-        phoneInput.style.border = "2px solid red";
-        errorMessage.innerText = "กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง";
-    }
-}
 
+function validatePhone() {
+    const phoneInput = document.getElementById("phone");
+    phoneInput.value = phoneInput.value.replace(/\D/g, "");
+}
 function toggleEdit(id) {
     let inputField = document.getElementById(id);
-    let editButton = inputField.nextElementSibling;
+    let editButton = document.querySelector(`.edit[onclick="toggleEdit('${id}')"]`);
 
     if (inputField.readOnly) {
         inputField.readOnly = false;
@@ -34,20 +27,106 @@ function toggleEdit(id) {
         inputField.readOnly = true;
         inputField.style.border = "none";
         editButton.textContent = "แก้ไข";
-        saveToLocalStorage(id, inputField.value.trim());
+
+        let dormData = JSON.parse(localStorage.getItem("dormData")) || {};
+        dormData[id] = inputField.value.trim();
+        localStorage.setItem("dormData", JSON.stringify(dormData));
     }
 }
 
+function toggleEdit(id) {
+    if (id === "checkInTime") {
+        let timeInputs = document.querySelectorAll("#time input");
+        let toggleIcon = document.getElementById("toggle-hour");
+
+        let isReadOnly = timeInputs[0].disabled;
+
+        timeInputs.forEach(input => {
+            input.disabled = !isReadOnly;
+            input.style.border = isReadOnly ? "1px solid black" : "none";
+        });
+
+        toggleIcon.style.pointerEvents = isReadOnly ? "auto" : "none";
+        toggleIcon.style.opacity = isReadOnly ? "1" : "0.5";
+
+        let editButton = document.querySelector('.edit[onclick="toggleEdit(\'checkInTime\')"]');
+        editButton.textContent = isReadOnly ? "บันทึก" : "แก้ไข";
+
+        if (!isReadOnly) {
+            saveCheckInTime();
+        }
+    } else {
+        let inputField = document.getElementById(id);
+        let editButton = inputField.nextElementSibling;
+
+        if (inputField.readOnly) {
+            inputField.readOnly = false;
+            inputField.style.border = "1px solid black";
+            editButton.textContent = "บันทึก";
+        } else {
+            inputField.readOnly = true;
+            inputField.style.border = "none";
+            editButton.textContent = "แก้ไข";
+
+            let dormData = JSON.parse(localStorage.getItem("dormData")) || {};
+            dormData[id] = inputField.value.trim();
+            localStorage.setItem("dormData", JSON.stringify(dormData));
+        }
+    }
+}
+function toggleEdit(id) {
+    if (id === "checkInTime") {
+        let timeInputs = document.querySelectorAll("#time input");
+        let toggleIcon = document.getElementById("toggle-hour");
+
+        let isReadOnly = timeInputs[0].disabled;
+
+        timeInputs.forEach(input => {
+            input.disabled = !isReadOnly;
+            input.style.border = isReadOnly ? "1px solid black" : "none";
+        });
+
+        toggleIcon.style.pointerEvents = isReadOnly ? "auto" : "none";
+        toggleIcon.style.opacity = isReadOnly ? "1" : "0.5";
+
+        let editButton = document.querySelector('.edit[onclick="toggleEdit(\'checkInTime\')"]');
+        editButton.textContent = isReadOnly ? "บันทึก" : "แก้ไข";
+
+        if (!isReadOnly) {
+            saveCheckInTime();
+        }
+    } else {
+        let inputField = document.getElementById(id);
+        let editButton = document.querySelector(`.edit[onclick="toggleEdit('${id}')"]`);
+
+        if (inputField.readOnly) {
+            inputField.readOnly = false;
+            inputField.style.border = "1px solid black";
+            editButton.textContent = "บันทึก";
+        } else {
+            inputField.readOnly = true;
+            inputField.style.border = "none";
+            editButton.textContent = "แก้ไข";
+
+            let dormData = JSON.parse(localStorage.getItem("dormData")) || {};
+            dormData[id] = inputField.value.trim();
+            localStorage.setItem("dormData", JSON.stringify(dormData));
+        }
+    }
+}
+function saveCheckInTime() {
+    let timeInputs = document.querySelectorAll("#time input");
+    let timeString = Array.from(timeInputs).map(input => input.value).join("");
+
+    let dormData = JSON.parse(localStorage.getItem("dormData")) || {};
+    dormData.checkInTime = timeString;
+    localStorage.setItem("dormData", JSON.stringify(dormData));
+}
 function saveToLocalStorage(id, value) {
     let dormData = JSON.parse(localStorage.getItem("dormData")) || {};
     dormData[id] = value;
     localStorage.setItem("dormData", JSON.stringify(dormData));
     console.log("บันทึกค่า:", dormData);
-}
-
-function validatePhone() {
-    const phoneInput = document.getElementById("phone");
-    phoneInput.value = phoneInput.value.replace(/\D/g, "");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -110,7 +189,6 @@ document.addEventListener("DOMContentLoaded", () => {
             input.value = checkInArray[index] || "";
         });
     }
-
     document.querySelectorAll('input').forEach(input => {
         input.addEventListener("blur", () => {
             saveToLocalStorage(input.id, input.value.trim());
