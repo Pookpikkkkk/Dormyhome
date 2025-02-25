@@ -162,9 +162,82 @@ button:active {
     color: #d9d9d9;
 }
 .main-top{
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
     color: white;
     display: flex;
     align-items: center;
+}
+.title{
+    font-size: 14px;
+}
+.review-card {
+    background: #ffffff;
+    width: 95%;
+    height: 200px;
+    margin: 15px auto;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    display: flex;
+}
+.review-header {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 90px;
+}
+.score {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007AFF;
+}
+.status {
+    font-size: 18px;
+    margin-top: -10px;
+}
+.review-count {
+    font-size: 14px;
+    color: #63A2E7;
+}
+.bx-check-circle{
+    color: green;
+}
+.review-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.review-item {
+    width: 48%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.progress-container {
+    width: 70%;
+    height: 8px;
+    background: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #0DAA3F;
+    border-radius: 5px;
+}
+
+.review-item p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.review-item .score {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0DAA3F;
 }
