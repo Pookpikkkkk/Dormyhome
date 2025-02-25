@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="navbar">
+        <nav class="navbar">
             <div class="logo">
                 <a href="./personalinformation.html"><img src="../images/logo home-Photoroom.png" alt="dorymy"></a>
             </div>
@@ -25,9 +25,9 @@
                 <a href="#"><button><i class='bx bxs-user-circle'></i></button></a>
                 <a href="../login/login.html"><button style="border-radius: 10px; background: #20B2AA;">ชื่อ:xxxxxx xxxxxxx</button></a>
             </div>
-        </div>
+        </nav>
     </header>
-    <div class="main">
+    <main class="main">
         <div class="container">
             <div class="left">
                 <div class="left-grid">
@@ -55,52 +55,64 @@
                         <div class="main-un-right">
                             <div class="main2">
                                 <div class="main-name">ชื่อหอพัก</div>
-                                <div class="main-sub" id="dormName"></div>
+                                <input type="text" placeholder="ระบุชื่อหอพัก" id="doom" maxlength="20" readonly>
                             </div>
-                            <div class="edit" onclick="toggleEdit('dormName')">แก้ไข</div>
+                            <div class="edit" onclick="toggleEdit('doom')">แก้ไข</div>
                         </div>
                     </div>
                     <div class="main-grid">
                         <div class="main-right">
                             <div class="main2">
                                 <div class="main-name">เวลาที่ผู้เช่าสามารถเช็คอิน</div>
-                                <div class="main-sub" id="checkInTime"></div>
+                                <div class="group-container">
+                                    <div class="input-group" id="time">
+                                        จาก<input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">:
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">ถึง
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">:
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                                <div class="main-subname">สามารถเช็คอินได้ 24 ชั่วโมง<i class='bx bxs-toggle-left' id="toggle-hour"></i></div>
                             </div>
                             <div class="edit" onclick="toggleEdit('checkInTime')">แก้ไข</div>
                         </div>
                         <div class="main-right">
                             <div class="main2">
                                 <div class="main-name">เบอร์โทรศัพท์</div>
-                                <div class="main-sub" id="phoneNumber"></div>
+                                <input type="text" placeholder="ระบุเบอร์โทร" id="phone" maxlength="10" oninput="validatePhone()"  readonly>
                             </div>
-                            <div class="edit" onclick="toggleEdit('phoneNumber')">แก้ไข</div>
+                            <div class="edit" onclick="toggleEdit('phone')">แก้ไข</div>
                         </div>
                         <div class="main-right">
                             <div class="main2">
                                 <div class="main-name">การแจ้งเตือนก่อนที่ผู้เช่าจะเข้ามาพัก</div>
-                                <div class="main-sub" id="notificationDays"></div>
+                                <input type="number" placeholder="วัน" min="0" id="notification" readonly>
                             </div>
-                            <div class="edit" onclick="toggleEdit('notificationDays')">แก้ไข</div>
+                            <div class="edit" onclick="toggleEdit('notification')">แก้ไข</div>
                         </div>
                         <div class="main-right">
                             <div class="main2">
                                 <div class="main-name">ผู้เช่าสามารถจองล่วงหน้าได้นานเท่าใด</div>
-                                <div class="main-sub" id="bookingMonths"></div>
+                                <input type="number" placeholder="เดือน" min="0" id="booking" readonly>
                             </div>
-                            <div class="edit" onclick="toggleEdit('bookingMonths')">แก้ไข</div>
+                            <div class="edit" onclick="toggleEdit('booking')">แก้ไข</div>
                         </div>
                         <div class="main-right" style="margin-bottom: 20px;">
                             <div class="main2">
                                 <div class="main-name">ระยะเวลาของสัญญา</div>
-                                <div class="main-sub" id="contractDuration"></div>
+                                <input type="number" placeholder="เดือน" min="0" id="contract" readonly>
                             </div>
-                            <div class="edit" onclick="toggleEdit('contractDuration')">แก้ไข</div>
+                            <div class="edit" onclick="toggleEdit('contract')">แก้ไข</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 <script src="./personalinformation.js"></script>
 </html>

@@ -207,7 +207,6 @@ button:active {
     color: #14AE5C;
 }
 
-/* Input Styles */
 input {
     width: 240px;
     height: 40px;
@@ -217,15 +216,12 @@ input {
     margin: 15px;
 }
 
-/* Error Message Styles */
 .error-message {
     color: red;
     font-size: 14px;
     display: block;
     margin-bottom: 5px;
 }
-
-/* Button Styles */
 .button {
     margin: 40px;
     width: 250px;

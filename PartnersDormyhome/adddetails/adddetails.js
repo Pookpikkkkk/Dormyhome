@@ -42,54 +42,66 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setupInputEvents(timeInputs);
+});
+document.getElementById("doom").addEventListener("input", checkSelection);
 
     document.getElementById("nextBtn").addEventListener("click", () => {
         let doomInput = document.getElementById("doom").value.trim();
+
         localStorage.setItem("doom", doomInput);
-        window.location.href = "../personalinformation/personalinformation.html";
-    });
 
-    function validatePhone() {
-        let phoneInput = document.getElementById("phone");
-        let errorMessage = document.getElementById("phone-error");
-        let phonePattern = /^0[0-9]{9}$/;
-        if (phonePattern.test(phoneInput.value) || phoneInput.value === "") {
-            phoneInput.style.border = "1px solid #ccc";
-            errorMessage.innerText = "";
-        } else {
-            phoneInput.style.border = "2px solid red";
-            errorMessage.innerText = "กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง";
-        }
+});
+function validatePhone() {
+    let phoneInput = document.getElementById("phone");
+    let errorMessage = document.getElementById("phone-error");
+    let phonePattern = /^0[0-9]{9}$/;
+    if (phonePattern.test(phoneInput.value) || phoneInput.value === "") {
+        phoneInput.style.border = "1px solid #ccc";
+        errorMessage.innerText = "";
+    } else {
+        phoneInput.style.border = "2px solid red";
+        errorMessage.innerText = "กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง";
     }
+}
 
-    function checkSelection() {
-        let phoneInput = document.getElementById("phone").value.trim();
-        let nearbyPlaceInput = document.getElementById("nearbyPlace").value.trim();
-        let notificationInput = document.getElementById("notification").value.trim();
-        let bookingInput = document.getElementById("booking").value.trim();
-        let contractInput = document.getElementById("contract").value.trim();
-        let doomInput = document.getElementById("doom").value.trim();
-        let nextBtn = document.getElementById("nextBtn");
+function checkSelection() {
+    let phoneInput = document.getElementById("phone").value.trim();
+    let nearbyPlaceInput = document.getElementById("nearbyPlace").value.trim();
+    let notificationInput = document.getElementById("notification").value.trim();
+    let bookingInput = document.getElementById("booking").value.trim();
+    let contractInput = document.getElementById("contract").value.trim();
+    let doomInput = document.getElementById("doom").value.trim();
+    let nextBtn = document.getElementById("nextBtn");
 
-        if (phoneInput !== "" && nearbyPlaceInput !== "" && notificationInput !== "" && bookingInput !== "" && contractInput !== "" && doomInput !== "") {
-            nextBtn.disabled = false;
-        } else {
-            nextBtn.disabled = true;
-        }
+    if (phoneInput !== "" && nearbyPlaceInput !== "" && notificationInput !== "" && bookingInput !== "" && contractInput !== "" && doomInput !== "") {
+        nextBtn.classList.add("active");
+        nextBtn.removeAttribute("disabled");
+    } else {
+        nextBtn.classList.remove("active");
+        nextBtn.setAttribute("disabled", true);
     }
+}
 
-    document.querySelectorAll('input').forEach(input => {
-        input.addEventListener("input", checkSelection);
-    });
+document.querySelectorAll('input').forEach(input => {
+    input.addEventListener("input", checkSelection);
+});
+document.getElementById("nextBtn").addEventListener("click", () => {
+    let dormName = document.getElementById("doom").value.trim();
+    let roomCount = document.getElementById("room").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let nearbyPlace = document.getElementById("nearbyPlace").value.trim();
+    let notification = document.getElementById("notification").value.trim();
+    let booking = document.getElementById("booking").value.trim();
+    let contract = document.getElementById("contract").value.trim();
 
-    const inputs = document.querySelectorAll("input");
+    let timeInputs = document.querySelectorAll("#time input");
+    let checkInTime = Array.from(timeInputs).map(input => input.value).join('');
 
-    inputs.forEach(input => {
-        input.addEventListener("input", () => {
-            localStorage.setItem(input.id, input.value); 
-        });
-        if (localStorage.getItem(input.id)) {
-            input.value = localStorage.getItem(input.id);
-        }
-    });
+    let dormData = {
+        dormName, roomCount, phone, nearbyPlace, notification, booking, contract, checkInTime
+    };
+
+    localStorage.setItem("dormData", JSON.stringify(dormData));
+
+    window.location.href = "personalinformation.html"; // ไปยังหน้าถัดไป
 });
