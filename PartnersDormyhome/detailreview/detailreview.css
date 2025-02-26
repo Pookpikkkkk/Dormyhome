@@ -168,144 +168,49 @@ button:active {
     display: flex;
     align-items: center;
 }
-.title{
-    font-size: 14px;
-    width: 200px;
-    margin: 35px 0 0 0;
-}
-.review-card {
-    background: #ffffff;
+.mainbox{
     width: 95%;
-    height: 200px;
-    margin: 15px auto;
-    border-radius: 5px;
-    color: rgb(0, 0, 0);
+    height: 70%;
+    border-radius: 10px;
+    background: #ffffff;
+    margin: 0 auto 0;
     display: flex;
 }
-.review-header {
-    display: grid;
-    flex-direction: column;
-    margin: auto 50px;
-    gap: 10px;
+.mainbox-top{
+    display: flex;
     text-align: left;
-    border-right: 1px solid #757575;
-    padding-right: 0.3rem; 
-    height: 100%;
+    padding: 20px 0 10px 30px;
 }
-.score {
-    font-size: 36px;
-    color: #007AFF;
-    text-align: center;
-}
-.status {
-    font-size: 18px;
 
+.mainbox-left{
+    width: 50%;
 }
-.review-count {
-    font-size: 14px;
-    color: #63A2E7;
-    margin: 0 0 35px 0;
-}
-.bx-check-circle{
-    color: green;
-}
-.review-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-.review-item {
-    width: 48%;
-    display: flex;
+.main-gridright{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 0.2fr);
     align-items: flex-start;
-    flex-direction: column;
-    margin-bottom: 10px;
+    text-align: left;
+    margin: 0 0 0 50px;
 }
-
-.progress-container {
+.main-itemright img{
+    width: 160px;
+    height: 123px;
+    border-radius: 10px;
+}
+.mainbox-right{
     width: 70%;
-    height: 8px;
-    background: #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
 }
-
-.progress-bar {
-    height: 100%;
-    background: #0DAA3F;
-    border-radius: 5px;
-}
-.subtitle{
-    display: flex;
-    align-items: center;
-    width: 230px;
-    justify-content: space-between;
-}
-.review-item p {
-    font-size: 14px;
-    margin: 0;
-    margin-top: 8px;
-}
-.review-item .score {
-    font-size: 16px;
-    font-weight: bold;
-    color: #0DAA3F;
-}
-.peoploreview{
-    background: #ffffff;
-    width: 95%;
-    height: 200px;
+.mainbox-right-title{
+    font-size: 35px;
     margin: 15px auto;
-    border-radius: 5px;
-    color: rgb(0, 0, 0);
-    display: flex;
 }
-.maincard{
-    border-right: 2px solid #757575;
-    padding-right: 0.3rem;
-    display: grid;
-    flex-direction: column;
-    margin: auto 30px;
-    gap: 10px;
-    text-align: left;
-    border-right: 1px solid #757575;
-    padding-right: 0.3rem; 
-    height: 100%;
-}
-.cardtitle{
-    display: flex;
-    align-items: flex-end;
-    color: #007AFF;
-}
-.cardtitle p{
-    font-size: 36px;
-    margin: 0 0 0 0;
-}
-.cardscore{
-    align-items: center;
-}
-.cardstatus{
-    color: #757575;
-    margin: -30px 0 0 10px;
-    font-size: 14px;
-}
-.maincardright{
-    text-align: left;
-    width: 58%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 15px 0 10px;
-}
-.maincardrighttitle{
+.mainbox-right-sub{
+    width: 95%;
     text-align: center;
-    font-size: 36px;
 }
-.maincardrightsub,.maincardrightunder{
-    margin: 10px;
+.mainbox-right-un{
+    margin: 11% 0 0 50%;
     font-size: 16px;
-    text-align: left;
     color: #757575;
 }

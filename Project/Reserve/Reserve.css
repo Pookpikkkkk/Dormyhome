@@ -137,7 +137,7 @@ nav .logo img {
     font-size: 16px;
     text-decoration: none;
     color: #fff;
-    background-color: #20c997;
+    background-color: #20B2AA;
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
@@ -212,9 +212,9 @@ nav .logo img {
 .col-foot a {
     width: 120px;
     height: 40px;
-    background-color: #20c997;
+    background-color: #20B2AA;
     border-radius: 30px;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     display: flex;
     align-items: center;

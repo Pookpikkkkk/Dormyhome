@@ -1,0 +1,166 @@
+/*boby*/
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FADEC8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 140px;
+    height: auto;
+}
+a {
+    color: 
+    rgb(0, 0, 0);
+    text-decoration: none;
+  }
+a:hover{
+    color: #007aff;
+}
+.menu-buttons {
+    display: flex;
+    gap: 120px;
+}
+.menu-buttons button {
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+}
+.icon-buttons {
+    display: flex;
+    gap: 10px;
+}
+.icon-buttons button {
+    background: none;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+.bxs-user-circle{
+    background: none;
+    color: black;
+    font-size: 55px;
+}
+#account-btn{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+button:hover {
+    transform: scale(1.05); 
+    transition: all 0.3s ease-in-out; 
+}
+button:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+}
+/*baby*/
+.main{
+    width: 80%;
+    margin-top: 2%;
+    height: 100vh;
+}
+.bx-bell{
+    font-size: 26px;
+}
+.title{
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.nofread,.delete{
+    text-align: end;
+    color: #007AFF;
+    text-decoration: underline;
+}
+.delete{
+    text-align: end;
+}
+.box-grid{
+    display: grid;
+}
+.main-box{
+    background: #ffffff;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+.main-box-icon{
+    font-size: 55px;
+    display: flex;
+}
+.main-box-icon div{
+    color: #009951;
+    font-size: 16px;
+}
+.main-box-sub{
+    margin: auto 50px;
+}
+.sub{
+    margin: 0 0 20px 0;
+}
+.date{
+    font-size: 14px;
+}
+.main-box-bin{
+    display: flex;
+    margin: auto 20px auto auto;
+    flex-direction: column;
+    align-items: center;
+}
+.bx-calendar-alt{
+    font-size: 25px;
+    color: #757575;
+}
+.bx-trash{
+    color: #757575;
+    font-size: 28px;
+}
+.bx-trash:hover{
+    color: red;
+}
+
