@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สร้างรหัสใหม่</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../picture/logoh.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function validateInput(input, errorMessage, validationFn) {
+                let errorSpan = input.parentElement.querySelector(".error-message");
+                if (!errorSpan) {
+                    errorSpan = document.createElement("span");
+                    errorSpan.classList.add("error-message", "text-red-500", "text-sm", "absolute", "top-full", "left-0", "mt-1");
+                    input.parentElement.appendChild(errorSpan);
+                }
+
+                const valid = validationFn(input.value.trim());
+                errorSpan.textContent = valid ? "" : errorMessage;
+                toggleSuccessIcon(input, valid);
+            }
+
+            function toggleSuccessIcon(input, valid) {
+                let successIcon = input.parentElement.querySelector(".success-icon");
+                if (!successIcon) {
+                    successIcon = document.createElement("div");
+                    successIcon.classList.add("success-icon", "absolute", "right-11", "top-1/2", "-translate-y-1/2", "w-6", "h-6", "rounded-full", "flex", "items-center", "justify-center", "text-white", "font-bold");
+                    input.parentElement.appendChild(successIcon);
+                }
+                successIcon.style.backgroundColor = valid ? "green" : "transparent";
+                successIcon.style.color = "#ffffff !important";
+                successIcon.style.fontSize = "15px";
+                successIcon.innerHTML = valid ? "✔" : "";
+            }
+
+            document.querySelector("input[type='email']").addEventListener("input", function () {
+                validateInput(this, "กรุณากรอกอีเมลให้ถูกต้อง", value => value.includes("@"));
+            });
+
+            document.getElementById("password").addEventListener("input", function () {
+                validateInput(this, "รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษรและมีตัวเลข", value => /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(value));
+            });
+
+            document.getElementById("confirm-password").addEventListener("input", function () {
+                validateInput(this, "รหัสผ่านไม่ตรงกัน", value => value === document.getElementById("password").value);
+            });
+        });
+    </script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-cover bg-center" style="background-image: url('/picture/bg3.jpg');">
+    <div class="absolute top-4 left-2 mt-[-1px] ml-[2px]">
+        <img src="../picture/logo1.png" alt="Dormybook Logo" class="w-[270px] h-[65px]">
+    </div>
+
+    <div class="w-[1104px] h-[700px] mt-[50px] bg-[#f6ddc8] bg-opacity-90 p-8 rounded-xl shadow-lg text-center">
+        <h2 class="text-4xl font-bold mb-[60px]">สร้างรหัสใหม่</h2>
+
+        <div class="text-left relative">
+            <label class="block text-xl font-semibold">Email</label>
+            <div class="relative">
+                <input type="email" placeholder="Enter email" class="w-[1004px] h-[76px] px-4 pr-12 py-3 text-[14px] mt-2 border rounded-xl shadow-inner focus:outline-none">
+            </div>
+        </div>
+
+        <div class="mt-4 text-left relative">
+            <label class="block text-xl font-semibold">Password</label>
+            <div class="relative">
+                <input id="password" type="password" placeholder="Enter Password" class="w-[1004px] h-[76px] px-4 pr-12 py-3 text-[14px] mt-2 border rounded-xl shadow-inner focus:outline-none">
+            </div>
+        </div>
+
+        <div class="mt-4 text-left relative">
+            <label class="block text-xl font-semibold">Confirm password</label>
+            <div class="relative">
+                <input id="confirm-password" type="password" placeholder="Enter Confirm password" class="w-[1004px] h-[76px] px-4 pr-12 py-3 text-[14px] mt-2 border rounded-xl shadow-inner focus:outline-none">
+            </div>
+        </div>
+
+        <button class="w-[425px] h-[70px] bg-teal-500 hover:bg-teal-600 text-white text-2xl py-3 rounded-full mt-[60px]">
+            สร้างรหัสใหม่
+        </button>
+    </div>
+    <div class="absolute inset-0 bg-white bg-opacity-30 backdrop-blur-sm -z-10"></div>
+</body>
+</html>

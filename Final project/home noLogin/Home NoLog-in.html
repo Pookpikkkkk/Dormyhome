@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dormybook</title>
+    <link rel="icon" href="/picture/logoh.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
+</head>
+<body class="bg-cover bg-center bg-scroll backdrop-blur-sm w-full h-full" style="background-image: url(../picture/bg1.jpg);">
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center w-full h-[143px] relative overflow-visible">
+        <img src="../picture/logo1.png" class=" w-[360px] h-[88px]">
+        <div class="relative">
+            <a href="#" class="bg-center mr-12 text-black text-2xl">หน้าหลัก</a>
+            <button id="dropdownButton" class="bg-white py-2 text-2xl relative">
+                ประเภทของหอพัก <i class="fa-solid fa-chevron-right text-black"></i>
+            </button>
+            <div id="dropdownMenu" 
+                class="absolute left-[135px] mt-2 w-48 bg-white shadow-md rounded hidden z-50">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">หอหญิง</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">หอชาย</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">หอรวม</a>
+            </div>
+            <button class="bg-yellow-700  text-white text-2xl rounded-md p-1 px-3 ml-12 ">ลงประกาศหอพัก</button>
+        </div>
+        <div class="flex items-center gap-5 ">
+            <div class="w-9 h-9 bg-yellow-800 rounded-full flex items-center justify-center">
+                <i class="fa-regular fa-bell text-white text-2xl"></i>
+            </div>
+            <div class="w-9 h-9 bg-yellow-800 rounded-full flex items-center justify-center">
+                <i class="fa-regular fa-heart text-white text-2xl"></i>
+            </div>
+            <i class="fa-regular fa-user-circle text- text-4xl"></i>
+            <button class="bg-teal-500 text-white text-xl px-12 py-2 rounded">Log-in</button>
+        </div>
+    </nav>
+
+    <div class="container relative mx-auto mt-6 p-6 bg-white shadow-md rounded flex flex-col items-center w-[1140px] h-[355px]">
+        <div class="w-[933px] h-[107px] mb-4 relative flex items-center">
+            <i class="fas fa-search absolute left-3 text-black text-2xl"></i>
+            <input type="text" placeholder="ใส่จุดหมายปลายทางหรือชื่อหอพัก" class="w-full h-full p-3 pl-10 border rounded">
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+            <div class=" w-[290px] h-[107px] flex items-center space-x-2 border p-3 rounded">
+                <input type="date" class="w-full outline-none">
+            </div>
+            <div class="relative flex flex-col border p-3 rounded w-full">
+                <div class="flex items-center mt-4 space-x-4">
+                    <i class="fas fa-user text-gray-500 mt-4"></i>
+                    <button id="toggleDropdown" class="w-full text-left">ผู้ใหญ่ <span id="adultCountDisplay">1</span> คน</button>
+                </div>
+                <p class="text-gray-500 text-sm ml-8"><span id="roomCountDisplay">1</span> ห้อง</p>
+                <div id="dropdownCounter" class="absolute top-full left-0 mt-2 w-full bg-white shadow-md rounded p-3 hidden">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold">ผู้ใหญ่</span>
+                        <div class="flex items-center space-x-2">
+                            <button class="bg-white px-2 py-1 rounded" onclick="decreaseAdult()">&lt;</button>
+                            <span id="adultCount">1</span>
+                            <button class="bg-white px-2 py-1 rounded" onclick="increaseAdult()">&gt;</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold">ห้อง</span>
+                        <div class="flex items-center space-x-2">
+                            <button class="bg-white px-2 py-1 rounded" onclick="decreaseRoom()">&lt;</button>
+                            <span id="roomCount">1</span>
+                            <button class="bg-white px-2 py-1 rounded" onclick="increaseRoom()">&gt;</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>            
+        </div>
+        <div class="items-center mt-4">
+            <button class="bg-[#20B2AA] text-white text-4xl px-6 w-[466px] h-[92px] rounded-xl">
+                ค้นหา
+            </button>
+        </div>        
+    </div>
+    
+    <div class="container mx-auto mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 w-[1344px] h-auto rounded-2xl">
+        <div class="bg-white shadow-md rounded overflow-hidden hover:scale-110 transition transform duration-300">
+            <img src="../picture/หอ1.jpg" alt="หอพัก" class="w-full h-[200px] object-cover">
+            <div class="p-4">
+                <h2 class="text-lg font-semibold">ชื่อหอพัก: xxxxxx</h2>
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-location-dot text-gray-500"></i>
+                    <p class="text-black">ตำแหน่งที่ตั้ง</p>
+                </div>
+                <p class="text-yellow-500">⭐⭐⭐⭐⭐ xxx คะแนนรีวิว (xxx คนรีวิว)</p>
+                <p class="font-bold text-lg">ราคา: xxxx THB/เดือน</p>
+                <button class="bg-teal-500 text-white px-4 py-2 rounded mt-2">ดูห้องว่าง</button>
+            </div>
+        </div>
+    
+        <div class="bg-white shadow-md rounded overflow-hidden hover:scale-105 transition transform duration-300">
+            <img src="../picture/หอ2.jpg" alt="หอพัก" class="w-full h-[200px] object-cover">
+            <div class="p-4">
+                <h2 class="text-lg font-semibold">ชื่อหอพัก: xxxxx</h2>
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-location-dot text-gray-500"></i>
+                    <p class="text-black">ตำแหน่งที่ตั้ง</p>
+                </div>
+                <p class="text-yellow-500">⭐⭐⭐⭐⭐ xxx คะแนนรีวิว (xxx คนรีวิว)</p>
+                <p class="font-bold text-lg">ราคา: xxxx THB/เดือน</p>
+                <button class="bg-teal-500 text-white px-4 py-2 rounded mt-2">ดูห้องว่าง</button>
+            </div>
+        </div>
+    
+        <div class="bg-white shadow-md rounded overflow-hidden hover:scale-105 transition transform duration-300">
+            <img src="../picture/หอ3.jpg" alt="หอพัก" class="w-full h-[200px] object-cover">
+            <div class="p-4">
+                <h2 class="text-lg font-semibold">ชื่อหอพัก: xxxxx</h2>
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-location-dot text-gray-500"></i>
+                    <p class="text-black">ตำแหน่งที่ตั้ง</p>
+                </div>
+                <p class="text-yellow-500">⭐⭐⭐⭐⭐ xxx คะแนนรีวิว (xxx คนรีวิว)</p>
+                <p class="font-bold text-lg">ราคา: xxxx THB/เดือน</p>
+                <button class="bg-teal-500 text-white px-4 py-2 rounded mt-2">ดูห้องว่าง</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const toggleDropdown = document.getElementById('toggleDropdown');
+    const dropdownCounter = document.getElementById('dropdownCounter');
+
+    const adultCountDisplay = document.getElementById('adultCountDisplay');
+    const adultCountElement = document.getElementById('adultCount');
+
+    const roomCountDisplay = document.getElementById('roomCountDisplay');
+    const roomCountElement = document.getElementById('roomCount');
+
+    function updateText() {
+        adultCountDisplay.textContent = adultCountElement.textContent;
+        roomCountDisplay.textContent = roomCountElement.textContent;
+    }
+
+    toggleDropdown.addEventListener('click', function(event) {
+        dropdownCounter.classList.toggle('hidden');
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!dropdownCounter.contains(event.target) && !toggleDropdown.contains(event.target)) {
+            dropdownCounter.classList.add('hidden');
+        }
+    });
+
+    window.increaseAdult = function() {
+        let count = parseInt(adultCountElement.textContent);
+        adultCountElement.textContent = count + 1;
+        updateText();
+    };
+
+    window.decreaseAdult = function() {
+        let count = parseInt(adultCountElement.textContent);
+        if (count > 1) {
+            adultCountElement.textContent = count - 1;
+            updateText();
+        }
+    };
+
+    window.increaseRoom = function() {
+        let count = parseInt(roomCountElement.textContent);
+        roomCountElement.textContent = count + 1;
+        updateText();
+    };
+
+    window.decreaseRoom = function() {
+        let count = parseInt(roomCountElement.textContent);
+        if (count > 1) {
+            roomCountElement.textContent = count - 1;
+            updateText();
+        }
+    };
+});
+    </script>
+</body>
+</html>

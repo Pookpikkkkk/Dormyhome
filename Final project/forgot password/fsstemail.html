@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="../picture/logoh.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-cover bg-center overflow-hidden" style="background-image: url('../picture/bg3.jpg');">
+  <div class="absolute top-4 left-2 mt-[-1px] ml-[2px]">
+    <img src="../picture/logo1.png" class="w-[270px] h-[65px]">
+  </div>
+
+  <h1 class="text-[50px] font-bold text-black mt-5 mb-6" style="font-family: 'Inknut Antiqua', serif;">Forgot password</h1>
+  
+  
+  <div class="w-full max-w-[1004px] p-6">
+    <label class="text-[25px] font-semibold text-black" style="font-family: 'Inknut Antiqua', serif;">Email</label>
+    <input type="email" placeholder="กรอกอีเมลที่ลงทะเบียนไว้" class="w-[1004px] h-[76px] p-6 rounded-3xl bg-white text-lg  mt-2 shadow-inner shadow-gray-300">
+  </div>
+  
+  <div class="flex gap-6 mt-6">
+    <a href="../forgot password/forgot password.html" class="w-[217px] h-[69px] px-6 py-3 bg-white rounded-xl text-2xl flex items-center justify-center">
+        ยกเลิก
+    </a>
+    <a href="../forgot password/forgot password otp/otp.html" class="w-[217px] h-[69px] px-6 py-3 bg-teal-500 text-white rounded-xl text-xl flex items-center justify-center">
+        รีเซ็ตรหัสผ่าน
+    </a>
+  </div>
+  <div class="absolute inset-0 bg-white bg-opacity-50 backdrop-blur-sm -z-10"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const emailInput = document.querySelector("input[type='email']");
+      const resetButton = document.querySelector("a[href='/forgot password otp/otp.html']");
+      
+      const errorMessage = document.createElement("p");
+      errorMessage.textContent = "กรุณากรอกอีเมลที่ลงทะเบียนไว้";
+      errorMessage.style.color = "red";
+      errorMessage.style.marginTop = "5px";
+      errorMessage.style.display = "none";
+      emailInput.insertAdjacentElement("afterend", errorMessage);
+      
+      resetButton.addEventListener("click", function (event) {
+      const emailValue = emailInput.value.trim();
+      
+      if (!emailValue) {
+        event.preventDefault();
+        errorMessage.textContent = "กรุณากรอกอีเมลที่ลงทะเบียนไว้";
+        errorMessage.style.display = "block";
+      } else if (!emailValue.includes("@")) {
+        event.preventDefault();
+        errorMessage.textContent = "อีเมลของคุณไม่ถูกต้อง กรุณากรอกอีเมลให้ถูกต้อง";
+        errorMessage.style.display = "block";
+      } else {
+        errorMessage.style.display = "none";
+      }
+    });
+  });
+  </script>
+</body>
+</html>
