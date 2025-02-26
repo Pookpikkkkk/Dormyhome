@@ -33,9 +33,17 @@
         <div class="main-grid">
             <div class="main-item">
                 <div class="main-name">ชื่อหอพัก</div>
-                <input type="text" placeholder="ระบุชื่อหอพัก" id="doom" maxlength="20">
-                <div class="main-name">จำนวนห้องพัก</div>
-                <input type="number" placeholder="ระบุจำนวนห้องพัก" id="room" min="0">
+                <div class="input-container">
+                    <input type="text" placeholder="ระบุชื่อหอพัก" id="doom">
+                    <small id="char-count">0/20</small>
+                </div>
+                <small id="doom-error" class="error-message"></small>
+            </div>
+            <div class="main-item">
+                    <div class="main-name">จำนวนห้องพัก</div>
+                    <input type="number" placeholder="ระบุจำนวนห้องพัก" id="room" min="0">
+            </div>
+            <div class="main-item">
                 <div class="main-name">เลือกเวลาที่ผู้เช่าสามารถเช็คอินได้</div>
                 <div class="form-group row">
                     <div class="column">จาก</div>

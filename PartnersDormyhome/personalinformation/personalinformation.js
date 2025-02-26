@@ -11,6 +11,30 @@ function loadImagesOnOtherPage() {
     }
 }
 document.addEventListener("DOMContentLoaded", () => {
+    const doomInput = document.getElementById("doom");
+    const charCount = document.getElementById("char-count");
+    const doomError = document.getElementById("doom-error");
+    doomInput.addEventListener("input", () => {
+        const inputLength = doomInput.value.length;
+        charCount.textContent = `${inputLength}/20`;
+
+        if (inputLength > 20) {
+            doomError.textContent = "ชื่อหอพักต้องไม่เกิน 20 ตัวอักษร";
+            doomError.style.color = "red";
+            doomInput.style.border = "2px solid red";
+        } else {
+            doomError.textContent = "";
+            doomInput.style.border = "1px solid #ccc";
+        }
+    });
+
+    let dormData = JSON.parse(localStorage.getItem("dormData")) || {};
+    if (dormData.doom) {
+        doomInput.value = dormData.doom;
+        charCount.textContent = `${dormData.doom.length}/20`;
+    }
+});
+document.addEventListener("DOMContentLoaded", () => {
     let dormData = JSON.parse(localStorage.getItem("dormData"));
     
     console.log("Dorm Data:", dormData);
@@ -123,7 +147,6 @@ function validatePhone() {
     phoneInput.value = phoneInput.value.replace(/\D/g, "");
 }
 
-
 function toggleEdit(id) {
     if (id === "checkInTime") {
         let timeInputs = document.querySelectorAll("#time input");
@@ -133,7 +156,7 @@ function toggleEdit(id) {
 
         timeInputs.forEach(input => {
             input.disabled = !isReadOnly;
-            input.style.border ="1px solid black";
+            input.style.border = "1px solid black";
         });
 
         toggleIcon.style.pointerEvents = isReadOnly ? "auto" : "none";
@@ -154,11 +177,25 @@ function toggleEdit(id) {
             inputField.style.border = "1px solid black";
             editButton.textContent = "บันทึก";
         } else {
+            if (id === "doom") {
+                const inputValue = inputField.value.trim();
+                if (inputValue.length > 20 || inputValue === "") {
+                    let dormData = JSON.parse(localStorage.getItem("dormData")) || {};
+                    inputField.value = dormData.doom || "";
+                    alert("ชื่อหอพักต้องไม่เกิน 20 ตัวอักษรและต้องไม่ว่างเปล่า");
+                    return;
+                }
+            }
             inputField.readOnly = true;
             inputField.style.border = "none";
             editButton.textContent = "แก้ไข";
 
             saveToLocalStorage(id, inputField.value.trim());
+            location.reload();
+        }
+        if (id === "doom") {
+            const inputLength = inputField.value.length;
+            document.getElementById("char-count").textContent = `${inputLength}/20`;
         }
     }
 }

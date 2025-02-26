@@ -215,12 +215,29 @@ input {
     border: none;
     margin: 15px;
 }
-
+.input-container {
+    position: relative;
+    width: 95%;
+}
+#doom {
+    width: 100%;
+    padding-right: 60px;
+    box-sizing: border-box;
+}
+#char-count {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #888;
+    pointer-events: none;
+}
 .error-message {
     color: red;
-    font-size: 14px;
+    font-size: 12px;
     display: block;
-    margin-bottom: 5px;
+    margin-top: 5px;
 }
 .button {
     margin: 40px;
