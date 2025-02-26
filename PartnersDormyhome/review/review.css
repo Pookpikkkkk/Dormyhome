@@ -9,7 +9,7 @@ body {
     background-attachment: fixed;
     padding-top: 100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
     flex-direction: column;
