@@ -11,40 +11,44 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
 }
 .main{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: hwb(0 100% 0% / 0.363);
 }
-.mainimg{
-    margin: 10px 0 0;
-    width: 100%;
-    display: flex;
+.icon img{
+    width: 300px;
+    margin: 20px 0 0 20px;
 }
-.mainimg img{
-    margin: 30px auto;
+.title{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
 }
 .main-grid{
     display: grid;
-    width: 30%;
+    gap: 5px;
+    width: 40%;
     margin: 0 auto;
 }
-.main-name{
-    font-size: 30px;
+.main-item{
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
-input{
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding-left: 20px;
+.main-item input{
+    height: 35px;
+    padding: 5px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    position: relative;
 }
-.next-bnt{
-    width: 600px;
-    margin: 30px auto;
+.btn{
+    margin: 20px auto;
 }
-.next-bnt button{
+.btn button{
     width: 280px;
     height: 60px;
     text-align: center;
@@ -56,42 +60,13 @@ input{
     cursor: pointer;
     transition: 0.3s;
 }
-.password-container {
-    position: relative;
-    width: 49%;
-}
-.input-wrapper {
-    position: relative;
-    width: 205%;
-}
-.input-wrapper input {
-    width: 100%;
-    height: 40px;
-    border: none;
-    padding-right: 0px; 
-}
-input#email {
-    border: none;
-}
 .bx {
     position: absolute;
-    right: 10px;
-    top: 50%;
+    right: 15px;
+    top: 74%;
     transform: translateY(-50%);
     cursor: pointer;
     font-size: 18px;
     background: none;
     border: none;
-}
-.google{
-    margin: 30px auto;
-    width: 280px;
-}
-button img{
-    width: 20px;
-}
-.error-message {
-    color: red;
-    font-size: 14px;
-    display: block;
 }
