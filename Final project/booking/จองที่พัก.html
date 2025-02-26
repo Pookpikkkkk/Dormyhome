@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dormybook</title>
+    <link rel="icon" href="../picture/logoh.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="bg-fixed bg-cover  bg-scroll w-full h-full justify-center items-center" style="background-image: url('../picture/bg1.jpg') ;">
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center w-full h-[143px] relative overflow-visible">
+        <img src="../picture/logo1.png" class=" w-[360px] h-[88px]">
+        <div class="relative">
+            <a href="#" class="bg-center mr-12 text-black text-2xl">หน้าหลัก</a>
+            <button id="dropdownButton" class="bg-white py-2 text-2xl relative">
+                ประเภทของหอพัก <i class="fa-solid fa-chevron-right text-black"></i>
+            </button>
+            <div id="dropdownMenu" 
+                class="absolute left-[135px] mt-2 w-48 bg-white shadow-md rounded hidden z-50">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">หอหญิง</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">หอชาย</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">หอรวม</a>
+            </div>
+            <button class="bg-yellow-700  text-white text-2xl rounded-md p-1 px-3 ml-12 ">ลงประกาศหอพัก</button>
+        </div>
+        <div class="flex items-center gap-5 ">
+            <div class="w-9 h-9 bg-yellow-800 rounded-full flex items-center justify-center">
+                <i class="fa-regular fa-bell text-white text-2xl"></i>
+            </div>
+            <div class="w-9 h-9 bg-yellow-800 rounded-full flex items-center justify-center">
+                <i class="fa-regular fa-heart text-white text-2xl"></i>
+            </div>
+            <i class="fa-regular fa-user-circle text- text-4xl"></i>
+            <button class="bg-teal-500 text-white text-xl px-12 py-2 rounded">ชื่อผู้ใช้: xxxxxx xxxxx</button>
+        </div>
+    </nav>
+    
+    <div class="container flex justify-center items-center mt-8 mx-auto">
+        <img src="../picture/1.jpg" class="w-[436px] h-[382px]  rounded-xl">
+        <div class="grid grid-cols-2 gap-2 ml-3 ">
+            <img src="../picture/1.jpg" class="w-[295px] h-[185px] rounded-xl">
+            <img src="../picture/2.jpg" class="w-[295px] h-[185px] rounded-xl">
+            <img src="../picture/3.jpg" class="w-[295px] h-[185px] rounded-xl">
+            <img src="../picture/4.jpg" class="w-[295px] h-[185px] rounded-xl">
+        </div>
+    </div>
+
+    <div class="ms-[140px] me-[130px]">
+        <div class="flex justify-between ">
+            <div class="w-full mt-5">
+                <div class="bg-white bg-opacity-70 w-[790px] h-[150px] rounded-t-xl p-2 border-b-[2px] border-gray-300">
+                    <div class="text-black text-[28px] font-bold ml-[40px]">ชื่อหอพัก: xxxxxxxxx</div>
+                    <div class="text-black text-lg ml-[80px]">ที่อยู่: xxxxxxxxxx xxxxxxxxxxxxxx</div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-black text-lg ml-[80px]">ระยะเวลาสัญญาเช่า: x ปี x เดือน</div>
+                        <div class="flex items-center">
+                            <div class="flex items-center space-x-2 mr-2">
+                                <div class="flex items-end mr-4">
+                                    <div class="text-black text-sm mr-2">เริ่มต้นที่</div>
+                                    <div class="text-red-600 mr-2">฿</div>
+                                    <div class="text-red-600 text-3xl">X,XXX</div>
+                                </div>
+                                <button class="bg-teal-500 text-white text-2xl px-7 py-2 rounded-full">ดูห้องพัก</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="bg-white bg-opacity-70 w-[790px] h-[220px] rounded-b-xl p-2">
+                    <div class="text-black text-xl font-bold mb-5 ml-[40px]">สิ่งอำนวยความสะดวก</div>
+                    <div class="flex flex-wrap gap-4 ml-[40px]">
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">เตียง</span></div>
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">ตู้เย็น</span></div>
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">พัดลม</span></div>
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">เก้าอี้</span></div>
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">แอร์</span></div>
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">ตู้เสื้อผ้า</span></div>
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">โต๊ะเขียนหนังสือ</span></div>
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">เครื่องทำน้ำอุ่น</span></div>
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">โต๊ะเครื่องแป้ง</span></div>
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">โต๊ะ</span></div>
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">ชั้นวางหนังสือ</span></div>
+                        <div class="flex items-center gap-1"><i class='bx bx-checkbox-checked text-green-600 text-lg'></i><span class="text-lg">Wifi</span></div>
+                    </div>
+                    <div class="text-black text-xl font-bold mt-5 ml-[40px]">ประเภทของหอพัก</div>
+                    <div class="text-black text-md mt-2 ml-[60px]">หอพักนี้เหมาะสำหรับเพศ XXX</div>
+                </div>
+                
+                <div class="bg-white bg-opacity-70 w-[790px] h-[270px] rounded-xl p-2 mt-3">
+                    <div class="text-black text-xl font-bold mt-2 ml-[40px]">สิ่งอำนวยความสะดวกส่วนกลาง</div>
+                    <div class="flex flex-col ml-[40px] mt-3 gap-3">
+                        <div class="flex items-center gap-1 text-[17px]"><i class='bx bx-checkbox-checked text-green-600 text-2xl'></i>พื้นที่ส่วนกลาง:ห้องนั่งเล่น, ห้องอ่านหนังสือ, Co-working Space</div>
+                        <div class="flex items-center gap-1 text-[17px]"><i class='bx bx-checkbox-checked text-green-600 text-2xl'></i>ฟิตเนส หรือห้องออกกำลังกาย</div>
+                        <div class="flex items-center gap-1 text-[17px]"><i class='bx bx-checkbox-checked text-green-600 text-2xl'></i>ลานจอดรถ:สำหรับรถยนต์และมอเตอร์ไซค์</div>
+                        <div class="flex items-center gap-1 text-[17px]"><i class='bx bx-checkbox-checked text-green-600 text-2xl'></i>เครื่องซักผ้าและเครื่องอบผ้า: บริการแบบหยอดเหรียญ</div>
+                        <div class="flex items-center gap-1 text-[17px]"><i class='bx bx-checkbox-checked text-green-600 text-2xl'></i>พื้นที่สวนหย่อม/สนามหญ้า</div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[417px] h-[640px] bg-white bg-opacity-70 p-2 rounded-xl mt-5">
+                <div class="justify-center">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2076.3491869861805!2d99.92713995298857!3d19.037429629306164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d8336b40585a9b%3A0x474ed878ffbd8042!2z4Lir4Lit4Lie4Lix4LiB4Lir4LiN4Li04LiH4Lin4Lix4LiZ4LiU4Liy!5e0!3m2!1sth!2sth!4v1740523247280!5m2!1sth!2sth" width="400" height="300" 
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                    <div class="px-4">
+                        <div class="flex justify-between mt-3">
+                        <div class="text-lg font-bold">คะแนนรีวิวของหอพัก</div>
+                        <a href="#"><div class="text-sm text-sky-500">อ่านรีวิวทั้งหมด</div></a>
+                    </div>
+                    <div class="text-sky-500 mt-2 ml-5">XXX คนรีวิว</div>
+                    <div class="text-lg font-bold mt-3">การเดินทางไปมหาวิทยาลัย</div>
+                    <div class="text-black mt-2 ml-5">ระยะทาง xxx กิโลเมตร</div>
+                    <div class="text-lg font-bold mt-3">สถานที่ใกล้เคียง</div>
+                    <div class="text-black mt-2 ml-5">ตลาดxxx : ระยะทาง xxx กิโลเมตร</div>
+                    <div class="text-black mt-2 ml-5">ห้างสรรพสินค้าxxx : ระยะทาง xxx กิโลเมตร</div>
+                    <div class="text-lg font-bold mt-3">เบอร์โทรหอพัก</div>
+                    <div class="text-black mt-2 ml-5">012-345-6789</div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="bg-white bg-opacity-70 w-[790px] h-[240px] rounded-xl p-2 mt-3">
+            <div class="text-black text-xl font-bold mt-2 ml-[40px]">การรักษาความปลอดภัยภายในหอพัก</div>
+            <div class="flex flex-col ml-[40px] mt-3 gap-3">
+                <div class="flex items-center gap-1 text-[17px]"><i class='bx bx-checkbox-checked text-green-600 text-2xl'></i>กล้องวงจรปิด (CCTV)</div>
+                <div class="flex items-center gap-1 text-[17px]"><i class='bx bx-checkbox-checked text-green-600 text-2xl'></i>คีย์การ์ดเข้า-ออก หรือระบบล็อคดิจิทัล</div>
+                <div class="flex items-center gap-1 text-[17px]"><i class='bx bx-checkbox-checked text-green-600 text-2xl'></i>ลานจอดรถ:สำหรับรถยนต์และมอเตอร์ไซค์</div>
+                <div class="flex items-center gap-1 text-[17px]"><i class='bx bx-checkbox-checked text-green-600 text-2xl'></i>เจ้าหน้าที่รักษาความปลอดภัย 24 ชั่วโมง</div>
+            </div>
+        </div>
+
+        <div class="bg-white bg-opacity-70 w-[790px] h-[1010px] rounded-xl p-2 mt-3">
+            <div class="text-black text-xl font-bold mt-2 ml-[40px]">การรักษาความปลอดภัยภายในหอพัก</div>
+            <div class="text-black text-lg font-bold mt-3 ml-[60px]">กฎระเบียบเกี่ยวกับการเข้า-ออก</div>
+            <div class="text-black ml-[70px]">
+                <li>เวลาเข้า-ออกหอพัก: เช่น 06.00 น. - 22.00 น.</li>
+                <li>ผู้พักอาศัยต้องใช้ คีย์การ์ดหรือรหัสผ่าน ในการเข้า-ออก</li>
+                <li>ห้ามบุคคลภายนอกเข้า-ออกโดยไม่ได้รับอนุญาต</li> 
+                <li>ต้องแจ้งผู้ดูแลหอพักล่วงหน้า กรณีมีผู้มาติดต่อหรือค้างคืน</li> 
+            </div>
+
+            <div class="text-black text-lg font-bold mt-3 ml-[60px]">การรักษาความสงบเรียบร้อย</div>
+            <div class="text-black ml-[70px]">
+                <li>ห้ามส่งเสียงดังรบกวนผู้อื่นในช่วงเวลา 21.00 น. - 07.00 น.</li>
+                <li>ห้ามจัดกิจกรรมที่ก่อให้เกิดความรำคาญ เช่น การสังสรรค์ในพื้นที่ส่วนกลางหรือในห้องพัก</li>
+                <li>ห้ามทะเลาะวิวาทหรือก่อเหตุการณ์ความไม่สงบในพื้นที่หอพัก</li>
+            </div>
+
+            <div class="text-black text-lg font-bold mt-3 ml-[60px]">การดูแลรักษาความสะอาด</div>
+            <div class="text-black ml-[70px]">
+                <li>ผู้พักอาศัยต้อง ดูแลความสะอาดในห้องพัก และพื้นที่ส่วนกลาง</li>
+                <li>ห้ามทิ้งขยะนอกจุดที่กำหนด</li>
+                <li>ห้ามทำอาหารในห้องพัก หากไม่มีการติดตั้งระบบดูดควันหรือพื้นที่ครัวในตัว</li>
+                <li>ห้ามตากผ้าหรือวางสิ่งของที่อาจทำให้ห้องพักหรือระเบียงดูไม่เป็นระเบียบ</li>
+            </div>
+
+            <div class="text-black text-lg font-bold mt-3 ml-[60px]">ความปลอดภัย</div>
+            <div class="text-black ml-[70px]">
+                <li>ห้ามสูบบุหรี่, ดื่มเครื่องดื่มแอลกอฮอล์, หรือใช้สารเสพติดในพื้นที่หอพัก</li>
+                <li>ห้ามนำสิ่งของอันตราย เช่น อาวุธ, วัตถุไวไฟ หรือสารเคมี เข้ามาในพื้นที่หอพัก</li>
+                <li>ต้องปิดไฟ, เครื่องใช้ไฟฟ้า และล็อคประตูเมื่อออกจากห้องพัก</li>
+                <li>ต้องแจ้งเจ้าหน้าที่ทันทีเมื่อพบเหตุการณ์ผิดปกติ เช่น ไฟฟ้าลัดวงจร, ของสูญหาย หรือบุคคลน่าสงสัย</li>
+            </div>
+
+            <div class="text-black text-lg font-bold mt-3 ml-[60px]">การใช้งานสิ่งอำนวยความสะดวก</div>
+            <div class="text-black ml-[70px]">
+                <li>ใช้เครื่องใช้ไฟฟ้าและสิ่งอำนวยความสะดวกส่วนกลางอย่าง ระมัดระวัง</li>
+                <li>ห้ามขโมยหรือยืมของใช้ส่วนตัวของผู้อื่นโดยไม่ได้รับอนุญาต</li>
+                <li>ห้ามเคลื่อนย้ายหรือดัดแปลงทรัพย์สินของหอพัก</li>
+            </div>
+
+            <div class="text-black text-lg font-bold mt-3 ml-[60px]">การรับผิดชอบค่าใช้จ่าย</div>
+            <div class="text-black ml-[70px]">
+                <li>ผู้พักอาศัยต้องชำระค่าเช่าและค่าสาธารณูปโภคตรงเวลา</li>
+                <li>หากเกิดความเสียหายต่อทรัพย์สินของหอพัก ผู้พักอาศัยต้อง รับผิดชอบค่าซ่อมแซมหรือเปลี่ยน</li>
+            </div>
+
+            <div class="text-black text-lg font-bold mt-3 ml-[60px]">การย้ายออก</div>
+            <div class="text-black ml-[70px]">
+                <li>ต้องแจ้งผู้ดูแลหอพักล่วงหน้า อย่างน้อย 30 วัน ก่อนย้ายออก</li>
+                <li>ต้องคืนสภาพห้องพักให้อยู่ในสภาพเดิม</li>
+                <li>ต้องส่งคืนกุญแจ, คีย์การ์ด หรืออุปกรณ์ต่างๆ ที่ได้รับจากหอพัก</li> 
+            </div>
+
+            <div class="text-black text-lg font-bold mt-3 ml-[60px]">การลงโทษและการบังคับใช้กฎ</div>
+            <div class="text-black ml-[70px]">
+                <li>ผู้ที่ฝ่าฝืนกฎระเบียบจะได้รับ การเตือนครั้งแรกเป็นลายลักษณ์อักษร</li>
+                <li>หากฝ่าฝืนซ้ำหรือทำผิดร้ายแรง เช่น ก่อความวุ่นวายหรือสร้างความเสียหาย จะถูก ยกเลิกสัญญาการพักอาศัยทันที</li>
+            </div>
+        </div>
+    <div class="fixed inset-0 bg-orange-100 bg-opacity-50 backdrop-blur-sm -z-10"></div>
+</body>
+</html>
