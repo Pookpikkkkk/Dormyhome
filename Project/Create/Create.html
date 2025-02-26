@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="icon" type="image/png" href="bandner.png"> 
+    <linK rel="stylesheet" href="Create.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/Create/image/logo.png" alt="Logo">
+        </div>
+    </header>
+    
+    <div class="container">
+        <h2>Create Account</h2>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+        
+                <label for="email"><b>Email</b></label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter Phone Number" pattern="[0-9]{10}" title="Enter a 10-digit phone number">
+        
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+           
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+            
+                <button type="submit" class="button">Create Account</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
