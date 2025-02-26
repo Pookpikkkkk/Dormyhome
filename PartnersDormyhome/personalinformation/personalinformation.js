@@ -135,16 +135,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function saveToLocalStorage(id, value) {
-    let dormData = JSON.parse(localStorage.getItem("dormData")) || {};
-    dormData[id] = value;
-    localStorage.setItem("dormData", JSON.stringify(dormData));
-    console.log("บันทึกค่า:", dormData);
-}
-
 function validatePhone() {
-    const phoneInput = document.getElementById("phone");
-    phoneInput.value = phoneInput.value.replace(/\D/g, "");
+    let phoneInput = document.getElementById("phone");
+    let errorMessage = document.getElementById("phone-error");
+    let phonePattern = /^0[0-9]{9}$/;
+    if (phonePattern.test(phoneInput.value) || phoneInput.value === "") {
+        phoneInput.style.border = "1px solid #ccc";
+        errorMessage.innerText = "";
+    } else {
+        phoneInput.style.border = "2px solid red";
+        errorMessage.innerText = "กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง";
+    }
 }
 
 function toggleEdit(id) {

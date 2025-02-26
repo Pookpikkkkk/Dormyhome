@@ -1,0 +1,135 @@
+body {
+    background-image:linear-gradient(rgba(245, 212, 212, 0.5), rgba(243, 226, 226, 0.5)), 
+    url('/Login/image/dormitory6.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100vh; 
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+
+}
+.container {
+    display: block;
+    margin: 0 auto;
+    padding: 0px;
+    border-radius: 10px;
+    width: 50%;
+    
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.input-group label {
+    display: block;
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 90%;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.link {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center ;
+    margin-top: 2rem;
+    gap: 30px;
+    
+}
+
+.link a {
+    text-decoration: none;
+}
+
+.login {
+    width: 20%;
+    height: 40px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex; /* ใช้ flexbox */
+    align-items: center; /* จัดให้ text อยู่ตรงกลางแนวตั้ง */
+    justify-content: center; /* จัดให้ text อยู่ตรงกลางแนวนอน */
+    font-size: 16px; /* ปรับขนาดตัวอักษร */
+    
+}
+
+.login a {
+    color: #000;
+}
+
+
+.create {
+    width: 20%;
+    height: 40px;
+    text-align: center;
+    background-color: #20B2AA;
+    border-radius: 50px;
+    display: flex; /* ใช้ flexbox */
+    align-items: center; /* จัดให้ text อยู่ตรงกลางแนวตั้ง */
+    justify-content: center; /* จัดให้ text อยู่ตรงกลางแนวนอน */
+    font-size: 16px; /* ปรับขนาดตัวอักษร */
+    
+}
+
+
+.create a {
+    color: #fff;
+}
+
+
+
+.google-signin-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    
+}
+
+.google-signin-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+    
+}
+
+.google-signin-button img {
+    width: 18px; /* ปรับขนาดให้เล็กลง */
+    height: 18px;
+    margin-right: 10px; /* เว้นระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+
+
+.create-account {
+    margin-top: 10px;
+}
