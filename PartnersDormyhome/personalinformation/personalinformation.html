@@ -46,7 +46,7 @@
             </div>
             <div class="right">
                 <div class="main-title">
-                    <i class='bx bx-left-arrow-alt' style="color: #000000; margin-left: 10px; margin-right: 30%;"></i>ข้อมูลส่วนตัวหอพัก<span id="dormTitle">xxxxx</span>
+                    <i class='bx bx-left-arrow-alt' style="color: #000000; margin-left: 10px; margin-right: 30%;"></i>ข้อมูลส่วนตัวหอพัก<span id="dormTitle"></span>
                 </div>
                 <hr>
                 <div class="main-un">
@@ -68,14 +68,18 @@
                                 <div class="main-name">เวลาที่ผู้เช่าสามารถเช็คอิน</div>
                                 <div class="group-container">
                                     <div class="input-group" id="time">
-                                        จาก<input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
-                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">:
-                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
-                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">ถึง
-                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
-                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">:
-                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
-                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*">
+                                        จาก
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="validateTime(this, 0)">
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="validateTime(this, 1)">
+                                        :
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="validateTime(this, 2)">
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="validateTime(this, 3)">
+                                        ถึง
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="validateTime(this, 4)">
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="validateTime(this, 5)">
+                                        :
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="validateTime(this, 6)">
+                                        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" oninput="validateTime(this, 7)">
                                     </div>
                                 </div>
                                 <div class="main-subname">สามารถเช็คอินได้ 24 ชั่วโมง<i class='bx bxs-toggle-left' id="toggle-hour"></i></div>

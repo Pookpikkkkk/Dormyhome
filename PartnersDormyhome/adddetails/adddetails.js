@@ -65,12 +65,12 @@ function validatePhone() {
 }
 
 function checkSelection() {
+    let doomInput = document.getElementById("doom").value.trim();
     let phoneInput = document.getElementById("phone").value.trim();
     let nearbyPlaceInput = document.getElementById("nearbyPlace").value.trim();
     let notificationInput = document.getElementById("notification").value.trim();
     let bookingInput = document.getElementById("booking").value.trim();
     let contractInput = document.getElementById("contract").value.trim();
-    let doomInput = document.getElementById("doom").value.trim();
     let nextBtn = document.getElementById("nextBtn");
 
     if (phoneInput !== "" && nearbyPlaceInput !== "" && notificationInput !== "" && bookingInput !== "" && contractInput !== "" && doomInput !== "") {
@@ -86,7 +86,7 @@ document.querySelectorAll('input').forEach(input => {
     input.addEventListener("input", checkSelection);
 });
 document.getElementById("nextBtn").addEventListener("click", () => {
-    let dormName = document.getElementById("doom").value.trim();
+    let doom = document.getElementById("doom").value.trim();
     let roomCount = document.getElementById("room").value.trim();
     let phone = document.getElementById("phone").value.trim();
     let nearbyPlace = document.getElementById("nearbyPlace").value.trim();
@@ -98,10 +98,10 @@ document.getElementById("nextBtn").addEventListener("click", () => {
     let checkInTime = Array.from(timeInputs).map(input => input.value).join('');
 
     let dormData = {
-        dormName, roomCount, phone, nearbyPlace, notification, booking, contract, checkInTime
+        doom, roomCount, phone, nearbyPlace, notification, booking, contract, checkInTime
     };
 
     localStorage.setItem("dormData", JSON.stringify(dormData));
 
-    window.location.href = "personalinformation.html"; // ไปยังหน้าถัดไป
+    window.location.href = "personalinformation.html";
 });

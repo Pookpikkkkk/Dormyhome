@@ -10,6 +10,18 @@ function loadImagesOnOtherPage() {
         }
     }
 }
+document.addEventListener("DOMContentLoaded", () => {
+    let dormData = JSON.parse(localStorage.getItem("dormData"));
+    
+    console.log("Dorm Data:", dormData);
+
+    if (dormData && dormData.doom) {
+        document.getElementById("doom").value = dormData.doom;
+        document.getElementById("dormTitle").textContent = dormData.doom;
+    } else {
+        document.getElementById("dormTitle").textContent = "ไม่พบข้อมูล";
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     loadImagesOnOtherPage();
