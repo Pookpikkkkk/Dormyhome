@@ -46,7 +46,7 @@
             </div>
             <div class="right">
                 <div class="main-title">
-                    <i class='bx bx-left-arrow-alt' style="color: #000000; margin-left: 10px; margin-right: 30%;"></i>ข้อมูลส่วนตัวหอพัก<span id="dormTitle"></span>
+                    <i class='bx bx-left-arrow-alt' style="color: #000000; margin: 0 auto 0 10px;"></i>ข้อมูลส่วนตัวหอพัก<span id="dormTitle" style="margin: 0 auto 0 10px;"></span>
                 </div>
                 <hr>
                 <div class="main-un">
@@ -57,7 +57,11 @@
                         <div class="main-un-right">
                             <div class="main2">
                                 <div class="main-name">ชื่อหอพัก</div>
-                                <input type="text" placeholder="ระบุชื่อหอพัก" id="doom" maxlength="20" readonly>
+                                <div class="input-container">
+                                    <input type="text" placeholder="ระบุชื่อหอพัก" id="doom" readonly>
+                                    <small id="char-count">0/20</small>
+                                </div>
+                                <small id="doom-error" class="error-message"></small>
                             </div>
                             <div class="edit" onclick="toggleEdit('doom')">แก้ไข</div>
                         </div>

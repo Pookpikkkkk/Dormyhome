@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const doomInput = document.getElementById("doom");
+    const charCount = document.getElementById("char-count");
+    const doomError = document.getElementById("doom-error");
+
+    doomInput.addEventListener("input", () => {
+        const inputLength = doomInput.value.length;
+        charCount.textContent = `${inputLength}/20`;
+
+        if (inputLength > 20) {
+            doomError.textContent = "ชื่อหอพักต้องไม่เกิน 20 ตัวอักษร";
+            doomError.style.color = "red";
+            doomInput.style.border = "2px solid red";
+        } else {
+            doomError.textContent = "";
+            doomInput.style.border = "1px solid #ccc";
+        }
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
     const toggleIcon = document.getElementById("toggle-hour");
     const timeInputs = document.querySelectorAll("#time input");
 
