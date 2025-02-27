@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dormybook</title>
     <link rel="icon" href="../images/logodorymyเล็ก.png">
-    <link rel="stylesheet" href="./User-booking.css">
+    <link rel="stylesheet" href="./cancelthebooking.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -33,58 +33,54 @@
         </div>
     </header>
     <div class="main">
-        <div class="left">
-            <div class="left-grid">
-                <div class="left-item">
-                    ข้อมูลส่วนตัว
-                </div>
-                <div class="left-item" style="background: #ffffff; color: #000000;">
-                    การจองของฉัน
-                </div>
-                <div class="left-item">
-                    รีวิวที่พัก
-                </div>
-                <div class="left-item">
-                    ที่พักถูกใจ
-                </div>
-            </div>
+        <div class="tile">
+            ยกเลิกการจองห้องพัก <i class='bx bx-x' style='color:#ff0000'  ></i>
         </div>
-        <div class="right">
-            <div class="top">
-                <div class="title">กำลังจะมาถึง</div>
-                <div class="title" style="background: #ffffff;">เสร็จสมบูรณ์</div>
-                <div class="title">ยกเลิก</div>
-            </div>
-            <div class="mainbox">
+        <div class="sub">ผู้ยื่นคำร้อง: ผู้เช่าคุณ xxxxxx</div>
+        <div class="un">
+            <div class="left">
                 <div class="images">
-                    <div id="preview1"></div>
-                    <div style="display: flex; gap: 10px;">
-                        <div id="preview2"></div>
-                        <div id="preview3"></div>
-                    </div>
-                </div>
-                <div class="details">
-                    <h2>ห้องพักประเภทxxxxx</h2>
-                    <div class="reviwe"><p style="color: #007AFF;">X.Xระดับคะแนนรีวิว</p><p>x,xxx รีวิว</p></div>
-                    <p style="color: #007AFF;">1 X - 1 Single Room </p>
-                    <div class="subb">
-                        <i class='bx bx-calendar-event'></i>
-                        <div class="sub">
-                            สัญญาเช่า<br>
-                            DD/MM/YYYY - DD/MM/YYYY
+                    <div class="imagesleft">
+                        <img src="../images/cfb5597666e7740cc3ac69c0cb531812.jpg">
+                        <div class="imagesleft-t">
+                            <img src="../images/cfb5597666e7740cc3ac69c0cb531812.jpg">
+                            <img src="../images/cfb5597666e7740cc3ac69c0cb531812.jpg">
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="details">
+                    <h2>ห้องพักประเภทxxxxx</h2>
+                    <div class="reviwe">ประเภทห้อง: ห้องเดี่ยวSingle Room </div>
                     <div class="subb">
-                        <i class='bx bx-user'></i>ผู้เข้าพัก: ผู้ใหญ่ x คน
+                        <i class='bx bx-calendar-event'></i>วันที่เข้าอยู่ DD/MM/YYY
                     </div>
+                    <div class="subb">
+                        กรุณาเลือกเหตุผลในการยกเลิก
+                    </div>
+                    <select class="input-cancle">
+                        <option value=""> </option>
+                        <option value="❌ เปลี่ยนแผน / ได้หอพักใหม่แล้ว">❌ เปลี่ยนแผน / ได้หอพักใหม่แล้ว </option>
+                        <option value="💰 ปัญหาด้านการเงิน">💰 ปัญหาด้านการเงิน</option>
+                        <option value="🚫 ไม่พอใจกับเงื่อนไขการจอง">🚫 ไม่พอใจกับเงื่อนไขการจอง</option>
+                        <hr>
+                        <option value="❓ อื่นๆ">❓ อื่นๆ</option>
+                    </select>
                 </div>
                 <div class="price">฿X,XXX.XX
                     <div class="vat">รวมภาษีและค่าธรรมเนียม</div>
+                    <div class="btn">
+                        <button class="cancle">
+                            ยกเลิก
+                        </button>
+                        <button class="next">
+                            ตกลง
+                        </button>
+                    </div>
                 </div>
-                
             </div>
         </div>
     </div>
 </body>
-<script src="./User-booking.js"></script>
 </html>

@@ -83,6 +83,10 @@ a:hover {
     justify-content: center;
     height: 45px;
 }
+.imagesleft img{
+    height: 200px;
+    width: 250px;
+}
 .bxs-user-circle {
     background: none;
     color: black;
@@ -101,71 +105,48 @@ button:active {
     transform: scale(0.95);
     transition: all 0.1s ease-in-out;
 }
-/**/
 .main{
-    width: 100%;
-    height: 82vh;
-    display: flex;
-    justify-content: space-between;
+    width: 80%;
+    
 }
-.left{
-    width: 20%;
-    margin: auto 0;
-}
-.left-grid{
-    display: grid;
-    gap: 10px;
-}
-.left-item{
-    width: 90%;
-    height: 70px;
-    background: #8D6E63;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    color: #ffffff;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.tile{
+    margin: 2% 0 2% 0;
+    text-align: center;
+    font-size: 30px;
     font-weight: 550;
 }
-.right{
-    width: 70%;
-    margin: 8% auto 2%;
-    background: #ffffff;
+.sub{
+    font-size: 18px;
+    margin-bottom: 20px;
 }
-.top{
+.un{
+    background: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+}
+.imagesleft{
+    padding: 20px;
     display: flex;
     align-items: center;
-    text-align: center;
 }
-.title{
-    font-size: 24px;
-    color: #000000;
-    width: 100%;
-    background: #D9D9D9;
-    padding: 2%;
-}
-.mainbox {
-    background-color: white;
-    width: 85%;
-    display: flex;
-    align-items:  flex-start;
-    padding: 20px;
+.imagesleft img{
     border-radius: 10px;
-    justify-content: space-between;
-    border: 1px solid #000000;
-    margin: 20px 5%;
-    text-align: left;
+    height: 210px;
+    width: 250px;
 }
-.images {
+.imagesleft-t img{
+    height: 100px;
+    width: 200px;
+    margin: 10px 20px;
+}
+.imagesleft-t{
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
-.images img {
-    width: 200px;
-    border-radius: 10px;
+.right{
+    width: 50%;
+    display: flex;
 }
 .details {
     flex: 1;
@@ -180,18 +161,7 @@ button:active {
     font-size: 24px;
     font-weight: bold;
     margin-top: 50px;
-}
-#preview1 img{
-    width: 290px; 
-    height: 163.13px;
-}
-#preview2 img{
-    width: 141px;
-    height: 79.31px;
-}
-#preview3 img{
-    width: 141px;
-    height: 79.31px;
+    text-align: right;
 }
 .subb{
     font-size: 16px;
@@ -208,20 +178,35 @@ button:active {
 .reviwe{
     display: flex;
 }
-.reviwe p{
-    margin: 2px 0 0 20px;
-}
 .vat{
     color: #939393;
     font-size: 10px;
     font-weight: normal;
     text-align: right;
 }
-.cancel{
-    color: red;
-    text-decoration: underline;
-    margin: 200px 0 0 0;
-    font-size: 16px;
-    font-weight: normal;
-    text-align: right;
+.btn{
+    margin: 170px 0 10px 0;
+    display: flex;
+}
+.input-cancle{
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.cancle{
+    background: none;
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: #757575;
+    margin-right: 5px;
+}
+.next{
+    background-color: #20B2AA;
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: #ffffff;
 }
