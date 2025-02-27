@@ -1,4 +1,11 @@
-document.getElementById('dropdownButton').addEventListener('click', function() {
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    dropdownMenu.classList.toggle('hidden');
+document.querySelector('.input-condition').addEventListener('change', function() {
+    if (this.value.trim() === "ประเภทของหอพัก") {
+        window.location.href = "#";
+    } else if (this.value.trim() === "หอพักหญิง") {
+        window.location.href = "#";
+    }else if (this.value.trim() === "หอพักชาย") {
+        window.location.href = "#";
+    }else if (this.value.trim() === "หอรวม") {
+        window.location.href = "#";
+    }
 });
