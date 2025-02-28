@@ -194,14 +194,14 @@ button:active {
     font-weight: normal;
     text-align: right;
 }
-.btn{
-    margin: 170px 0 10px 0;
-    display: flex;
-}
 .input-cancle{
     font-size: 20px;
     border-radius: 5px;
     padding: 5px;
+}
+.btn{
+    margin: 170px 0 10px 0;
+    display: flex;
 }
 .cancle{
     background: none;
