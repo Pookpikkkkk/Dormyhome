@@ -129,6 +129,10 @@ button:active {
     justify-content: center;
     font-weight: 550;
 }
+.left-item:hover{
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+}
 .right{
     width: 70%;
     margin: 3% auto 2%;
@@ -163,7 +167,12 @@ button:active {
     flex-direction: column;
     gap: 10px;
 }
-.images img {
+.imagesleft img{
+    width: 400px;
+    height: 180px;
+    border-radius: 10px;
+}
+.imgleft img {
     width: 200px;
     border-radius: 10px;
 }
