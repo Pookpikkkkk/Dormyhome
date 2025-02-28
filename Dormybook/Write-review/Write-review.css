@@ -102,13 +102,13 @@ button:active {
     transition: all 0.1s ease-in-out;
 }
 .main{
-    width: 90%;
+    width: 95%;
     height: 82vh;
     display: flex;
     justify-content: space-between;
 }
 .left{
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,10 +120,71 @@ button:active {
     margin: 8% 0;
 }
 .images{
-    width: 80%;
+    width: 70%;
     background: #ffffff;
 }
 .images img{
-    width: 80%;
-    margin: 10px 10%;
+    width: 90%;
+    height: 200px;
+    margin: 10px 5%;
+}
+.un{
+    margin: 10px 0 10px 20px;
+}
+.name{
+    font-size: 20px;
+    font-weight: 550;
+    margin-bottom: 5px;
+}
+.bx-map{
+    font-size: 20px;
+}
+.type{
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+.sex{
+    margin-left: 10px;
+}
+.date{
+    font-size: 10px;
+    margin: 20px 0 0 60%;
+}
+.right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end ;
+}
+.area{
+    background: #ffffff;
+    width: 100%;
+    margin-top: 5%;
+}
+.main-title{
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bx-star {
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+.bxs-star{
+    font-size: 16px;
+    color: gold;
+}
+.ratingDisplay{
+    font-size: 16px;
+}
+.subb{
+    display: grid;
+    gap: 5px;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
 }
