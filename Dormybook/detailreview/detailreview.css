@@ -101,8 +101,7 @@ button:active {
     transform: scale(0.95);
     transition: all 0.1s ease-in-out;
 }
-
-
+/*body*/
 .main{
     width: 100%;
     text-align: center;
@@ -152,8 +151,8 @@ button:active {
     align-items: center;
 }
 .right{
-    width: 70%;
-    margin-right: 75px;
+    width: 75%;
+    margin-left: 4  0px;
     height: 65vh;
     border-radius: 5px;
     margin-top: 20px;
@@ -181,6 +180,12 @@ button:active {
 }
 .mainbox-right{
     width: 70%;
+    margin-top: 30px;
+}
+.main-right img{
+    width: 350px;
+    height: 220px;
+    margin-left: 50px;
 }
 .mainbox-right-title{
     font-size: 35px;
@@ -189,4 +194,8 @@ button:active {
 .mainbox-right-sub{
     width: 95%;
     text-align: center;
+}
+.box{
+    font-size: 22px;
+    font-weight: 500;
 }

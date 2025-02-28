@@ -12,7 +12,6 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    overflow: hidden;
 }
 .navbar {
     position: fixed;
@@ -101,8 +100,10 @@ button:active {
     transform: scale(0.95);
     transition: all 0.1s ease-in-out;
 }
+/*body*/
 .main{
-    width: 95%;
+    margin-top: 2%;
+    width: 90%;
     height: 82vh;
     display: flex;
     justify-content: space-between;
@@ -117,19 +118,24 @@ button:active {
     text-align: center;
     font-size: 30px;
     font-weight: 550;
-    margin: 8% 0;
+    margin: 2% 0;
 }
 .images{
     width: 70%;
+    height: 80%;
     background: #ffffff;
+    border-radius: 5px;
 }
 .images img{
     width: 90%;
     height: 200px;
     margin: 10px 5%;
+    border-radius: 5px;
 }
 .un{
     margin: 10px 0 10px 20px;
+    display: grid;
+    gap: 10px;
 }
 .name{
     font-size: 20px;
@@ -147,8 +153,8 @@ button:active {
     margin-left: 10px;
 }
 .date{
-    font-size: 10px;
-    margin: 20px 0 0 60%;
+    font-size: 12px;
+    margin: 15% 0 0 50%;
 }
 .right{
     width: 50%;
@@ -159,16 +165,25 @@ button:active {
 .area{
     background: #ffffff;
     width: 100%;
+    height: 180%;
     margin-top: 5%;
+    border-radius: 5px;
+    margin-right: 50px;
+    padding: 5px 30px;
 }
 .main-title{
-    font-size: 28px;
+    font-size: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
+}
+.sub-title{
+    font-size: 18px;
+    font-weight: 100;
 }
 .bx-star {
-    font-size: 16px;
+    font-size: 22px;
     cursor: pointer;
     color: rgb(0, 0, 0);
 }
@@ -183,10 +198,27 @@ button:active {
     display: grid;
     gap: 5px;
 }
+.sub{
+    font-size: 18px;
+    font-weight: 800;
+    margin: 5px
+}
+.title{
+    font-size: 15px;
+    margin: 5px;
+}
+.subti{
+    font-size: 12px;
+    margin-left: 35px;
+}
+.bx-check-square{
+    font-size: 20px;
+    color: #AB887C;
+}
 .item{
     display: flex;
     justify-content: space-between;
-    margin: 0 10%;
+    margin: 0.25px 8%;
 }
 .wang{
     margin: 10px auto;
@@ -194,10 +226,14 @@ button:active {
     background: #BEBABA;
     height: 100px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white
 }
 .btn{
     display: flex;
-    gap: 10px;
+    gap: 30px;
     justify-content: center;
 }
 .btn button{
@@ -205,25 +241,38 @@ button:active {
     background: none;
     border-radius: 10px;
     border: 0.5px solid #000000;
-    font-size: 24px;
+    font-size:  18px;
     padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.btn .bx{
+    font-size: 28px;
 }
 .btn-next{
-    margin: 10px 0 10px 70%;
+    margin: 10px 0 10px 60%;
     display: flex;
 }
 .cancle{
     background: none;
     border: none;
-    width: 100px;
-    height: 30px;
+    width: 130px;
+    height: 35px;
     border-radius: 5px;
     margin-right: 5px;
+    border: 0.25px solid black;
+    font-size: 16px;
 }
 .next{
     background-color: #20B2AA;
     border: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 5px
+    width: 130px;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+.cancle:hover{
+    background-color:red;
+    color: white;
 }
