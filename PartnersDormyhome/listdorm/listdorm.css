@@ -117,6 +117,7 @@ button:active {
     justify-content: center;
     border-radius: 10px;
     margin-top: 30px;
+    cursor: pointer;
 }
 .title{
     font-size: 32px;
@@ -149,6 +150,7 @@ button:active {
     border: none;
     border-radius: 10px;
     background-color: white;
+    cursor: pointer;
 }
 .pluslist{
     font-size: 18px;
@@ -163,6 +165,7 @@ button:active {
     border: none;
     border-radius: 10px;
     background-color: white;
+    cursor: pointer;
 }
 .bx-plus{
     font-size: 22px;

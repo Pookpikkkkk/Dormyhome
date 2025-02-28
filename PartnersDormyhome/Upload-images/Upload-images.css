@@ -141,6 +141,7 @@ input[type="number"] {
     font-size: 22px;
     cursor: not-allowed;
     transition: 0.3s;
+    cursor: pointer;
 }
 .next-bnt button.active {
     background-color: #20B2AA;

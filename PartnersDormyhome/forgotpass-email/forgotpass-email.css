@@ -64,6 +64,7 @@ body {
     border-radius: 5px;
     font-size: 16px;
     margin-left: 10px;
+    cursor: pointer;
 }
 .summit-btn{
     background-color:#098a84;

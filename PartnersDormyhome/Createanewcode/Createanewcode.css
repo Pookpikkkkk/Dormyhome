@@ -70,6 +70,7 @@ body {
 .summit-btn{
     background-color:#098a84;
     color: white;
+    cursor: pointer;
 }
 .summit-btn:hover{
     transform: scale(1.05); 
