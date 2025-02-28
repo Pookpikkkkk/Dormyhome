@@ -102,6 +102,7 @@ button:active {
     display: flex;
     text-align: left;
     align-items: center;
+    cursor: pointer;
 }
 .left button:hover{
     background-color: #BE986D;

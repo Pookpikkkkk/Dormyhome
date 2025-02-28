@@ -118,6 +118,7 @@ button:active {
     background: #ffffff;
     width: 250px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .item-left:hover{
     background-color: #babebe;
@@ -156,6 +157,7 @@ button:active {
     height: 60px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .item-right:hover{
     background: #BEBABA;
