@@ -129,6 +129,7 @@ button:active {
     align-items: center;
     justify-content: center;
     font-weight: 550;
+    cursor: pointer;
 }
 .left-item:hover{
     transform: scale(1.05);
@@ -152,10 +153,10 @@ button:active {
     border-radius: 10px;
     display: flex;
     align-items: center;
-    height: 95px;
+    height: 80px;
 }
 .t{
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .user .bxs-user-circle{
     margin: 20px;
@@ -168,18 +169,45 @@ button:active {
 .mitem{
     background: #ffffff;
     padding-left: 20px;
-    height: 80px;
+    height: 60px;
     display: flex;
     align-items: center;
     border-radius: 10px;
 }
+.sub{
+    font-size: 20px;
+    font-weight: 700;
+}
+.subb{
+    margin: 5px 0 0 15px ;
+    display: flex;
+    align-items: center;
+}
+.subbox{
+    background: #8F8F8F;
+    color: white;
+    height: 25px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 5px;
+}
 .btn button{
+    font-size: 14px;
+    font-weight: bold;
     margin: 20px 0 20px;
     border-radius: 30px;
     border: none;
     background: #ffffff;
     width: 20%;
     height: 50px;
+    cursor: pointer;
+}
+.btn button:hover{
+    background-color: #20B2AA;
+    color: white;
 }
 .toggle-input {
     display: none;
