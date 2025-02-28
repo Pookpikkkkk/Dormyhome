@@ -188,3 +188,42 @@ button:active {
     justify-content: space-between;
     margin: 0 10%;
 }
+.wang{
+    margin: 10px auto;
+    width: 90%;
+    background: #BEBABA;
+    height: 100px;
+    border-radius: 10px;
+}
+.btn{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.btn button{
+    height: 50px;
+    background: none;
+    border-radius: 10px;
+    border: 0.5px solid #000000;
+    font-size: 24px;
+    padding: 10px;
+}
+.btn-next{
+    margin: 10px 0 10px 70%;
+    display: flex;
+}
+.cancle{
+    background: none;
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.next{
+    background-color: #20B2AA;
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px
+}
