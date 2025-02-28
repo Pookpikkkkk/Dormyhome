@@ -121,35 +121,6 @@ button:active {
     display: flex;
     justify-content: center;
 }
-.left{
-    width: 20%;
-    margin-top: 8%;
-}
-.left-grid{
-    display: grid;
-    gap: 10px;
-}
-.item-left{
-    background: #ffffff;
-    width: 250px;
-    border-radius: 5px;
-}
-.item-left:hover{
-    background-color: #babebe;
-    color: white;
-}
-.sub .bx{
-    margin: 0 28px;
-    font-size: 32px;
-}
-.sub{
-    margin-right: 30px;
-    font-weight: 200;
-    font-size: 22px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-}
 /*left*/
 .right{
     width: 70%;
@@ -202,6 +173,7 @@ button:active {
 }
 .bx-check-circle{
     color: green;
+    font-size: 18px;
 }
 .review-content {
     display: flex;
@@ -217,19 +189,25 @@ button:active {
     margin-bottom: 10px;
 }
 .score-reviwe{
-    border-left: 2px solid #000000;
+    border-left: 0.25px solid #000000;
     padding-left: 0.3rem; 
-    width: 50%;
+    width: 39%;
+}
+.score-reviwe .title{
+    font-size: 22px;
+    font-weight: 800;
 }
 .chb{
+    margin: 5px;
     display: grid;
-    gap: 5px;
+    gap: 10px;
     text-align: left;
 }
 .chb-item{
     font-size: 16px;
-    color: #757575;
+    color: black;
 }
+
 .progress-container {
     width: 70%;
     height: 8px;
@@ -246,7 +224,7 @@ button:active {
 .subtitle{
     display: flex;
     align-items: center;
-    width: 230px;
+    width: 200px;
     justify-content: space-between;
 }
 .review-item p {
@@ -315,3 +293,4 @@ button:active {
     text-align: left;
     color: #757575;
 }
+

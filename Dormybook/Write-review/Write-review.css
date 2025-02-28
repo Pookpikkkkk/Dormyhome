@@ -102,6 +102,7 @@ button:active {
 }
 /*body*/
 .main{
+    margin-top: 2%;
     width: 90%;
     height: 82vh;
     display: flex;
@@ -171,7 +172,7 @@ button:active {
     padding: 5px 30px;
 }
 .main-title{
-    font-size: 28px;
+    font-size: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,9 +180,10 @@ button:active {
 }
 .sub-title{
     font-size: 18px;
+    font-weight: 100;
 }
 .bx-star {
-    font-size: 16px;
+    font-size: 22px;
     cursor: pointer;
     color: rgb(0, 0, 0);
 }
@@ -197,7 +199,21 @@ button:active {
     gap: 5px;
 }
 .sub{
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 5px
+}
+.title{
+    font-size: 15px;
+    margin: 5px;
+}
+.subti{
+    font-size: 12px;
+    margin-left: 35px;
+}
+.bx-check-square{
+    font-size: 20px;
+    color: #AB887C;
 }
 .item{
     display: flex;
@@ -217,7 +233,7 @@ button:active {
 }
 .btn{
     display: flex;
-    gap: 10px;
+    gap: 30px;
     justify-content: center;
 }
 .btn button{
@@ -225,8 +241,13 @@ button:active {
     background: none;
     border-radius: 10px;
     border: 0.5px solid #000000;
-    font-size: 24px;
+    font-size:  18px;
     padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.btn .bx{
+    font-size: 28px;
 }
 .btn-next{
     margin: 10px 0 10px 60%;
