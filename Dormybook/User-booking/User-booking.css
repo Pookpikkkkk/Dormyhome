@@ -128,16 +128,18 @@ button:active {
     align-items: center;
     justify-content: center;
     font-weight: 550;
+    cursor: pointer;
 }
 .right{
     width: 70%;
-    margin: 8% auto 2%;
+    margin: 5% auto 2%;
     background: #ffffff;
 }
 .top{
     display: flex;
     align-items: center;
     text-align: center;
+    cursor: pointer;
 }
 .title{
     font-size: 24px;

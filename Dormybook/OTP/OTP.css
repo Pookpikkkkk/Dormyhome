@@ -132,6 +132,7 @@ input, button {
 button#otp-button {
     height: 57px;
     width: 20%;
+    cursor: pointer;
 }
 .otp-container {
     display: flex;

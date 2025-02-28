@@ -262,6 +262,7 @@ button:active {
     margin-right: 5px;
     border: 0.25px solid black;
     font-size: 16px;
+    cursor: pointer;
 }
 .next{
     background-color: #20B2AA;
@@ -271,6 +272,7 @@ button:active {
     border-radius: 5px;
     color: white;
     font-size: 16px;
+    cursor: pointer;
 }
 .cancle:hover{
     background-color:red;

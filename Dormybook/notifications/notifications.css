@@ -168,6 +168,7 @@ button:active {
 .bx-trash{
     color: #757575;
     font-size: 28px;
+    cursor: pointer;
 }
 .bx-trash:hover{
     color: red;

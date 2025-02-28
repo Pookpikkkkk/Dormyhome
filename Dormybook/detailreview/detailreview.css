@@ -116,6 +116,7 @@ button:active {
     font-size:35px;
     margin: 10px 25px 0 0;
     color: #999999;
+    cursor: pointer;
 }
 .container{
     display: flex;
