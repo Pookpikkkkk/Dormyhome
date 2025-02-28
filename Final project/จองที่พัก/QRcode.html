@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="/logoh.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
+</head>
+<body class="bg-cover w-screen min-h-screen justify-center items-center overflow-x-hidden" style="background-color: #fadec8;">
+    <nav class="flex flex-col bg-white w-screen h-[220px] relative">
+        <div class="absolute top-[40px] left-[20px] w-[200px] h-[55px]">
+            <img src="logo1.png" class="w-full h-full">
+        </div>
+
+        <div class="flex justify-between items-center w-full px-10 mt-[100px]">
+            <div class="w-[880px] flex items-center justify-between relative mx-auto">
+                <div class="absolute top-1 left-[6.5%] right-[55.3%] h-2 rounded-full bg-[#30DBD1] z-0" style="transform: translateY(15px);"></div>
+                <div class="absolute top-1 left-[49.4%] right-[9.5%] h-2 rounded-full bg-gray-300 z-0" style="transform: translateY(15px);"></div>
+    
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-black bg-[#30DBD1]">1</div>
+                    <p class="mt-2 text-black font-medium">ข้อมูลผู้จอง</p>
+                </div>
+    
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-black bg-[#30DBD1]">2</div>
+                    <p class="mt-2 text-black font-medium">ข้อมูลการชำระเงิน</p>
+                </div>
+    
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-gray-500 bg-gray-300">3</div>
+                    <p class="mt-2 text-gray-500">ยืนยันการจองสำเร็จ</p>
+                </div>
+            </div>
+    
+            <!-- Profile Dropdown -->
+            <div class="relative ml-[-15%]">
+                <button id="profileButton" class="flex items-center space-x-2 bg-white px-4 py-2 gap-3">
+                    <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                        <i class="fa-regular fa-circle-user text-[45px]"></i>
+                    </div>
+                    <span class="text-black text-2xl">XXXXXX</span>
+                    <img id="dropdownIcon" src="./down.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                </button>
+                
+                <div id="dropdownMenu" class="absolute right-2 mt-2 w-[150px] h-[40px] bg-[#FA0624] rounded-xl hidden">
+                    <button class="w-full h-full rounded-xl px-4 py-2 text-white font-semibold hover:bg-red-400">ออกจากระบบ</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex flex-col justify-center items-center mt-[17px]">
+        <p class="font-bold text-[40px]">สแกนเพื่อชำระเงิน</p>
+        <img src="./คิวอา อย่าหื้อกูอดบ่ได้เด้อ.png" class="w-[400px] h-[375px]">
+        <div class="w-[327px] h-[74px] bg-[#8D6E63] rounded-lg flex justify-center items-center text-white text-[23px] mt-[10px]">
+            ยอดการชำระ : X,XXX THB
+        </div>
+        <div class="flex mt-[15px] gap-[50px]">
+            <button class="bg-[#808080] rounded-lg border border-gray-300 text-white text-lg w-[166px] h-[54px]">ยกเลิก</button>
+            <button class="bg-[#20B2AA] rounded-lg border border-gray-300 text-white text-lg w-[166px] h-[54px]">ยืนยัน</button>
+        </div>
+    </div>
+
+</body>
+</html>
