@@ -12,7 +12,6 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    overflow: hidden;
 }
 .navbar {
     position: fixed;
@@ -222,7 +221,8 @@ button:active {
 }
 .vat{
     color: #939393;
-    font-size: 10px;
+    font-size: 11px;
+    margin-top: 5px;
     font-weight: normal;
     text-align: right;
 }
