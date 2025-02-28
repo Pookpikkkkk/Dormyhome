@@ -109,8 +109,8 @@ button:active {
 }
 .left {
     width: 20%;
-    margin: 8% 0;
-    position: sticky;
+    margin: 8% 0 auto;
+    position: fixed;
     top: 143px;
 }
 .left-grid{
@@ -136,23 +136,81 @@ button:active {
 }
 .right {
     width: 80%;
-    margin: 2% 10%;
+    margin: 2% 12% 2% 28%;
 }
 .title{
     font-size: 30px;
     font-weight: 550;
+}
+.m-grid{
+    display: grid;
+    gap: 10px;
+    margin: 10px 0;
 }
 .user{
     background-color: #ffffff;
     border-radius: 10px;
     display: flex;
     align-items: center;
+    height: 95px;
 }
-.user .bx{
+.t{
+    margin-left: 20px;
+}
+.user .bxs-user-circle{
     margin: 20px;
 }
-.edit{
+.edit,.check{
     text-decoration: underline;
     color: #007AFF;
     margin: 0 10px 0 auto;
+}
+.mitem{
+    background: #ffffff;
+    padding-left: 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.btn button{
+    margin: 20px 0 20px;
+    border-radius: 30px;
+    border: none;
+    background: #ffffff;
+    width: 20%;
+    height: 50px;
+}
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.toggle-label::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+.toggle-input:checked + .toggle-label {
+    background-color: #007AFF;
+}
+
+.toggle-input:checked + .toggle-label::before {
+    transform: translateX(30px);
 }
