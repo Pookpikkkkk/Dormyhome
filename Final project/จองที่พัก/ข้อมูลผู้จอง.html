@@ -176,7 +176,7 @@
             const dropdownIcon = document.getElementById("dropdownIcon");
     
             profileButton.addEventListener("click", (event) => {
-                event.stopPropagation(); // ป้องกัน event bubbling
+                event.stopPropagation();
                 dropdownMenu.classList.toggle("hidden");
                 dropdownIcon.classList.toggle("rotate-180");
             });
