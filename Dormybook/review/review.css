@@ -202,6 +202,7 @@ button:active {
     display: grid;
     gap: 10px;
     text-align: left;
+    accent-color: #007AFF;
 }
 .chb-item{
     font-size: 16px;

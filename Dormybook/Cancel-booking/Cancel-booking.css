@@ -116,10 +116,6 @@ button:active {
     display: grid;
     gap: 10px;
 }
-.left-item:hover{
-    transform: scale(0.95);
-    transition: all 0.1s ease-in-out;
-}
 .left-item{
     width: 90%;
     height: 70px;
