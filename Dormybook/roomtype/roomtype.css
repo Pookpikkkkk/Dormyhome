@@ -129,6 +129,10 @@ button:active {
     justify-content: center;
     font-weight: 550;
 }
+.left-item:hover{
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+}
 .right{
     width: 70%;
     margin: 1% auto 2%;

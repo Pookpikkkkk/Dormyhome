@@ -101,129 +101,92 @@ button:active {
     transform: scale(0.95);
     transition: all 0.1s ease-in-out;
 }
+
+
 .main{
-    width: 95%;
-    height: 82vh;
-    display: flex;
-    justify-content: space-between;
-}
-.left{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.left-title{
-    text-align: center;
-    font-size: 30px;
-    font-weight: 550;
-    margin: 8% 0;
-}
-.images{
-    width: 70%;
-    background: #ffffff;
-}
-.images img{
-    width: 90%;
-    height: 200px;
-    margin: 10px 5%;
-}
-.un{
-    margin: 10px 0 10px 20px;
-}
-.name{
-    font-size: 20px;
-    font-weight: 550;
-    margin-bottom: 5px;
-}
-.bx-map{
-    font-size: 20px;
-}
-.type{
-    font-size: 20px;
-    margin: 10px 0 5px;
-}
-.sex{
-    margin-left: 10px;
-}
-.date{
-    font-size: 10px;
-    margin: 20px 0 0 60%;
-}
-.right{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end ;
-}
-.area{
-    background: #ffffff;
     width: 100%;
-    margin-top: 5%;
+    text-align: center;
 }
 .main-title{
-    font-size: 28px;
+    text-align: left;
+    margin: 30px 0 0 10%;
+    font-size: 36px;
+    font-weight: bold;
+}
+.bx-left-arrow-alt{
+    font-size:35px;
+    margin: 10px 25px 0 0;
+    color: #999999;
+}
+.container{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.bx-star {
-    font-size: 16px;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-}
-.bxs-star{
-    font-size: 16px;
-    color: gold;
-}
-.ratingDisplay{
-    font-size: 16px;
-}
-.subb{
-    display: grid;
-    gap: 5px;
-}
-.item{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 10%;
-}
-.wang{
-    margin: 10px auto;
-    width: 90%;
-    background: #BEBABA;
-    height: 100px;
-    border-radius: 10px;
-}
-.btn{
-    display: flex;
-    gap: 10px;
     justify-content: center;
 }
-.btn button{
-    height: 50px;
-    background: none;
-    border-radius: 10px;
-    border: 0.5px solid #000000;
-    font-size: 24px;
-    padding: 10px;
+.left{
+    width: 20%;
+    margin-top: 8%;
 }
-.btn-next{
-    margin: 10px 0 10px 70%;
+.left-grid{
+    display: grid;
+    gap: 10px;
+}
+.item-left{
+    background: #ffffff;
+    width: 250px;
+    border-radius: 5px;
+}
+.item-left:hover{
+    background-color: #babebe;
+    color: white;
+}
+.sub .bx{
+    margin: 0 28px;
+    font-size: 32px;
+}
+.sub{
+    margin-right: 30px;
+    font-weight: 200;
+    font-size: 22px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.right{
+    width: 70%;
+    margin-right: 75px;
+    height: 65vh;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.mainbox{
+    width: 95%;
+    height: 70%;
+    border-radius: 10px;
+    background: #ffffff;
+    margin: 0 auto 0;
     display: flex;
 }
-.cancle{
-    background: none;
-    border: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    margin-right: 5px;
+.mainbox-top{
+    display: flex;
+    text-align: left;
+    padding: 20px 0 10px 30px;
 }
-.next{
-    background-color: #20B2AA;
-    border: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 5px
+.mainbox-left{
+    width: 50%;
+}
+.main-right img{
+    width: 160px;
+    height: 123px;
+    border-radius: 10px;
+}
+.mainbox-right{
+    width: 70%;
+}
+.mainbox-right-title{
+    font-size: 35px;
+    margin: 15px auto;
+}
+.mainbox-right-sub{
+    width: 95%;
+    text-align: center;
 }

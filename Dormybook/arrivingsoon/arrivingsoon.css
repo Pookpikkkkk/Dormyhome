@@ -101,129 +101,136 @@ button:active {
     transform: scale(0.95);
     transition: all 0.1s ease-in-out;
 }
+/**/
 .main{
-    width: 95%;
+    width: 100%;
     height: 82vh;
     display: flex;
     justify-content: space-between;
 }
 .left{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 20%;
+    margin: auto 0;
 }
-.left-title{
-    text-align: center;
-    font-size: 30px;
-    font-weight: 550;
-    margin: 8% 0;
+.left-grid{
+    display: grid;
+    gap: 10px;
 }
-.images{
-    width: 70%;
-    background: #ffffff;
-}
-.images img{
+.left-item{
     width: 90%;
-    height: 200px;
-    margin: 10px 5%;
-}
-.un{
-    margin: 10px 0 10px 20px;
-}
-.name{
+    height: 70px;
+    background: #8D6E63;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #ffffff;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 550;
-    margin-bottom: 5px;
 }
-.bx-map{
-    font-size: 20px;
-}
-.type{
-    font-size: 20px;
-    margin: 10px 0 5px;
-}
-.sex{
-    margin-left: 10px;
-}
-.date{
-    font-size: 10px;
-    margin: 20px 0 0 60%;
+.left-item:hover{
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
 }
 .right{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end ;
-}
-.area{
+    width: 70%;
+    margin: 3% auto 2%;
     background: #ffffff;
-    width: 100%;
-    margin-top: 5%;
 }
-.main-title{
-    font-size: 28px;
+.top{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.title{
+    font-size: 24px;
+    color: #000000;
+    width: 100%;
+    background: #D9D9D9;
+    padding: 2%;
+}
+.mainbox {
+    background-color: white;
+    width: 85%;
+    display: flex;
+    align-items:  flex-start;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: space-between;
+    border: 1px solid #000000;
+    margin: 20px 5%;
+    text-align: left;
+}
+.images {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
 }
-.bx-star {
-    font-size: 16px;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
+.imagesleft img{
+    width: 400px;
+    height: 180px;
+    border-radius: 10px;
 }
-.bxs-star{
-    font-size: 16px;
-    color: gold;
+.imgleft img {
+    width: 200px;
+    border-radius: 10px;
 }
-.ratingDisplay{
-    font-size: 16px;
+.details {
+    flex: 1;
+    padding: 0 30px;
+    margin-top: 40px;
+}
+.details h2 {
+    margin: 0;
+    font-size: 32px;
+}
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+#preview1 img{
+    width: 290px; 
+    height: 163.13px;
+}
+#preview2 img{
+    width: 141px;
+    height: 79.31px;
+}
+#preview3 img{
+    width: 141px;
+    height: 79.31px;
 }
 .subb{
-    display: grid;
-    gap: 5px;
-}
-.item{
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-left: 15px;
     display: flex;
-    justify-content: space-between;
-    margin: 0 10%;
+    align-items: center;
 }
-.wang{
-    margin: 10px auto;
-    width: 90%;
-    background: #BEBABA;
-    height: 100px;
-    border-radius: 10px;
+.subb .bx{
+    font-size: 30px;
+    margin: 5px;
 }
-.btn{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-.btn button{
-    height: 50px;
-    background: none;
-    border-radius: 10px;
-    border: 0.5px solid #000000;
-    font-size: 24px;
-    padding: 10px;
-}
-.btn-next{
-    margin: 10px 0 10px 70%;
+.reviwe{
     display: flex;
 }
-.cancle{
-    background: none;
-    border: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    margin-right: 5px;
+.reviwe p{
+    margin: 2px 0 0 20px;
 }
-.next{
-    background-color: #20B2AA;
-    border: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 5px
+.vat{
+    color: #939393;
+    font-size: 10px;
+    font-weight: normal;
+    text-align: right;
+}
+.cancel{
+    color: red;
+    text-decoration: underline;
+    margin: 200px 0 0 0;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
 }
