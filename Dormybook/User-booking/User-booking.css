@@ -163,7 +163,12 @@ button:active {
     flex-direction: column;
     gap: 10px;
 }
-.images img {
+.imagesleft img{
+    width: 400px;
+    height: 180px;
+    border-radius: 10px;
+}
+.imgleft img {
     width: 200px;
     border-radius: 10px;
 }
@@ -174,7 +179,7 @@ button:active {
 }
 .details h2 {
     margin: 0;
-    font-size: 32px;
+    font-size: 28px;
 }
 .price {
     font-size: 24px;
