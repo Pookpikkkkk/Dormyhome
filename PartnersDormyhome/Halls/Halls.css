@@ -106,6 +106,7 @@ button:active {
     display: flex;
     justify-content: space-between;
 }
+/*left*/
 .left{
     width: 20%;
     margin-top: 8%;
@@ -125,7 +126,7 @@ button:active {
     color: white;
 }
 .sub .bx{
-    margin: 0 28px;
+    margin: 0px 28px;
     font-size: 32px;
 }
 .sub{
@@ -136,6 +137,7 @@ button:active {
     display: flex;
     align-items: center;
 }
+/*left*/
 .right{
     width: 70%;
     margin-right: 75px;
