@@ -165,6 +165,7 @@ button:active {
     text-decoration: underline;
     color: #007AFF;
     margin: 0 10px 0 auto;
+    cursor: pointer;
 }
 .mitem{
     background: #ffffff;

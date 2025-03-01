@@ -57,6 +57,6 @@ function login() {
         return;
     } else{
         alert("เข้าสู่ระบบสำเร็จ!");
-        window.location.href = "#";
+        window.location.href = "../index/index.html";
     }
 }
