@@ -1,351 +1,103 @@
 body {
-    background: linear-gradient(rgba(245, 212, 212, 0.5), rgba(243, 226, 226, 0.5)), 
-    url("/home/images/dormitory2.jpg");
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FADEC8;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    margin: 0px;
-} 
-
-
-nav {
+    background-attachment: fixed;
+    padding-top: 143px;
     display: flex;
-    background-color: white;
-    height: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 143px;
+    z-index: 1000;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-       
+    background: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
-
-
-nav a {
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 360px;
+    height: 88px;
+}
+a {
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
-
-
-nav .logo img {
-    width: 300px;
-    height: 300px ;
+a:hover {
+    transform: scale(1.025);
 }
-
-.menu {
+.menu-buttons {
     display: flex;
-    font-size: 18px;
-    font-weight: bold;
-    list-style: none;
-    gap: 20px;
-    
+    gap: 48px;
+    align-items: center;
 }
-
-.menu a{
-    color: #000;
-}
-
-.dropdown {
-    position: relative;
-}
-
-.dropdown-button {
+.menu-buttons button {
     background: none;
-    border: none;
-    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
     cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 120px;
-    padding: 8px 0;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 8px 16px;
-    text-decoration: none;
-    color: black;
-}
-
-.dropdown-content a:hover {
-    background-color: #f0f0f0;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.icon {
+    font-size: 24px;
+    border: none;
     display: flex;
-    
+    align-items: center;
+}
+.bx-chevron-right{
+    font-size: 40px;
+}
+.icon-buttons {
+    display: flex;
     gap: 10px;
 }
-  
-
-.icon a {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
- 
-
-.icon a:nth-child(-n+2) {
-    background-color: #AB887C;
-}
-  
-
-.icon a:nth-child(3) {
-    background-color: white;
-}
-  
-
-.icon img {
-    width: 40px;
-    height: 40px;
-}
-  
-.link-text {
-    display: inline-block;
-    padding: 12px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #8b5d2f;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-
-.link-button {
-    display: inline-block;
-    margin-right: 30px;
-    padding: 12px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #20c997;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-.container-Input {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* กระจายพื้นที่ให้เท่ากัน */
-    width: 100%;
-    max-width: 100vw; /* ขยายเต็มความกว้างของ viewport */
-    margin-top: 2rem;
-    padding: 0 30px; /* เพิ่ม padding ซ้ายขวา */
-    box-sizing: border-box; /* ป้องกันการล้น */
-    flex-wrap: wrap; /* ทำให้ responsive */
-    gap: 30px;
-}
-
-.search-box,
-.date-box,
-.proFile-box {
-    flex: 1; /* ให้แต่ละกล่องขยายตามพื้นที่ */
-    display: flex;
-    align-items: center;
-    border: 2px solid #ccc;
-    padding: 10px;
-    background-color: #fff;
-    min-width: 280px; /* ป้องกันการเล็กเกินไป */
-    max-width: 33%; /* ทำให้แต่ละกล่องใช้พื้นที่เท่า ๆ กัน */
-    box-sizing: border-box; /* คำนวณ padding ในขนาดกล่อง */
-}
-
-.search-box img,
-.date-box img,
-.proFile-box img {
-    width: 40px; 
-    height: 40px;
-    margin-right: 8px;
-}
-
-.search-box input,
-.date-box input,
-.proFile-box input {
+.input-condition{
+    font-size: 24px;
     border: none;
-    outline: none;
-    font-size: 16px;
-    width: 100%;
+}
+.icon-buttons button {
     background: none;
-}
-
-@media (max-width: 768px) {
-    .container-Input {
-        flex-direction: column; /* เรียงจากบนลงล่างบนหน้าจอเล็ก */
-        gap: 10px;
-    }
-    .search-box,
-    .date-box,
-    .proFile-box {
-        max-width: 100%; /* ให้เต็มความกว้าง */
-    }
-}
-
-.proFile-box {
-    position: relative; /* ให้เมนูอยู่ในกล่อง */
-    display: flex;
-    align-items: center;
-    border: 2px solid #ccc;
-    padding: 5px 10px;
-    width: 300px;
-    background-color: #fff;
-    cursor: pointer;
-}
-
-.proFile-box img {
-    width: 50px; 
-    height: 50px;
-    margin-right: 8px;
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%; /* ให้เมนูอยู่ใต้ proFile-box */
-    left: 0;
-    width: 100%;
-    background: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    display: none; /* ซ่อนเมนูก่อน */
-    z-index: 10;
-}
-
-.dropdown-menu .menu-item {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #eee;
-}
-
-.dropdown-menu .menu-item:last-child {
-    border-bottom: none;
-}
-
-/* แสดงเมนูเมื่อกด */
-.proFile-box.active .dropdown-menu {
-    display: block;
-}
-
-
-.container {
-    display: flex;
-    padding: 20px;
-    gap: 20px;
-}
-
-.search button {
-    width: 150px;
-    height: 50px;
-    font-size: 18px;
     color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    background-color: #3c8be6;
+    padding: 0px;
+    border-radius: 50%;
     cursor: pointer;
-}   
-
-.filters {
-    flex: 1;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.filters h3 {
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.filters label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.filters input[type="number"] {
-    width: 45%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #cccccce1;
-    border-radius: 5px;
-}
-.filters button {
-    width: 50%;
-    background-color: #20B2AA;
-    color: white;
     border: none;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.results {
-    flex: 3;
+    font-size: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.result {
-    display: flex;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    border: 20px solid white;
-}
-    
-.result img {
-    width: 20%;
-    object-fit: cover;
-}
-
-.result-content {
-    padding: 15px;
-    flex: 1;
-}
-
-.result-content h4 {
-    margin: 0 0 10px 0;
-}
-
-.result-content p {
-    margin: 5px 0;
-    color: #555;
-}
-
-.result-price {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 5px;
-    background-color: #f8f9fa;
+    justify-content: center;
+    height: 45px;
 }
-
-.result-price h4 {
-    margin: 0;
-    color: #20B2AA;
+.bxs-user-circle {
+    background: none;
+    color: black;
+    font-size: 55px;
 }
-
-.result-price button {
-    background-color: #20B2AA;
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 5px;
+#account-btn {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
 }
+button:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+button:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+}
+/*baby*/
