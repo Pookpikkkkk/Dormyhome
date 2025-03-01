@@ -190,5 +190,22 @@
             </div>
         </div>
     <div class="fixed inset-0 bg-orange-100 bg-opacity-50 backdrop-blur-sm -z-10"></div>
+    
+    <script>
+        const dropdownButton = document.getElementById('dropdownButton');
+        document.getElementById('input-condition').addEventListener('change', function() {
+            const value = this.value.trim();
+            if (value === "ประเภทของหอพัก") {
+                window.location.href = "#";
+            } else if (value === "หอพักหญิง") {
+                window.location.href = "";
+            } else if (value === "หอพักชาย") {
+                window.location.href = "#";
+            } else if (value === "หอรวม") {
+                window.location.href = "#";
+            }
+        });
+
+    </script>
 </body>
 </html>
