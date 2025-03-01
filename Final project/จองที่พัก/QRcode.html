@@ -53,7 +53,7 @@
 
     <div class="flex flex-col justify-center items-center mt-[17px]">
         <p class="font-bold text-[40px]">สแกนเพื่อชำระเงิน</p>
-        <img src="../picture/คิวอา อย่าหื้อกูอดบ่ได้เด้อ.png" class="w-[400px] h-[375px]">
+        <div id="qrcode" class="w-[300px] h-[300px]"></div>
         <div class="w-[327px] h-[74px] bg-[#8D6E63] rounded-lg flex justify-center items-center text-white text-[23px] mt-[10px]">
             ยอดการชำระ : X,XXX THB
         </div>
@@ -62,6 +62,28 @@
             <button class="bg-[#20B2AA] rounded-lg border border-gray-300 text-white text-lg w-[166px] h-[54px]">ยืนยัน</button>
         </div>
     </div>
-
 </body>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <script>
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "00020101021229370016A000000677010111011300668294587005802TH530376454072500.0063044B37",
+            width: 400,
+            height: 375
+        });
+        setTimeout(() => {
+        let qrContainer = document.getElementById("qrcode");
+        let icon = document.createElement("img");
+        icon.src = "../picture/logoh.png";
+        icon.style.background = "#ffffff";
+        icon.style.position = "absolute";
+        icon.style.width = "50px";
+        icon.style.height = "50px";
+        icon.style.left = "50%";
+        icon.style.top = "50%";
+        icon.style.transform = "translate(-50%, -50%)";
+        icon.style.borderRadius = "10px";
+        qrContainer.style.position = "relative";
+        qrContainer.appendChild(icon);
+    });
+    </script>
 </html>
