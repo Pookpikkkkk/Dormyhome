@@ -62,9 +62,11 @@ function login() {
 
     if (password === "" || confirmPassword === "") {
         alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+        return;
     } else if (passwordError !== "" || confirmPasswordError !== "") {
         alert("กรุณากรอกข้อมูลให้ถูกต้อง");
-    }else {
-        window.location.href = "../Log-in_Dormyhome/log-in.html";
+        return;
+    }else if (password !== "" || confirmPassword !== "") {
+        window.location.href = "../Log-in_Dormyhome/Log-in_Dormyhome.html";
     }
 }
