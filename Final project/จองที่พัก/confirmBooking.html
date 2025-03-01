@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dormybook</title>
+    <link rel="icon" href="../picture/logoh.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
+</head>
+<body class="bg-cover w-screen h-screen justify-center items-center overflow-x-hidden" style="background-color: #fadec8;">
+    <nav class="flex flex-col bg-white w-full h-[220px] relative">
+        <div class="absolute top-[40px] left-[20px] w-[200px] h-[50px]">
+            <img src="../picture/logo1.png" class="w-full h-full">
+        </div>
+
+        <div class="flex justify-between items-center w-full px-10 mt-[100px] max-w-screen">
+            <div class="w-[880px] flex items-center justify-between relative mx-auto">
+                <div class="absolute top-1 left-[6.5%] right-[55.3%] h-2 rounded-full bg-[#30DBD1] z-0" style="transform: translateY(15px);"></div>
+                <div class="absolute top-1 left-[49.4%] right-[9.5%] h-2 rounded-full bg-[#30DBD1] z-0" style="transform: translateY(15px);"></div>
+
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-black bg-[#30DBD1]">1</div>
+                    <p class="mt-2 text-black font-medium">ข้อมูลผู้จอง</p>
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-black bg-[#30DBD1]">2</div>
+                    <p class="mt-2 text-black font-medium">ข้อมูลการชำระเงิน</p>
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-black bg-[#30DBD1]">3</div>
+                    <p class="mt-2 text-gray-500">ยืนยันการจองสำเร็จ</p>
+                </div>
+            </div>
+
+            <div class="relative ml-[-15%]">
+                <button id="profileButton" class="flex items-center space-x-2 bg-white px-4 py-2 gap-3">
+                    <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                        <i class="fa-regular fa-circle-user text-[45px]"></i>
+                    </div>
+                    <span class="text-black text-2xl">XXXXXX</span>
+                    <img id="dropdownIcon" src="../picture/down.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                </button>
+
+                <div id="dropdownMenu" class="absolute right-2 mt-2 w-[150px] h-[40px] bg-[#FA0624] rounded-xl hidden">
+                    <button class="w-full h-full rounded-xl px-4 py-2 text-white font-semibold hover:bg-red-400">ออกจากระบบ</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex mt-[25px] ml-[85px]">
+        <p class="text-black text-[28px] font-bold">การจองของคุณ XXXXXX สำเร็จแล้ว</p>
+    </div>
+
+    <div class="bg-white bg-opacity-80 w-[620px] h-[240px] rounded-xl flex pt-[20px] pl-[30px] mt-[10px] ml-[120px]">
+        <div class="flex flex-col text-[20px]">
+            <p>ชื่อผู้เข้าพัก : XXXXX XXXXXXX</p>
+            <p>ชื่อหอพัก : XXXXXXXXX</p>
+            <p>วันเข้าอยู่ : DD/MM/YYYY</p>
+            <p>ชำระเงินแล้ว : X,XXX บาท</p>
+            <div class="flex">
+                <p class="mr-[160px]">สถานะ : <i class="fa-solid fa-square-check text-[#00c209] mr-1"></i>ชำระเงินสำเร็จ</p>
+                <button class="bg-[#20B2AA] w-[207px] h-[52px] rounded-full text-white text-[17px] mt-[10px] flex justify-center items-center"><i class="fa-solid fa-envelope text-[20px] text-black mr-[5px]"></i>ส่งใบเสร็จไปยังอีเมล</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center gap-[100px] mt-[130px]">
+        <button class="bg-[#20B2AA] w-[310px] h-[75px] rounded-full text-white text-[20px] flex justify-center items-center">ดูรายละเอียดการจอง</button>
+        <button class="bg-[#20B2AA] w-[310px] h-[75px] rounded-full text-white text-[20px] flex justify-center items-center">กลับไปหน้า Home</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const profileButton = document.getElementById("profileButton");
+            const dropdownMenu = document.getElementById("dropdownMenu");
+            const dropdownIcon = document.getElementById("dropdownIcon");
+    
+            profileButton.addEventListener("click", (event) => {
+                event.stopPropagation(); 
+                dropdownMenu.classList.toggle("hidden");
+                dropdownIcon.classList.toggle("rotate-180");
+            });
+    
+            document.addEventListener("click", (event) => {
+                if (!profileButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add("hidden");
+                    dropdownIcon.classList.remove("rotate-180");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
