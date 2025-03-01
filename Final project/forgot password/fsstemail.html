@@ -16,49 +16,35 @@
   
   <h1 class="text-[50px] font-bold text-black mt-5 mb-6" style="font-family: 'Inknut Antiqua', serif;">Forgot password</h1>
   
-  <div class="w-full max-w-[1004px] p-6">
+  <form id="resetForm" class="w-full max-w-[1004px] p-6">
     <label class="text-[25px] font-semibold text-black" style="font-family: 'Inknut Antiqua', serif;">Email</label>
-    <input type="email" placeholder="กรอกอีเมลที่ลงทะเบียนไว้" class="w-[1004px] h-[76px] p-6 rounded-3xl bg-white text-lg  mt-2 shadow-inner shadow-gray-300">
-  </div>
-  
-  <div class="flex gap-6 mt-6">
-    <a href="../forgot password/forgot password.html" class="w-[217px] h-[69px] px-6 py-3 bg-white rounded-xl text-2xl flex items-center justify-center">
-        ยกเลิก
-    </a>
-    <a href="../forgot password/forgot password otp/otp.html" class="w-[217px] h-[69px] px-6 py-3 bg-teal-500 text-white rounded-xl text-xl flex items-center justify-center">
-        รีเซ็ตรหัสผ่าน
-    </a>
-  </div>
+    <input id="email" type="email" placeholder="กรอกอีเมลที่ลงทะเบียนไว้" class="w-[1004px] h-[76px] p-6 rounded-3xl bg-white text-lg mt-2 shadow-inner shadow-gray-300">
+    <p id="emailError" class="text-red-500 text-lg mt-2 hidden">กรุณากรอกอีเมล</p>
+    
+    <div class="flex justify-center gap-[100px] mt-[60px]">
+      <a href="../forgot password/forgot password.html" class="w-[217px] h-[69px] px-6 py-3 bg-white rounded-xl text-2xl flex items-center justify-center">
+          ยกเลิก
+      </a>
+      <button type="submit" class="w-[217px] h-[69px] px-6 py-3 bg-teal-500 text-white rounded-xl text-xl flex items-center justify-center">
+          รีเซ็ตรหัสผ่าน
+      </button>
+    </div>
+  </form>
+
   <div class="absolute inset-0 bg-white bg-opacity-50 backdrop-blur-sm -z-10"></div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const emailInput = document.querySelector("input[type='email']");
-      const resetButton = document.querySelector("a[href='/forgot password otp/otp.html']");
-      
-      const errorMessage = document.createElement("p");
-      errorMessage.textContent = "กรุณากรอกอีเมลที่ลงทะเบียนไว้";
-      errorMessage.style.color = "red";
-      errorMessage.style.marginTop = "5px";
-      errorMessage.style.display = "none";
-      emailInput.insertAdjacentElement("afterend", errorMessage);
-      
-      resetButton.addEventListener("click", function (event) {
-      const emailValue = emailInput.value.trim();
-      
-      if (!emailValue) {
+    document.getElementById('resetForm').addEventListener('submit', function(event) {
+      const email = document.getElementById('email').value.trim();
+      const emailError = document.getElementById('emailError');
+      if (!email) {
         event.preventDefault();
-        errorMessage.textContent = "กรุณากรอกอีเมลที่ลงทะเบียนไว้";
-        errorMessage.style.display = "block";
-      } else if (!emailValue.includes("@")) {
-        event.preventDefault();
-        errorMessage.textContent = "อีเมลของคุณไม่ถูกต้อง กรุณากรอกอีเมลให้ถูกต้อง";
-        errorMessage.style.display = "block";
+        emailError.classList.remove('hidden');
       } else {
-        errorMessage.style.display = "none";
+        emailError.classList.add('hidden');
+        this.action = '../forgot password/forgot password otp/otp.html';
       }
     });
-  });
   </script>
 </body>
 </html>
