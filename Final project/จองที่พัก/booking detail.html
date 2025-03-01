@@ -13,7 +13,7 @@
 </head>
 <body class="bg-cover w-full h-full justify-center items-center" style="background-color: #fadec8;">
     <nav class="bg-white shadow-md p-4 flex justify-between items-center w-full h-[143px] relative overflow-visible">
-        <a href="../index/index.html"><img src="../picture/logo1.png" class=" w-[360px] h-[88px]"></a>
+        <a href="#"><img src="../picture/logo1.png" class=" w-[360px] h-[88px]"></a>
         <div class="flex items-center justify-between gap-12">
             <a href="../../Dormybook/index/index.html" class="text-black text-2xl">หน้าหลัก</a>
             <select id="input-condition" class="text-black text-2xl bg-white rounded p-2">
@@ -130,19 +130,18 @@
     </div>
 
     <script>
-        const dropdownButton = document.getElementById('dropdownButton');
         document.getElementById('input-condition').addEventListener('change', function() {
-            const value = this.value.trim();
-            if (value === "ประเภทของหอพัก") {
-                window.location.href = "#";
-            } else if (value === "หอพักหญิง") {
-                window.location.href = "";
-            } else if (value === "หอพักชาย") {
-                window.location.href = "#";
-            } else if (value === "หอรวม") {
-                window.location.href = "#";
-            }
-        });
+                const value = this.value.trim();
+                if (value === "ประเภทของหอพัก") {
+                    window.location.href = "#";
+                } else if (value === "หอพักหญิง") {
+                    window.location.href = "../../Final project/doom/หอพักหญิง.html";
+                } else if (value === "หอพักชาย") {
+                    window.location.href = "../../Final project/doom/หอพักชาย.html";
+                } else if (value === "หอรวม") {
+                    window.location.href = "../../Final project/doom/หอพักรวม.html";
+                }
+            });
     </script>
 </body>
 </html>
