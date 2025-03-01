@@ -29,3 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
         updateRatingDisplay(0);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fileInputs = document.querySelectorAll(".file-upload input[type='file']");
+
+    fileInputs.forEach(input => {
+        input.addEventListener("change", function () {
+            const fileName = this.files[0] ? this.files[0].name : "อัปโหลดไฟล์";
+            const previewContainer = this.closest(".file-upload").querySelector(".preview-container");
+            if (previewContainer) {
+                previewContainer.textContent = fileName;
+            }
+        });
+    });
+});
