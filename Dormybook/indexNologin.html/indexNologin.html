@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dormybook</title>
-    <link rel="icon" href="../picture/logoh.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
+    <link rel="icon" href="../images/logodorymyเล็ก.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
 </head>
-<body class="bg-cover bg-center w-screen h-full overflow-x-hidden" style="background-image: url(../picture/bg1.jpg);">
+<body class="bg-cover bg-center w-screen h-full overflow-x-hidden" style="background-image: url(../images/พื้นหลังหน้าinbex.jpg);">
     <nav class="bg-white shadow-md p-4 flex justify-between items-center w-full h-[143px] relative overflow-visible">
-        <a href="../index/index.html"><img src="../picture/logo1.png" class=" w-[360px] h-[88px]"></a>
+        <a href="../index/index.html"><img src="../images/dormybook.png" class=" w-[360px] h-[88px]"></a>
         <div class="flex items-center justify-between gap-12">
-            <a href="../../Dormybook/index/index.html" class="text-black text-2xl">หน้าหลัก</a>
+            <a href="../index/index.html" class="text-black text-2xl">หน้าหลัก</a>
             <select id="input-condition" class="text-black text-2xl bg-white rounded p-2">
                 <option value="ประเภทของหอพัก">ประเภทของหอพัก</option>
                 <option value="หอพักหญิง">หอพักหญิง</option>
@@ -23,31 +23,31 @@
             <a href="../../PartnersDormyhome/index/index.html"><button class="bg-[#AB887C] text-white text-2xl rounded-md p-2 px-4">ลงประกาศหอพัก</button></a>
         </div>
         <div class="flex items-center gap-5 ">
-            <a href="../../Dormybook/notifications/notifications.html"><div class="w-9 h-9 bg-[#8D6E63] rounded-full flex items-center justify-center">
+            <a href="../notifications/notifications.html"><div class="w-9 h-9 bg-[#8D6E63] rounded-full flex items-center justify-center">
                 <i class="fa-regular fa-bell text-white text-2xl"></i>
             </div></a>
-            <a href="../../Dormybook/roomtype/roomtype.html"><div class="w-9 h-9 bg-[#8D6E63] rounded-full flex items-center justify-center">
+            <a href="../roomtype/roomtype.html"><div class="w-9 h-9 bg-[#8D6E63] rounded-full flex items-center justify-center">
                 <i class="fa-regular fa-heart text-white text-2xl"></i>
             </div></a>
-            <a href="../../Dormybook/User-account/User account.html"><i class='bx bxs-user-circle text- text-[47px]'></i></a>
-            <a href="../../Dormybook/User-account/User account.html"><button class="bg-teal-500 text-white text-xl px-12 py-2 rounded">ชื่อผู้ใช้: xxxxxx xxxxx</button>
+            <a href="../User-account/User account.html"><i class='bx bxs-user-circle text- text-[47px]'></i></a>
+            <a href="../User-account/User account.html"><button class="bg-teal-500 text-white text-xl px-12 py-2 rounded">log-in</button>
         </div></a>
     </nav>
 
     <div class="container flex justify-center items-center gap-4 mt-8 mx-auto">
         <div class="w-[509px] h-[88px] shadow-inner shadow-gray-500 bg-white rounded-md">
             <i class="fas fa-search absolute mt-8 ml-4 text-gray-500 text-2xl"></i>
-            <input type="text" placeholder="ใส่จุดหมายปลายทางหรือชื่อหอพัก" class="w-full h-full p-3 pl-[60px] bg-transparent">
+            <input type="search" placeholder="ใส่จุดหมายปลายทางหรือชื่อหอพัก" class="w-full h-full p-3 pl-[60px] bg-transparent">
         </div>
         <div class="w-[290px] h-[88px] rounded-md shadow-inner shadow-gray-500 bg-white">
             <p class="p-4">วันที่เข้าพัก<input type="date" class="w-full h-full text-xl bg-transparent"></p>
         </div>
         <div class="relative">
-            <div class="w-[290px] h-[88px] bg-white p-3 rounded-md shadow-inner shadow-gray-500 flex items-center justify-between cursor-pointer" id="toggleDropdown">
+            <div class="w-[290px] h-[88px] bg-white p-3 rounded-md shadow-inner shadow-gray-500 flex items-center  cursor-pointer" id="toggleDropdown">
+                <i class="fas fa-user text-gray-500 text-4xl"></i>
                 <div>
-                    <i class="fas fa-user text-gray-500 text-xl"></i>
                     <span class="ml-2">ผู้ใหญ่ <span id="adultCountDisplay">x</span> คน</span>
-                    <p class="text-gray-500 text-sm ml-8"> <span id="roomCountDisplay">x</span> ห้อง</p>
+                    <p class="text-gray-500 text-sm ml-2"> <span id="roomCountDisplay">x</span> ห้อง</p>
                 </div>
             </div>
 
@@ -73,7 +73,7 @@
         <button class="bg-[#007aff] w-[194px] h-[72px] rounded-md text-white text-xl">ค้นหา</button>
     </div>
 
-    <div class="container ml-2 mt-5 flex gap-4">
+    <div class="container ml-2 mt-5 grid grid-cols-3">
         <div class="bg-white p-6 rounded-lg shadow-md col-span-1 w-[420px] h-[840px]">
             <h2 class="text-xl font-bold mb-4 text-center">กรอกผลลัพธ์การค้นหา</h2>
             <form>
@@ -125,18 +125,17 @@
                     </div>
                 </div>
 
-                <div class="flex justify-center mt-[50px]">
+                <a href="../index/index.html"><div class="flex justify-center mt-[50px]">
                     <button type="submit" class="w-[207px] h-[53px] bg-teal-500 hover:bg-teal-600 w-[155px] h-[60px] text-xl text-white py-2 rounded-xl">ค้นหา</button>
-                </div>
+                </div></a>
             </form>
         </div>
 
         <div class="col-span-2 w-[1065px] bg-[#8d6e63] p-5 rounded-lg">
-            <h2 class="text-[50px] text-center mb-5 text-white">หอพักรวม</h2>
             <div class="space-y-4">
                 <div class="h-[270px] bg-white  rounded-lg flex">
                     <div class="p-7">
-                        <img src="../picture/หอ1.jpg" class="w-[317px] h-[214px] items-center rounded-lg">
+                        <img src="../images/จองที่พัก1.jpg" class="w-[317px] h-[214px] items-center rounded-lg">
                     </div>
                     <div class="ml-4 py-7 flex-1">
                         <h3 class="text-lg font-bold">ชื่อหอพัก: xxxxxx</h3>
@@ -148,17 +147,17 @@
                     
                     <div class="text-right py-7 px-5">
                         <p class="text-yellow-500" style="color: black;"><i class="fa-solid fa-star mr-3 text-xl" style="color: #FFD43B;"></i>xx คะแนนรีวิว</p>
-                        <p class="text-yellow-500 mr-5" style="color: black;">xxx คนรีวิว</p>
+                        <p class="text-yellow-500 mr-5"  style="color: black;">xxx คนรีวิว</p>
                         <p class="text-lg font-bold mt-[80px]">ราคา: xxxx THB/เดือน</p>
                     </div>
                     <div class="relative">
-                        <a href="../booking/จองที่พัก.html"><button class="w-[185px] h-[52px] bg-teal-500 text-white py-1 px-4 rounded absolute right-0 bottom-0 mb-5 mr-8">ดูห้องว่าง</button></a>
+                        <a href="../../Final project/booking/จองที่พัก.html"><button class="w-[185px] h-[52px] bg-teal-500 text-white py-1 px-4 rounded absolute right-0 bottom-0 mb-5 mr-8">ดูห้องว่าง</button></a>
                     </div>
                 </div>
                 
                 <div class="h-[270px] bg-white  rounded-lg flex">
                     <div class="p-7">
-                        <img src="../picture/หอ2.jpg" class="w-[317px] h-[214px] items-center rounded-lg">
+                        <img src="../images/images.jpg" class="w-[317px] h-[214px] items-center rounded-lg">
                     </div>
                     <div class="ml-4 py-7 flex-1">
                         <h3 class="text-lg font-bold">ชื่อหอพัก: xxxxxx</h3>
@@ -174,13 +173,13 @@
                         <p class="text-lg font-bold mt-[80px]">ราคา: xxxx THB/เดือน</p>
                     </div>
                     <div class="relative">
-                        <a href="../booking/จองที่พัก.html"><button class="w-[185px] h-[52px] bg-teal-500 text-white py-1 px-4 rounded absolute right-0 bottom-0 mb-5 mr-8">ดูห้องว่าง</button></a>
+                        <a href="../../Final project/booking/จองที่พัก.html"><button class="w-[185px] h-[52px] bg-teal-500 text-white py-1 px-4 rounded absolute right-0 bottom-0 mb-5 mr-8">ดูห้องว่าง</button></a>
                     </div>
                 </div>
 
                 <div class="h-[270px] bg-white  rounded-lg flex">
                     <div class="p-7">
-                        <img src="../picture/หอ3.jpg" class="w-[317px] h-[214px] items-center rounded-lg">
+                        <img src="../images/S4e848379fe0e4286a4f966883b1fb8a0j.jpg" class="w-[317px] h-[214px] items-center rounded-lg">
                     </div>
                     <div class="ml-4 py-7 flex-1">
                         <h3 class="text-lg font-bold">ชื่อหอพัก: xxxxxx</h3>
@@ -196,7 +195,7 @@
                         <p class="text-lg font-bold mt-[80px]">ราคา: xxxx THB/เดือน</p>
                     </div>
                     <div class="relative">
-                        <a href="../booking/จองที่พัก.html"><button class="w-[185px] h-[52px] bg-teal-500 text-white py-1 px-4 rounded absolute right-0 bottom-0 mb-5 mr-8">ดูห้องว่าง</button></a>
+                        <a href="../../Final project/booking/จองที่พัก.html"><button class="w-[185px] h-[52px] bg-teal-500 text-white py-1 px-4 rounded absolute right-0 bottom-0 mb-5 mr-8">ดูห้องว่าง</button></a>
                     </div>
                 </div>
             </div>
