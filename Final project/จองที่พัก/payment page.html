@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="../picture/logoh.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+</head>
+<body class="bg-cover w-screen min-h-screen justify-center items-center overflow-x-hidden" style="background-color: #fadec8;">
+    <nav class="flex flex-col bg-white w-screen h-[220px] relative">
+        <div class="absolute top-[40px] left-[20px] w-[200px] h-[55px]">
+            <img src="../picture/logo1.png" class="w-full h-full">
+        </div>
+
+        <div class="flex justify-between items-center w-full px-10 mt-[100px]">
+            <div class="w-[880px] flex items-center justify-between relative mx-auto">
+                <div class="absolute top-1 left-[6.5%] right-[55.3%] h-2 rounded-full bg-[#30DBD1] z-0" style="transform: translateY(15px);"></div>
+                <div class="absolute top-1 left-[49.4%] right-[9.5%] h-2 rounded-full bg-gray-300 z-0" style="transform: translateY(15px);"></div>
+    
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-black bg-[#30DBD1]">1</div>
+                    <p class="mt-2 text-black font-medium">ข้อมูลผู้จอง</p>
+                </div>
+    
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-black bg-[#30DBD1]">2</div>
+                    <p class="mt-2 text-black font-medium">ข้อมูลการชำระเงิน</p>
+                </div>
+    
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-gray-500 bg-gray-300">3</div>
+                    <p class="mt-2 text-gray-500">ยืนยันการจองสำเร็จ</p>
+                </div>
+            </div>
+    
+            <div class="relative ml-[-15%]">
+                <button id="profileButton" class="flex items-center space-x-2 bg-white px-4 py-2 gap-3">
+                    <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                        <i class="fa-regular fa-circle-user text-[45px]"></i>
+                    </div>
+                    <span class="text-black text-2xl">XXXXXX</span>
+                    <img id="dropdownIcon" src="../picture/down.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
+                </button>
+                
+                <div id="dropdownMenu" class="absolute right-2 mt-2 w-[150px] h-[40px] bg-[#FA0624] rounded-xl hidden">
+                    <button class="w-full h-full rounded-xl px-4 py-2 text-white font-semibold hover:bg-red-400">ออกจากระบบ</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="grid grid-cols-3 gap-2">
+        <div class="col-span-2 w-[789px] mt-[115px] ml-[65px]">
+            <div class="bg-white bg-opacity-80 w-full h-[75px] rounded-t-lg border-b border-gray-400 px-4 py-1">
+                <div class="flex flex-col">
+                    <div class="flex">
+                        <i class="fi fi-rr-shield text-[#007AFF] text-[35px] mr-2"></i>
+                        <p class="text-[#007AFF] text-[22px] mt-[4px]">ชำระเงินปลอดภัย</p>
+                    </div>
+                    <p class="text-[12.5px] mt-[-10px]">ข้อมูลบัตรทั้งหมดได้รับการปกป้อง เข้ารหัส และปลอดภัย</p>
+                </div>
+            </div>
+
+            <div class="bg-white bg-opacity-80 w-full h-[75px] border-b border-gray-400">
+                <div class="flex justify-between py-4 px-5">
+                    <div class="flex items-center">
+                        <input type="radio" class="mr-2"><span>ชำระเงินด้วยรหัส QR Code</span>
+                    </div>
+                    <img src="../picture/ชำระเงินคิวอา.png" class="w-[110px] h-[38px]">
+                </div>
+            </div>
+            
+            <div class="bg-white bg-opacity-80 w-full border-b border-gray-400 p-5">
+                <!-- Radio Button + Bank Icons -->
+                <div class="flex justify-between items-center mb-3">
+                    <div class="flex items-center">
+                        <input type="radio" id="mobileBanking" class="mr-2" onclick="toggleDropdown()">
+                        <label for="mobileBanking" class="text-[17.5px]">Mobile Banking</label>
+                    </div>
+                    <div class="flex gap-4">
+                        <img src="../picture/กรุงไทย.png" alt="ธนาคารกรุงไทย" class="w-8 h-8">
+                        <img src="../picture/SCB.png" alt="ธนาคารไทยพาณิชย์" class="w-8 h-8">
+                        <img src="../picture/กสิกร.png" alt="ธนาคารกสิกร" class="w-8 h-8">
+                    </div>
+                </div>
+            
+                <div id="bankDropdown" class="hidden">
+                    <label for="bankSelect" class="block mb-2 font-medium">เลือกวิธีชำระเงิน</label>
+                    <div class="relative">
+                        <div class="border border-gray-400 w-full">
+                            <div class="p-3 flex items-center justify-between cursor-pointer" onclick="toggleBankOptions()">
+                                <div class="flex items-center gap-2">
+                                    <img id="selectedBankIcon" src="../picture/กรุงไทย.png" alt="ธนาคารกรุงไทย" class="w-8 h-8">
+                                    <span id="selectedBankText">ธนาคารกรุงไทย</span>
+                                </div>
+                                <span>▼</span>
+                            </div>
+                            <div id="bankOptions" class="hidden border-t">
+                                <div class="p-3 flex items-center gap-2 hover:bg-gray-200 cursor-pointer" onclick="selectBank('กรุงไทย', '../picture/กรุงไทย.png')">
+                                    <img src="../picture/กรุงไทย.png" alt="ธนาคารกรุงไทย" class="w-8 h-8">
+                                    <span>ธนาคารกรุงไทย</span>
+                                </div>
+                                <div class="p-3 flex items-center gap-2 hover:bg-gray-200 cursor-pointer" onclick="selectBank('ไทยพาณิชย์', '../picture/SCB.png')">
+                                    <img src="../picture/SCB.png" alt="ธนาคารไทยพาณิชย์" class="w-8 h-8">
+                                    <span>ธนาคารไทยพาณิชย์</span>
+                                </div>
+                                <div class="p-3 flex items-center gap-2 hover:bg-gray-200 cursor-pointer" onclick="selectBank('กสิกร', '../picture/กสิกร.png')">
+                                    <img src="../picture/กสิกร.png" alt="ธนาคารกสิกร" class="w-8 h-8">
+                                    <span>ธนาคารกสิกร</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <p class="text-sm text-gray-600 mt-2">
+                        เพื่อไม่ให้การจองของท่านถูกยกเลิก กรุณาชำระเงินภายใน 15 นาที
+                    </p>
+                </div>
+            </div>
+            
+
+            <div class="bg-white bg-opacity-80 w-full h-[85px] rounded-b-lg">
+                <div class="flex flex-col py-2 px-5">
+                    <div class="flex text-[13.5px]">
+                        <p>ท่านยอมรับ</p><p class="text-[#007AFF] ml-1 mr-1">ข้อกำหนดการใช้งาน</p><p>และ</p><p class="text-[#007AFF] ml-1 mr-1">นโยบายความเป็นส่วนตัว</p><p>ของ Dormybook เมื่อดำเนินการต่อ</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fi fi-br-checkbox text-[#007AFF] mr-3 mt-2"></i>
+                        <div class="flex flex-col text-[12px] mt-[10px]">
+                            <p>ฉันตกลงที่จะรับข้อมูลอัปเดตและโปรโมชั่นเกี่ยวกับ Dormybook และบริษัทในเครือหรือพันธมิตรทางธุรกิจผ่านช่องทางต่างๆรวมถึง WhatsApps</p>
+                            <p>ฉันสามารถยกเลิกการรับข้อมูลได้ตลอดเวลา</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-[20px]"><button class="w-[695px] h-[72px] rounded-full text-white bg-[#1A237E] text-3xl">จองหอพัก</button></div>
+        </div>
+
+        <div class="col-span-1 mt-[10px]">
+            <div class="flex flex-col">
+                <div class="flex items-center justify-center bg-white bg-opacity-80 w-[468px] h-[71px] rounded-xl">
+                    <div class="flex">
+                        <p class="text-2xl">สัญญาเช่า : DD/MM/YYYY - DD/MM/YYYY</p>
+                    </div>
+                </div>
+
+                <div class="flex bg-white bg-opacity-80 w-[468px] h-[326px] rounded-xl mt-[5px] pt-3">
+                    <div class="flex flex-col">
+                        <div class="flex ml-[20px]">
+                            <p class="text-2xl font-bold">ชื่อหอพัก : XXXXXX</p>
+                        </div>
+                        <div class="flex gap-2 ml-[20px] mt-[5px]">
+                            <i class="fi fi-rr-marker text-black text-[20px]"></i>
+                            <p class="mt-[3px]">ตำแหน่งที่ตั้ง</p>
+                        </div>
+                        <div class="flex ml-[20px] mt-[5px]">
+                            <p class="text-[#007AFF] text-lg">X.X</p>
+                            <p class="text-[#007AFF] mt-[2px]">ระดับคะแนนรีวิว</p>
+                            <p class="ml-5">x,xxx รีวิว</p>
+                        </div>
+                        <div class="flex mt-[30px] px-2">
+                            <img src="../picture/4.jpg" class="w-[240px] h-[156px] rounded-lg mr-2">
+                            <div class="flex flex-col gap-1">
+                                <p class="text-[23px]">1 X - 1 Single Room</p>
+                                <div class="flex text-[13px] text-gray-500">
+                                    <p class="mr-[40px]">25 ตร.ม</p>
+                                    <p>ผู้เข้าพัก : ผู้ใหญ่ X คน</p>
+                                </div>
+                                <div class="flex items-end">
+                                    <img src="../picture/เตียงคู่-Photoroom.png" class="w-[40px] h-[35px]">
+                                    <p class="text-gray-500 text-[12px]">เตียงเดี่ยว : 5 ฟุต</p>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i><p class="text-gray-500 text-[13px]">จองและจ่ายทันที</p></div>
+                                    <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i><p class="text-gray-500 text-[13px]">ขอรับเงินคืนไม่ได้</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-80 rounded-t-xl border-b border-gray-400 w-[468px] h-[112px] mt-[5px]">
+                    <div class="flex justify-between text-[17.5px] p-3">
+                        <p>ราคาห้องพัก (หอพัก 1 ห้อง)</p>
+                        <div class="flex items-end">
+                            <p class="text-[12px] mr-1">฿</p>
+                            <p>X,XXX.XX</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between p-3">
+                        <p class="text-[17.5px]">ค่าธรรมเนียมการจอง</p>
+                        <div class="flex justify-end">
+                            <p class="text-[#007AFF] text-[11px]">ฟรี</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-80 w-[468px] h-[105px] pt-[20px] px-7 rounded-b-xl mb-[30px]">
+                    <div class="flex justify-between text-[30px] ">
+                        <p>ราคาที่จ่าย</p>
+                        <div class="flex items-center">
+                        <p class="text-[15px] mr-1 mt-3">฿</p>
+                        <p>X,XXX.XX</p>
+                    </div>
+                </div>
+                <p class="text-gray-500 text-[13px]">รวม : ภาษีท้องถิ่น 1%, ภาษี 7%, เซอร์วิสชาร์จ 10%</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const profileButton = document.getElementById("profileButton");
+            const dropdownMenu = document.getElementById("dropdownMenu");
+            const dropdownIcon = document.getElementById("dropdownIcon");
+    
+            profileButton.addEventListener("click", (event) => {
+                event.stopPropagation(); // ป้องกัน event bubbling
+                dropdownMenu.classList.toggle("hidden");
+                dropdownIcon.classList.toggle("rotate-180");
+            });
+    
+            document.addEventListener("click", (event) => {
+                if (!profileButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add("hidden");
+                    dropdownIcon.classList.remove("rotate-180");
+                }
+            });
+        });
+        function toggleDropdown() {
+        const dropdown = document.getElementById('bankDropdown');
+        dropdown.classList.toggle('hidden');
+    }
+
+    function toggleBankOptions() {
+        const options = document.getElementById('bankOptions');
+        options.classList.toggle('hidden');
+    }
+
+    function selectBank(bankName, bankIcon) {
+        document.getElementById('selectedBankText').textContent = 'ธนาคาร' + bankName;
+        document.getElementById('selectedBankIcon').src = bankIcon;
+        toggleBankOptions();
+    }
+    </script>
+</body>
+</html>
