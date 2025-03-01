@@ -3,168 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" href="../images/logodorymyเล็ก.png">
-    <link rel="stylesheet" href="./index.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dormybook</title>
+    <link rel="icon" href="../picture/logoh.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
 </head>
-<body>
-    <header class="header">
-        <div class="navbar">
-            <div class="logo">
-                <a href="../index/index.html"><img src="../images/dormybook.png" alt="Dormybook">
-            </div></a>
-            <div class="menu-buttons">
-                <a href="#"><button>หน้าหลัก</button></a>
-                <select class="input-condition">
-                    <option value="ประเภทของหอพัก">ประเภทของหอพัก </option>
-                    <option value="หอพักหญิง">หอพักหญิง </option>
-                    <option value="หอพักชาย">หอพักชาย</option>
-                    <option value="หอรวม">หอรวม</option>
-                </select>
-                <a href="#"><button style="background: #AB887C; color: #ffffff;">ลงประกาศหอพัก</button></a>
+<body class="bg-cover bg-center w-screen h-full overflow-x-hidden pt-[143px] relative" style="background-image: url(../picture/bg1.jpg);">
+    <nav class="fixed top-0 left-0 flex justify-between items-center w-screen h-[143px] bg-white shadow-md p-4 z-50">
+        <a href="#"><img src="../picture/logo1.png" class=" w-[360px] h-[88px]"></a>
+        <div class="relative flex items-center">
+            <a href="#" class="bg-center mr-12 text-black text-2xl">หน้าหลัก</a>
+            <div class="relative mr-[20px]">
+                <button id="dropdownButton" class="bg-white py-2 text-2xl flex items-center mr-5">
+                    ประเภทของหอพัก <i class="fa-solid fa-chevron-down text-black ml-2"></i>
+                </button>
+                <div id="dropdownMenu" 
+                    class="absolute left-0 mt-2 w-48 bg-white shadow-md rounded hidden z-40">
+                    <a href="./หอพักหญิง.html" class="block px-4 py-2 hover:bg-gray-100">หอหญิง</a>
+                    <a href="./หอพักชาย.html" class="block px-4 py-2 hover:bg-gray-100">หอชาย</a>
+                    <a href="./หอพักรวม.html" class="block px-4 py-2 hover:bg-gray-100">หอรวม</a>
+                </div>
+            </div>   
+            <a href="#"><button class="bg-yellow-700 text-white text-2xl rounded-md p-1 px-3">ลงประกาศหอพัก</button></a>
+            <div class="flex items-center gap-5 ml-5">
+                <a href="#"><div class="w-9 h-9 bg-yellow-800 rounded-full flex items-center justify-center">
+                    <i class="fa-regular fa-bell text-white text-2xl"></i></div>
+                </a>
+                <a href="#"><div class="w-9 h-9 bg-yellow-800 rounded-full flex items-center justify-center">
+                    <i class="fa-regular fa-heart text-white text-2xl"></i></div>
+                </a>
+                <a href="#"><i class="fa-regular fa-user-circle text-4xl"></i></a>
+                <a href="#"><button class="bg-teal-500 text-white text-xl px-12 py-2 rounded">ชื่อผู้ใช้: xxxxxx xxxxx</button></a>
             </div>
-            <div class="icon-buttons">
-                <a href="#"><button style="background: #8D6E63;color: #ffffff; width: 45px; font-size: 25px;"><i class='bx bx-bell'></i></button></a>
-                <a href="#"><button style="background: #8D6E63;color: #ffffff; width: 45px; font-size: 25px;"><i class='bx bx-heart'></i></button></a>
-                <a href="#"><button><i class='bx bxs-user-circle'></i></button></a>
-                <a href="#"><button style="border-radius: 10px; background: #20B2AA; padding: 5px 50px;">ชื่อ:xxxxxx xxxxxxx</button></a>
+        </div>
+    </nav>
+
+    <div class="container flex justify-center items-center gap-4 mt-8 mx-auto">
+        <div class="w-[509px] h-[88px] shadow-inner shadow-gray-500 bg-white rounded-md">
+            <i class="fas fa-search absolute mt-8 ml-4 text-gray-500 text-2xl"></i>
+            <input type="text" placeholder="ใส่จุดหมายปลายทางหรือชื่อหอพัก" class="w-full h-full p-3 pl-[60px] bg-transparent">
+        </div>
+        <div class="w-[290px] h-[88px] rounded-md shadow-inner shadow-gray-500 bg-white">
+            <p class="p-4">วันที่เข้าพัก<input type="date" class="w-full h-full text-xl bg-transparent"></p>
+        </div>
+        <div class="relative">
+            <div class="w-[290px] h-[88px] bg-white p-3 rounded-md shadow-inner shadow-gray-500 flex items-center justify-between cursor-pointer" id="toggleDropdown">
+                <div>
+                    <i class="fas fa-user text-gray-500 text-xl"></i>
+                    <span class="ml-2">ผู้ใหญ่ <span id="adultCountDisplay">x</span> คน</span>
+                    <p class="text-gray-500 text-sm ml-8"> <span id="roomCountDisplay">x</span> ห้อง</p>
+                </div>
+            </div>
+
+            <div id="dropdownCounter" class="absolute top-full left-0 mt-2 w-full bg-white shadow-md rounded p-3 hidden">
+                <div class="flex justify-between items-center">
+                    <span class="font-bold">ผู้ใหญ่</span>
+                    <div class="flex items-center space-x-2">
+                        <button class="text-black px-3" onclick="decreaseAdult()">&lt;</button>
+                        <span id="adultCount">1</span>
+                        <button class="text-black px-3" onclick="increaseAdult()">&gt;</button>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                    <span class="font-bold">ห้อง</span>
+                    <div class="flex items-center space-x-2">
+                        <button class="text-black px-3" onclick="decreaseRoom()">&lt;</button>
+                        <span id="roomCount">1</span>
+                        <button class="text-black px-3" onclick="increaseRoom()">&gt;</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
-    <div class="container-Input">
-        <div class="search-box">
-            <img src="/home/images/search.png" alt="Search Icon"> 
-            <input type="text" placeholder="XXXXXX XXXXXXXXXXX">
+        <button class="bg-[#007aff] w-[194px] h-[72px] rounded-md text-white text-xl">ค้นหา</button>
     </div>
 
-    <div class="date-box" onclick="openCalendar()">
-            <img src="/home/images/date.png" alt="Calendar Icon"> 
-            <input type="date" id="dateInput">
-    </div>
+    <div class="container ml-2 mt-5 grid grid-cols-3">
+        <div class="bg-white p-6 rounded-lg shadow-md col-span-1 w-[420px] h-[840px]">
+            <h2 class="text-xl font-bold mb-4 text-center">กรอกผลลัพธ์การค้นหา</h2>
+            <form>
+                <div class="mb-4">
+                    <label class="block font-bold">เรียงตาม</label>
+                    <div class="space-y-1 ml-3">
+                        <label class="flex items-center space-x-2"><input type="radio" name="sort"> <span>หอพักแนะนำ</span></label>
+                        <label class="flex items-center space-x-2"><input type="radio" name="sort"> <span>หอพักใกล้ฉัน</span></label>
+                        <label class="flex items-center space-x-2"><input type="radio" name="sort"> <span>ราคาต่ำสุดถึงสูงสุด</span></label>
+                        <label class="flex items-center space-x-2"><input type="radio" name="sort"> <span>ราคาสูงสุดถึงต่ำสุด</span></label>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block font-bold">คะแนนรีวิว</label>
+                    <div class="space-y-1 ml-3">
+                        <label class="flex items-center space-x-2"><input type="radio" name="rating"> <span>ยอดเยี่ยม 9+</span></label>
+                        <label class="flex items-center space-x-2"><input type="radio" name="rating"> <span>ดีเยี่ยม 8+</span></label>
+                        <label class="flex items-center space-x-2"><input type="radio" name="rating"> <span>ดีมาก 7+</span></label>
+                        <label class="flex items-center space-x-2"><input type="radio" name="rating"> <span>ดี 6+</span></label>
+                    </div>
+                </div>
 
-    <div class="proFile-box" onclick="toggleMenu()">
-        <img src="/home/images/person.png" alt="Profile">
-        <span>ผู้ใหญ่ x คน</span>
-        <div class="dropdown-menu" id="profileMenu">
-            <div class="menu-item">ห้อง <span class="controls">&lt; X &gt;</span></div>
-            <div class="menu-item">ผู้ใหญ่ <span class="controls">&lt; X &gt;</span></div>
+                <div class="mb-4">
+                    <label class="block font-bold">ระยะทางถึงมหาวิทยาลัย</label>
+                    <div class="space-y-1 ml-3">
+                        <label class="flex items-center space-x-2"><input type="radio" name="rating"> <span>800 เมตร</span></label>
+                        <label class="flex items-center space-x-2"><input type="radio" name="rating"> <span>1-2 กิโลเมตร</span></label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block font-bold">สิ่งอำนวยความสะดวก</label>
+                    <div class="space-y-1 ml-3">
+                        <label class="flex items-center space-x-2"><input type="radio" name="rating"> <span>พื้นที่จอดรถ</span></label>
+                        <label class="flex items-center space-x-2"><input type="radio" name="rating"> <span>ระบบรักษาความปลอดภัย 24 ชม.</span></label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block font-bold">ช่วงราคา</label>
+                    <p class="ml-6">ใส่ราคาหอพักรายเดือนระหว่าง 1,500-15,000 บาท </p>
+                    <div class="bg-gray-200 w-[207px] h-[53px] mt-8 mx-auto p-4 rounded-xl flex items-center justify-between">
+                        <input type="text" id="priceInput" value="1500" readonly class="w-16 text-center bg-transparent text-xl">
+                        <div class="flex flex-col">
+                            <button id="increase" type="button" class="text-gray-700 hover:text-black text-lg">▲</button>
+                            <button id="decrease" type="button" class="text-gray-700 hover:text-black text-lg">▼</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center mt-[50px]">
+                    <button type="submit" class="w-[207px] h-[53px] bg-teal-500 hover:bg-teal-600 w-[155px] h-[60px] text-xl text-white py-2 rounded-xl">ค้นหา</button>
+                </div>
+            </form>
         </div>
-    </div>
 
-    <div class="search button">
-        <button>ค้นหา</button>
-    </div>
-    </div>
-
-
-    <div class="container">
-        <div class="filters">
-            <h3>กรองผลลัพธ์การค้นหา</h3>
-            <b><label>เรียงตาม</label></b>
-            <input type="radio" name="sort" value="relevance"> หอพักแนะนำ<br>
-            <input type="radio" name="sort" value="nearby"> หอพักใกล้ฉัน<br>
-            <input type="radio" name="sort" value="price_high"> ราคาสูงสุดถึงต่ำสุด<br>
-            <input type="radio" name="sort" value="price_low"> ราคาต่ำสุดถึงสูงสุด<br>
-            <br>
-
-            <b><label>คะแนนรีวิว</label></b>
-            <input type="radio" name="review" value="9+"> ยอดเยี่ยม 9+<br>
-            <input type="radio" name="review" value="8+"> ดีเยียม 8+<br>
-            <input type="radio" name="review" value="7+"> ดีมาก 7+<br>
-            <input type="radio" name="review" value="6+"> ค่อนข้างดี 6+<br>
-            <br>
-
-            <b><label>ระยะทางจากมหาวิทยาลัย</label></b>   
-            <input type="radio" name="distance" value="800m"> 800 เมตร<br>
-            <input type="radio" name="distance" value="1-2km"> 1-2 กิโลเมตร<br>
-            <br>
-
-            <b><label>สิ่งอำนวยความสะดวก</label></b>
-            <input type="radio" name="facilities" value="wifi"> พื้นที่จอดรถ<br>
-            <input type="radio" name="facilities" value="24hour"> ระบบรักษาความปลอดภัย 24 ชม.   <br>
-            <br>
-
-            <b><label>ช่วงราคา</label></b>
-            <p>ใส่ราคารายเดือนระหว่าง 1,500-15,000บาท</p>
-            <input type="number" placeholder="xxxx " min="0" step="500">
-            <br>
-            <button>ใช้ตัวกรอก</button>
-    
-        </div>
-
-        <div class="results">
-            <div class="result">
-                <img src="/home/images/dormitory1.jpg" alt="Dorm Image">
-                <div class="result-content">
-                    <h4>ชื่อหอพัก: xxxxxx</h4>
-                    <p>ตำแหน่งที่ตั้ง: </p>
+        <div class="col-span-2 w-[1065px] bg-[#8d6e63] p-5 rounded-lg">
+            <h2 class="text-[50px] text-center mb-5 text-white">หอพักชาย</h2>
+            <div class="space-y-4">
+                <div class="h-[270px] bg-white  rounded-lg flex">
+                    <div class="p-7">
+                        <img src="../picture/หอ1.jpg" class="w-[317px] h-[214px] items-center rounded-lg">
+                    </div>
+                    <div class="ml-4 py-7 flex-1">
+                        <h3 class="text-lg font-bold">ชื่อหอพัก: xxxxxx</h3>
+                        <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot mr-2 text-lg"></i>ตำแหน่งที่ตั้ง</p>
+                    </div>
+                    <div class="mr-[20px]">
+                        <div class="border-l border-black h-full"></div>
+                    </div>
                     
+                    <div class="text-right py-7 px-5">
+                        <p class="text-yellow-500"><i class="fa-solid fa-star mr-3 text-xl" style="color: #FFD43B;"></i>xx คะแนนรีวิว</p>
+                        <p class="text-yellow-500 mr-5">xxx คนรีวิว</p>
+                        <p class="text-lg font-bold mt-[80px]">ราคา: xxxx THB/เดือน</p>
+                    </div>
+                    <div class="relative">
+                        <button class="w-[185px] h-[52px] bg-teal-500 text-white py-1 px-4 rounded absolute right-0 bottom-0 mb-5 mr-8">ดูห้องว่าง</button>
+                    </div>
                 </div>
-                <div class="result-price">
-                   <b><p class="review">⭐ xx คะแนนรีวิว</p></b>
-                   <p>xxx คนรีวิว</p>
-                    <p class="price">ราคาต่อเดือน: xxxx THB</p>
-                    <button>ดูห้องว่าง</button>
-                </div>
-            </div>
-
-            <div class="result">
-                <img src="/home/images/dormitory4.jpg" alt="Dorm Image">
-                <div class="result-content">
-                    <h4>ชื่อหอพัก: xxxxxx</h4>
-                    <p>ตำแหน่งที่ตั้ง: xxxxxx</p>
+                
+                <div class="h-[270px] bg-white  rounded-lg flex">
+                    <div class="p-7">
+                        <img src="../picture/หอ2.jpg" class="w-[317px] h-[214px] items-center rounded-lg">
+                    </div>
+                    <div class="ml-4 py-7 flex-1">
+                        <h3 class="text-lg font-bold">ชื่อหอพัก: xxxxxx</h3>
+                        <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot mr-2 text-lg"></i>ตำแหน่งที่ตั้ง</p>
+                    </div>
+                    <div class="mr-[20px]">
+                        <div class="border-l border-black h-full"></div>
+                    </div>
                     
+                    <div class="text-right py-7 px-5">
+                        <p class="text-yellow-500"><i class="fa-solid fa-star mr-3 text-xl" style="color: #FFD43B;"></i>xx คะแนนรีวิว</p>
+                        <p class="text-yellow-500 mr-5">xxx คนรีวิว</p>
+                        <p class="text-lg font-bold mt-[80px]">ราคา: xxxx THB/เดือน</p>
+                    </div>
+                    <div class="relative">
+                        <button class="w-[185px] h-[52px] bg-teal-500 text-white py-1 px-4 rounded absolute right-0 bottom-0 mb-5 mr-8">ดูห้องว่าง</button>
+                    </div>
                 </div>
-                <div class="result-price">
-                    <b><p class="review">⭐ xx คะแนนรีวิว</p></b>
-                    <p>xxx คนรีวิว</p>
-                    <p class="price">ราคาต่อเดือน: xxxx THB</p>
-                    <button>ดูห้องว่าง</button>
-                </div>
-            </div>
 
-            <div class="result">
-                <img src="/home/images/dormitory3.jpg" alt="Dorm Image">
-                <div class="result-content">
-                    <h4>ชื่อหอพัก: xxxxxx</h4>
-                    <p>ตำแหน่งที่ตั้ง: xxxxxx</p>
-                  
-                </div>
-                <div class="result-price">
-                    <b><p class="review">⭐ xx คะแนนรีวิว</p></b>
-                    <p>xxx คนรีวิว</p>
-                    <p class="price">ราคาต่อเดือน: xxxx THB</p>
-                    <button>ดูห้องว่าง</button>
-                </div>
-            </div>
-
-            <div class="result">
-                <img src="/home/images/dormitory5.jpg" alt="Dorm Image">
-                <div class="result-content">
-                    <h4>ชื่อหอพัก: xxxxxx</h4>
-                    <p>ตำแหน่งที่ตั้ง: xxxxxx</p>
-                  
-                </div>
-                <div class="result-price">
-                    <b><p class="review">⭐ xx คะแนนรีวิว</p></b>
-                    <p>xxx คนรีวิว</p>
-                    <p class="price">ราคาต่อเดือน: xxxx THB</p>
-                    <button>ดูห้องว่าง</button>
+                <div class="h-[270px] bg-white  rounded-lg flex">
+                    <div class="p-7">
+                        <img src="../picture/หอ3.jpg" class="w-[317px] h-[214px] items-center rounded-lg">
+                    </div>
+                    <div class="ml-4 py-7 flex-1">
+                        <h3 class="text-lg font-bold">ชื่อหอพัก: xxxxxx</h3>
+                        <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot mr-2 text-lg"></i>ตำแหน่งที่ตั้ง</p>
+                    </div>
+                    <div class="mr-[20px]">
+                        <div class="border-l border-black h-full"></div>
+                    </div>
+                    
+                    <div class="text-right py-7 px-5">
+                        <p class="text-yellow-500"><i class="fa-solid fa-star mr-3 text-xl" style="color: #FFD43B;"></i>xx คะแนนรีวิว</p>
+                        <p class="text-yellow-500 mr-5">xxx คนรีวิว</p>
+                        <p class="text-lg font-bold mt-[80px]">ราคา: xxxx THB/เดือน</p>
+                    </div>
+                    <div class="relative">
+                        <button class="w-[185px] h-[52px] bg-teal-500 text-white py-1 px-4 rounded absolute right-0 bottom-0 mb-5 mr-8">ดูห้องว่าง</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="fixed inset-0 bg-orange-100 bg-opacity-50 backdrop-blur-sm -z-10"></div>
 
     <script>
-        function openCalendar() {
-            document.getElementById("dateInput").showPicker(); 
+        document.addEventListener('DOMContentLoaded', function() {
+        const toggleDropdown = document.getElementById('toggleDropdown');
+        const dropdownCounter = document.getElementById('dropdownCounter');
+
+        const adultCountDisplay = document.getElementById('adultCountDisplay');
+        const adultCountElement = document.getElementById('adultCount');
+
+        const roomCountDisplay = document.getElementById('roomCountDisplay');
+        const roomCountElement = document.getElementById('roomCount');
+
+        const dropdownButton = document.getElementById('dropdownButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        dropdownButton.addEventListener('click', function() {
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!dropdownMenu.contains(event.target) && !dropdownButton.contains(event.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        }); 
+
+        function updateText() {
+            adultCountDisplay.textContent = adultCountElement.textContent;
+            roomCountDisplay.textContent = roomCountElement.textContent;
         }
 
-        function toggleMenu() {
-            document.querySelector(".proFile-box").classList.toggle("active");
-        }      
-    </script>
+        toggleDropdown.addEventListener('click', function(event) {
+            dropdownCounter.classList.toggle('hidden');
+            event.stopPropagation();
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!dropdownCounter.contains(event.target) && !toggleDropdown.contains(event.target)) {
+                dropdownCounter.classList.add('hidden');
+            }
+        });
+
+        window.increaseAdult = function() {
+            let count = parseInt(adultCountElement.textContent);
+            adultCountElement.textContent = count + 1;
+            updateText();
+        };
+
+        window.decreaseAdult = function() {
+            let count = parseInt(adultCountElement.textContent);
+            if (count > 1) {
+                adultCountElement.textContent = count - 1;
+                updateText();
+            }
+        };
+
+        window.increaseRoom = function() {
+            let count = parseInt(roomCountElement.textContent);
+            roomCountElement.textContent = count + 1;
+            updateText();
+        };
+
+        window.decreaseRoom = function() {
+            let count = parseInt(roomCountElement.textContent);
+            if (count > 1) {
+                roomCountElement.textContent = count - 1;
+                updateText();
+            }
+        };
+    });
+    const priceInput = document.getElementById('priceInput');
+    const increaseButton = document.getElementById('increase');
+    const decreaseButton = document.getElementById('decrease');
+                    
+
+    const minPrice = 1500;
+    const maxPrice = 15000;
+    const step = 500;
+                    
+                        
+    increaseButton.addEventListener('click', () => {
+        let currentValue = parseInt(priceInput.value);
+        if (currentValue < maxPrice) {
+            priceInput.value = currentValue + step;
+        }
+    });
+                    
+                        
+    decreaseButton.addEventListener('click', () => {
+        let currentValue = parseInt(priceInput.value);
+        if (currentValue > minPrice) {
+            priceInput.value = currentValue - step;
+        }
+    });
+</script>
 </body>
-<script src="./index.js"></script>
 </html>
