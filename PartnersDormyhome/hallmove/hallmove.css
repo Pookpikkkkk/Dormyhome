@@ -221,3 +221,10 @@ button:active {
     margin-bottom: 5px;
     margin-left: 15px;
 }
+.sub-ti{
+    text-decoration: underline;
+    color: #007AFF;
+}
+.sub-ti  .bxs-star{
+    font-size: 18px;
+}
