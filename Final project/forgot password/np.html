@@ -12,44 +12,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            function validateInput(input, errorMessage, validationFn) {
-                let errorSpan = input.parentElement.querySelector(".error-message");
-                if (!errorSpan) {
-                    errorSpan = document.createElement("span");
-                    errorSpan.classList.add("error-message", "text-red-500", "text-sm", "absolute", "top-full", "left-0", "mt-1");
-                    input.parentElement.appendChild(errorSpan);
-                }
+        const emailInput = document.querySelector("input[type='email']");
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirm-password");
 
-                const valid = validationFn(input.value.trim());
-                errorSpan.textContent = valid ? "" : errorMessage;
-                toggleSuccessIcon(input, valid);
+        function validateInput(input, errorMessage, validationFn) {
+            let errorSpan = input.parentElement.querySelector(".error-message");
+            if (!errorSpan) {
+                errorSpan = document.createElement("span");
+                errorSpan.classList.add("error-message", "text-red-500", "text-sm", "absolute", "left-0", "mt-2");
+                input.parentElement.appendChild(errorSpan);
             }
 
-            function toggleSuccessIcon(input, valid) {
-                let successIcon = input.parentElement.querySelector(".success-icon");
-                if (!successIcon) {
-                    successIcon = document.createElement("div");
-                    successIcon.classList.add("success-icon", "absolute", "right-11", "top-1/2", "-translate-y-1/2", "w-6", "h-6", "rounded-full", "flex", "items-center", "justify-center", "text-white", "font-bold");
-                    input.parentElement.appendChild(successIcon);
-                }
-                successIcon.style.backgroundColor = valid ? "green" : "transparent";
-                successIcon.style.color = "#ffffff !important";
-                successIcon.style.fontSize = "15px";
-                successIcon.innerHTML = valid ? "✔" : "";
+            const valid = validationFn(input.value.trim());
+            errorSpan.textContent = valid ? "" : errorMessage;
+            toggleSuccessIcon(input, valid);
+        }
+
+        function toggleSuccessIcon(input, valid) {
+            let successIcon = input.parentElement.querySelector(".success-icon");
+            if (!successIcon) {
+                successIcon = document.createElement("div");
+                successIcon.classList.add("success-icon", "absolute", "right-4", "top-1/2", "-translate-y-1/2", "w-6", "h-6", "rounded-full", "flex", "items-center", "justify-center", "text-white", "font-bold");
+                input.parentElement.appendChild(successIcon);
             }
+            successIcon.style.backgroundColor = valid ? "green" : "transparent";
+            successIcon.textContent = valid ? "✔" : "";
+        }
 
-            document.querySelector("input[type='email']").addEventListener("input", function () {
-                validateInput(this, "กรุณากรอกอีเมลให้ถูกต้อง", value => value.includes("@"));
-            });
-
-            document.getElementById("password").addEventListener("input", function () {
-                validateInput(this, "รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษรและมีตัวเลข", value => /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(value));
-            });
-
-            document.getElementById("confirm-password").addEventListener("input", function () {
-                validateInput(this, "รหัสผ่านไม่ตรงกัน", value => value === document.getElementById("password").value);
-            });
+        emailInput.addEventListener("input", function () {
+            validateInput(this, "กรุณากรอกอีเมลให้ถูกต้อง", value => /\S+@\S+\.\S+/.test(value));
         });
+
+        passwordInput.addEventListener("input", function () {
+            validateInput(this, "รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษรและตัวเลข", value => /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(value));
+        });
+
+        confirmPasswordInput.addEventListener("input", function () {
+            validateInput(this, "รหัสผ่านไม่ตรงกัน", value => value === passwordInput.value);
+        });
+    });
+
     </script>
 </head>
 <body class="flex items-center justify-center min-h-screen bg-cover bg-center overflow" style="background-image: url('../picture/bg3.jpg');">
