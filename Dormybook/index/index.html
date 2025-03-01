@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dormybook</title>
+    <link rel="icon" type="image/png" href="bandner.png"> 
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="/review/image/logo.png" alt="logo"></a>
+        </div>
+
+        <div class="menu">
+            <a href="#">หน้าหลัก</a>
+
+            <!-- เมนู Dropdown -->
+            <div class="dropdown">
+                <button class="dropdown-button">ประเภทหอพัก ▾</button>
+                <div class="dropdown-content">
+                    <a href="#">หอหญิง</a>
+                    <a href="#">หอชาย</a>
+                    <a href="#">หอรวม</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="icon">
+            <a href="#"><img class="not" src="/image/notificationsW.png" alt=""></a>
+            <a href="#"><img class="favoritew" src="/image/favoritew.png" alt=""></a>
+            <a href="#"><img class="proFile" src="/image/profile.png" alt=""></a>
+        </div>
+
+        <div class="register">
+            <a href="" class="link-button">ชื่อผู้ใช้:xxxxx xxxxx</a>
+        </div>
+    </nav>
+
+    <div class="container-Input">
+        <div class="search-box">
+            <img src="/home/images/search.png" alt="Search Icon"> 
+            <input type="text" placeholder="XXXXXX XXXXXXXXXXX">
+    </div>
+
+    <div class="date-box" onclick="openCalendar()">
+            <img src="/home/images/date.png" alt="Calendar Icon"> 
+            <input type="date" id="dateInput">
+    </div>
+
+    <div class="proFile-box" onclick="toggleMenu()">
+        <img src="/home/images/person.png" alt="Profile">
+        <span>ผู้ใหญ่ x คน</span>
+        <div class="dropdown-menu" id="profileMenu">
+            <div class="menu-item">ห้อง <span class="controls">&lt; X &gt;</span></div>
+            <div class="menu-item">ผู้ใหญ่ <span class="controls">&lt; X &gt;</span></div>
+        </div>
+    </div>
+
+    <div class="search button">
+        <button>ค้นหา</button>
+    </div>
+    </div>
+
+
+    <div class="container">
+        <div class="filters">
+            <h3>กรองผลลัพธ์การค้นหา</h3>
+            <b><label>เรียงตาม</label></b>
+            <input type="radio" name="sort" value="relevance"> หอพักแนะนำ<br>
+            <input type="radio" name="sort" value="nearby"> หอพักใกล้ฉัน<br>
+            <input type="radio" name="sort" value="price_high"> ราคาสูงสุดถึงต่ำสุด<br>
+            <input type="radio" name="sort" value="price_low"> ราคาต่ำสุดถึงสูงสุด<br>
+            <br>
+
+            <b><label>คะแนนรีวิว</label></b>
+            <input type="radio" name="review" value="9+"> ยอดเยี่ยม 9+<br>
+            <input type="radio" name="review" value="8+"> ดีเยียม 8+<br>
+            <input type="radio" name="review" value="7+"> ดีมาก 7+<br>
+            <input type="radio" name="review" value="6+"> ค่อนข้างดี 6+<br>
+            <br>
+
+            <b><label>ระยะทางจากมหาวิทยาลัย</label></b>   
+            <input type="radio" name="distance" value="800m"> 800 เมตร<br>
+            <input type="radio" name="distance" value="1-2km"> 1-2 กิโลเมตร<br>
+            <br>
+
+            <b><label>สิ่งอำนวยความสะดวก</label></b>
+            <input type="radio" name="facilities" value="wifi"> พื้นที่จอดรถ<br>
+            <input type="radio" name="facilities" value="24hour"> ระบบรักษาความปลอดภัย 24 ชม.   <br>
+            <br>
+
+            <b><label>ช่วงราคา</label></b>
+            <p>ใส่ราคารายเดือนระหว่าง 1,500-15,000บาท</p>
+            <input type="number" placeholder="xxxx " min="0" step="500">
+            <br>
+            <button>ใช้ตัวกรอก</button>
+    
+        </div>
+
+        <div class="results">
+            <div class="result">
+                <img src="/home/images/dormitory1.jpg" alt="Dorm Image">
+                <div class="result-content">
+                    <h4>ชื่อหอพัก: xxxxxx</h4>
+                    <p>ตำแหน่งที่ตั้ง: </p>
+                    
+                </div>
+                <div class="result-price">
+                   <b><p class="review">⭐ xx คะแนนรีวิว</p></b>
+                   <p>xxx คนรีวิว</p>
+                    <p class="price">ราคาต่อเดือน: xxxx THB</p>
+                    <button>ดูห้องว่าง</button>
+                </div>
+            </div>
+
+            <div class="result">
+                <img src="/home/images/dormitory4.jpg" alt="Dorm Image">
+                <div class="result-content">
+                    <h4>ชื่อหอพัก: xxxxxx</h4>
+                    <p>ตำแหน่งที่ตั้ง: xxxxxx</p>
+                    
+                </div>
+                <div class="result-price">
+                    <b><p class="review">⭐ xx คะแนนรีวิว</p></b>
+                    <p>xxx คนรีวิว</p>
+                    <p class="price">ราคาต่อเดือน: xxxx THB</p>
+                    <button>ดูห้องว่าง</button>
+                </div>
+            </div>
+
+            <div class="result">
+                <img src="/home/images/dormitory3.jpg" alt="Dorm Image">
+                <div class="result-content">
+                    <h4>ชื่อหอพัก: xxxxxx</h4>
+                    <p>ตำแหน่งที่ตั้ง: xxxxxx</p>
+                  
+                </div>
+                <div class="result-price">
+                    <b><p class="review">⭐ xx คะแนนรีวิว</p></b>
+                    <p>xxx คนรีวิว</p>
+                    <p class="price">ราคาต่อเดือน: xxxx THB</p>
+                    <button>ดูห้องว่าง</button>
+                </div>
+            </div>
+
+            <div class="result">
+                <img src="/home/images/dormitory5.jpg" alt="Dorm Image">
+                <div class="result-content">
+                    <h4>ชื่อหอพัก: xxxxxx</h4>
+                    <p>ตำแหน่งที่ตั้ง: xxxxxx</p>
+                  
+                </div>
+                <div class="result-price">
+                    <b><p class="review">⭐ xx คะแนนรีวิว</p></b>
+                    <p>xxx คนรีวิว</p>
+                    <p class="price">ราคาต่อเดือน: xxxx THB</p>
+                    <button>ดูห้องว่าง</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCalendar() {
+            document.getElementById("dateInput").showPicker(); 
+        }
+
+        function toggleMenu() {
+            document.querySelector(".proFile-box").classList.toggle("active");
+        }      
+    </script>
+</body>
+</html>

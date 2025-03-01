@@ -125,6 +125,7 @@ function register() {
 
     }else if (email && password) {
         alert("สมัครสมาชิกสำเร็จ! กรุณาเข้าสู่ระบบ");
-        window.location.href = "#";
+        localStorage.setItem("registeredforgotemail", email);
+        window.location.href = "../OTP/OTP.html";
     }
 }
