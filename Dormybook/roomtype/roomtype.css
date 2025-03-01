@@ -42,7 +42,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: #007aff;
+    transform: scale(1.025);
 }
 .menu-buttons {
     display: flex;

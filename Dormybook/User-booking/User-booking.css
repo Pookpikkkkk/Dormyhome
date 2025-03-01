@@ -144,7 +144,6 @@ button:active {
 }
 .title:hover{
     transform: scale(1.025);
-    color: white;
 }
 .title{
     font-size: 24px;

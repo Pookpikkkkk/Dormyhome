@@ -41,9 +41,6 @@ a {
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
-a:hover {
-    color: #007aff;
-}
 .menu-buttons {
     display: flex;
     gap: 48px;
@@ -144,4 +141,8 @@ button:active {
 }
 .reviwe p{
     font-size: 20px;
+}
+.a:hover{
+    transform: scale(1.025);
+    color: black;
 }
