@@ -7,7 +7,7 @@
     <link href="./createaccount.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="../../images/logodorymyเล็ก.png">
+    <link rel="icon" href="../images/logodorymyเล็ก.png">
 </head>
 <body>
     <div class="main">
@@ -18,34 +18,41 @@
         <div class="main-grid">
             <div class="main-item">
                 Name
-                <input type="text" id="name" placeholder="Enter Name" maxlength="40">
+                <input type="text" id="name" placeholder="Enter Name" maxlength="40" oninput="validateName()">
+                <small id="name-error" class="error-message"></small>
             </div>
             <div class="main-item">
                 Surename
-                <input type="text" id="Surename" placeholder="Enter Surename" maxlength="40">
+                <input type="text" id="Surename" placeholder="Enter Surename" maxlength="40" oninput="validateSurename()">
+                <small id="surename-error" class="error-message"></small>
             </div>
             <div class="main-item">
                 Email
-                <input type="Email" id="Email" placeholder="Enter Email" maxlength="40">
+                <input type="Email" id="Email" placeholder="Enter Email" maxlength="40" oninput="validateEmail()">
+                <small id="email-error" class="error-message"></small>
             </div>
             <div class="main-item">
                 Phone number
-                <input type="number" id="Phonenumber" placeholder="Enter Phone number" maxlength="40">
+                <input type="number" id="Phonenumber" placeholder="Enter Phone number" maxlength="10" oninput="validatePhoneNumber()">
+                <small id="phone-error" class="error-message"></small>
             </div>
             <div class="main-item">
                 Password
-                <input type="password" id="Password" placeholder="Enter Password" maxlength="40">
+                <input type="password" id="Password" placeholder="Enter Password" maxlength="40" oninput="validatePassword()">
                 <i class='bx bx-hide' id="toggle-password"></i>
             </div>
+            <small id="password-error" class="error-message"></small>
             <div class="main-item">
                 Confirm password
-                <input type="password" id="Confirmpassword" placeholder="Enter  Confirm password" maxlength="40">
-                <i class='bx bx-hide' id="toggle-password"></i>
+                <input type="password" id="Confirmpassword" placeholder="Enter  Confirm password" maxlength="40" oninput="validateConfirmPassword()">
+                <i class='bx bx-hide' id="toggle-confirm-password"></i>
             </div>
+            <small id="confirm-password-error" class="error-message"></small>
             <div class="btn">
-                <a href="#"></a><button>Create Account</button>
+                <button onclick="register()">Create Account</button>
             </div>
         </div>
     </div>
 </body>
+<script src="./createaccount.js"></script>
 </html>

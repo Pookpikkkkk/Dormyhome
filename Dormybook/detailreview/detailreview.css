@@ -41,9 +41,7 @@ a {
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
-a:hover {
-    color: #007aff;
-}
+
 .menu-buttons {
     display: flex;
     gap: 48px;
@@ -116,6 +114,7 @@ button:active {
     font-size:35px;
     margin: 10px 25px 0 0;
     color: #999999;
+    cursor: pointer;
 }
 .container{
     display: flex;
@@ -198,4 +197,8 @@ button:active {
 .box{
     font-size: 22px;
     font-weight: 500;
+}
+.bx-left-arrow-alt:hover {
+    transform: scale(1.15);
+    transition: all 0.3s ease-in-out;
 }

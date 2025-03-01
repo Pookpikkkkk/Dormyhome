@@ -106,6 +106,7 @@ button:active {
     display: flex;
     justify-content: space-between;
 }
+/*left*/
 .left{
     width: 20%;
     margin-top: 8%;
@@ -118,13 +119,14 @@ button:active {
     background: #ffffff;
     width: 250px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .item-left:hover{
     background-color: #babebe;
     color: white;
 }
 .sub .bx{
-    margin: 0 28px;
+    margin: 0px 28px;
     font-size: 32px;
 }
 .sub{
@@ -160,13 +162,14 @@ button:active {
     font-size:8 25px;
     margin: 10px 25% 0 10px;
     color: #d9d9d9;
+    cursor: pointer;
 }
 .main-top{
     font-size: 28px;
     font-weight: bold;
     color: white;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 .title{
     font-size: 14px;

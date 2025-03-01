@@ -70,3 +70,9 @@ body {
     background: none;
     border: none;
 }
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}

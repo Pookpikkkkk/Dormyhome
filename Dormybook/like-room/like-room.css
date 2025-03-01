@@ -12,7 +12,7 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    overflow: hidden;
+
 }
 .navbar {
     position: fixed;
@@ -133,7 +133,7 @@ button:active {
     font-size: 30px;
 }
 .title-main{
-    margin: 40px;
+    margin: 20px;
 }
 .title-main p{
     margin: 2px;

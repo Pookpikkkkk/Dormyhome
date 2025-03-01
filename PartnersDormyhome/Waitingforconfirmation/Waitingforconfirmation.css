@@ -118,6 +118,7 @@ button:active {
     background: #ffffff;
     width: 250px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .item-left:hover{
     background-color: #babebe;
@@ -146,6 +147,7 @@ button:active {
 .bx-left-arrow-alt{
     font-size: 25px;
     margin-left: 10px;
+    cursor: pointer;
 }
 .main-top{
     margin-top: 2%;
@@ -168,7 +170,7 @@ button:active {
 }
 .main-gridright{
     display: grid;
-    gap: 20px;
+    gap: 2px;
     align-items: flex-start;
     text-align: left;
 }
@@ -179,7 +181,7 @@ button:active {
 }
 #preview1 img{
     width: 290px; 
-    height: 163.13px;
+    height: 165px;
 }
 #preview2 img{
     width: 141px;

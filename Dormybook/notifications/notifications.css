@@ -168,7 +168,20 @@ button:active {
 .bx-trash{
     color: #757575;
     font-size: 28px;
+    cursor: pointer;
 }
 .bx-trash:hover{
     color: red;
+}
+.main-empty{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 4% auto;
+}
+.empty-message {
+    text-align: center;
+    font-size: 22px;
+    color: #000000;
+    padding: 20px;
 }
