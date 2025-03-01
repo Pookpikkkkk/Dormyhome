@@ -1,8 +1,11 @@
-let registeredemail = localStorage.getItem("registeredemail");
-let emailbt = document.getElementById("emailbt");
-if (emailbt) {
-    emailbt.textContent = registeredemail;
-}
+document.addEventListener("DOMContentLoaded", function () {
+    let email = localStorage.getItem("registeredforgotemail");
+
+    if (email) {
+        document.getElementById("emailbt").innerText = email;
+    }
+});
+
 
 let generatedOtp;
 
