@@ -10,50 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        const emailInput = document.querySelector("input[type='email']");
-        const passwordInput = document.getElementById("password");
-        const confirmPasswordInput = document.getElementById("confirm-password");
-
-        function validateInput(input, errorMessage, validationFn) {
-            let errorSpan = input.parentElement.querySelector(".error-message");
-            if (!errorSpan) {
-                errorSpan = document.createElement("span");
-                errorSpan.classList.add("error-message", "text-red-500", "text-sm", "absolute", "left-0", "mt-2");
-                input.parentElement.appendChild(errorSpan);
-            }
-
-            const valid = validationFn(input.value.trim());
-            errorSpan.textContent = valid ? "" : errorMessage;
-            toggleSuccessIcon(input, valid);
-        }
-
-        function toggleSuccessIcon(input, valid) {
-            let successIcon = input.parentElement.querySelector(".success-icon");
-            if (!successIcon) {
-                successIcon = document.createElement("div");
-                successIcon.classList.add("success-icon", "absolute", "right-4", "top-1/2", "-translate-y-1/2", "w-6", "h-6", "rounded-full", "flex", "items-center", "justify-center", "text-white", "font-bold");
-                input.parentElement.appendChild(successIcon);
-            }
-            successIcon.style.backgroundColor = valid ? "green" : "transparent";
-            successIcon.textContent = valid ? "✔" : "";
-        }
-
-        emailInput.addEventListener("input", function () {
-            validateInput(this, "กรุณากรอกอีเมลให้ถูกต้อง", value => /\S+@\S+\.\S+/.test(value));
-        });
-
-        passwordInput.addEventListener("input", function () {
-            validateInput(this, "รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษรและตัวเลข", value => /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(value));
-        });
-
-        confirmPasswordInput.addEventListener("input", function () {
-            validateInput(this, "รหัสผ่านไม่ตรงกัน", value => value === passwordInput.value);
-        });
-    });
-
-    </script>
 </head>
 <body class="flex items-center justify-center min-h-screen bg-cover bg-center overflow" style="background-image: url('../picture/bg3.jpg');">
     <div class="absolute top-4 left-2 mt-[-1px] ml-[2px]">
@@ -63,31 +19,98 @@
     <div class="w-[1104px] h-[700px] mt-[50px] bg-[#f6ddc8] bg-opacity-90 p-8 rounded-xl shadow-lg text-center">
         <h2 class="text-4xl font-bold mb-[60px]">สร้างรหัสใหม่</h2>
 
-        <div class="text-left relative">
-            <label class="block text-xl font-semibold">Email</label>
-            <div class="relative">
-                <input type="email" placeholder="Enter email" class="w-[1004px] h-[76px] px-4 pr-12 py-3 text-[14px] mt-2 border rounded-xl shadow-inner focus:outline-none">
+        <form id="reset-password-form" class="space-y-4">
+            <div class="text-left relative">
+                <label class="block text-xl font-semibold">Email</label>
+                <input id="email" type="email" placeholder="Enter email" class="w-[1004px] h-[76px] px-4 pr-12 py-3 text-[14px] mt-2 border rounded-xl shadow-inner focus:outline-none">
+                <p id="email-error" class="text-red-600 text-sm mt-1 hidden">กรุณากรอกอีเมล</p>
             </div>
-        </div>
 
-        <div class="mt-4 text-left relative">
-            <label class="block text-xl font-semibold">Password</label>
-            <div class="relative">
+            <div class="text-left relative">
+                <label class="block text-xl font-semibold">Password</label>
                 <input id="password" type="password" placeholder="Enter Password" class="w-[1004px] h-[76px] px-4 pr-12 py-3 text-[14px] mt-2 border rounded-xl shadow-inner focus:outline-none">
+                <p id="password-error" class="text-red-600 text-sm mt-1 hidden">กรุณากรอกรหัสผ่านใหม่</p>
+                <p id="password-hint" class="text-gray-600 text-sm mt-1">รหัสผ่านของคุณต้องมีความยาว 8 ตัวอักษร</p>
+                <p id="password-check" class="text-green-600 text-sm mt-1 hidden">✔️ รหัสผ่านผ่านเงื่อนไข</p>
             </div>
-        </div>
 
-        <div class="mt-4 text-left relative">
-            <label class="block text-xl font-semibold">Confirm password</label>
-            <div class="relative">
+            <div class="text-left relative">
+                <label class="block text-xl font-semibold">Confirm password</label>
                 <input id="confirm-password" type="password" placeholder="Enter Confirm password" class="w-[1004px] h-[76px] px-4 pr-12 py-3 text-[14px] mt-2 border rounded-xl shadow-inner focus:outline-none">
+                <p id="confirm-password-error" class="text-red-600 text-sm mt-1 hidden">กรุณายืนยันรหัสผ่าน</p>
+                <p id="password-match-error" class="text-red-600 text-sm mt-1 hidden">รหัสผ่านไม่ตรงกัน</p>
             </div>
-        </div>
 
-        <button class="w-[425px] h-[70px] bg-teal-500 hover:bg-teal-600 text-white text-2xl py-3 rounded-full mt-[60px]">
-            สร้างรหัสใหม่
-        </button>
+            <button id="submit-button" type="submit" class="w-[425px] h-[70px] bg-teal-500 hover:bg-teal-600 text-white text-2xl py-3 rounded-full mt-[60px] disabled:opacity-50" disabled>
+                สร้างรหัสใหม่
+            </button>
+        </form>
     </div>
+
     <div class="absolute inset-0 bg-white bg-opacity-30 backdrop-blur-sm -z-10"></div>
+
+    <script>
+        const form = document.getElementById('reset-password-form');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+        const submitButton = document.getElementById('submit-button');
+
+        const emailError = document.getElementById('email-error');
+        const passwordError = document.getElementById('password-error');
+        const passwordHint = document.getElementById('password-hint');
+        const passwordCheck = document.getElementById('password-check');
+        const confirmPasswordError = document.getElementById('confirm-password-error');
+        const passwordMatchError = document.getElementById('password-match-error');
+
+        function validateForm() {
+            let isValid = true;
+
+            // Email validation
+            if (!emailInput.value) {
+                emailError.textContent = 'กรุณากรอกอีเมล';
+                emailError.classList.remove('hidden');
+                isValid = false;
+            } else if (!emailInput.value.includes('@')) {
+                emailError.textContent = 'กรุณากรอกอีเมลให้ถูกต้อง';
+                emailError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                emailError.classList.add('hidden');
+            }
+
+            // Password validation
+            if (!passwordInput.value) {
+                passwordError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                passwordError.classList.add('hidden');
+                if (passwordInput.value.length >= 8) {
+                    passwordCheck.classList.remove('hidden');
+                } else {
+                    passwordCheck.classList.add('hidden');
+                    isValid = false;
+                }
+            }
+
+            // Confirm password validation
+            if (!confirmPasswordInput.value) {
+                confirmPasswordError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                confirmPasswordError.classList.add('hidden');
+                if (confirmPasswordInput.value !== passwordInput.value) {
+                    passwordMatchError.classList.remove('hidden');
+                    isValid = false;
+                } else {
+                    passwordMatchError.classList.add('hidden');
+                }
+            }
+
+            submitButton.disabled = !isValid;
+        }
+
+        form.addEventListener('input', validateForm);
+    </script>
 </body>
 </html>
