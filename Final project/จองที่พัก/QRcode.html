@@ -6,6 +6,7 @@
     <title>Dormyybook</title>
     <link rel="icon" href="../picture/logoh.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
 </head>
 <body class="bg-cover w-screen min-h-screen justify-center items-center overflow-x-hidden" style="background-color: #fadec8;">
@@ -37,14 +38,14 @@
             <div class="relative ml-[-15%]">
                 <button id="profileButton" class="flex items-center space-x-2 bg-white px-4 py-2 gap-3">
                     <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                        <i class="fa-regular fa-circle-user text-[45px]"></i>
+                        <i class='bx bxs-user-circle  text-[45px]'></i>
                     </div>
                     <span class="text-black text-2xl">XXXXXX</span>
                     <img id="dropdownIcon" src="../picture/down.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
                 </button>
-                
+
                 <div id="dropdownMenu" class="absolute right-2 mt-2 w-[150px] h-[40px] bg-[#FA0624] rounded-xl hidden">
-                    <button class="w-full h-full rounded-xl px-4 py-2 text-white font-semibold hover:bg-red-400">ออกจากระบบ</button>
+                    <a href="../Home/Home.html"><button class="w-full h-full rounded-xl px-4 py-2 text-white font-semibold hover:bg-red-400">ออกจากระบบ</button></a>
                 </div>
             </div>
         </div>
@@ -57,8 +58,8 @@
             ยอดการชำระ : X,XXX THB
         </div>
         <div class="flex mt-[15px] gap-[50px]">
-            <button class="bg-[#808080] rounded-lg border border-gray-300 text-white text-lg w-[166px] h-[54px]">ยกเลิก</button>
-            <button class="bg-[#20B2AA] rounded-lg border border-gray-300 text-white text-lg w-[166px] h-[54px]">ยืนยัน</button>
+            <a href="./payment page.html"><button class="bg-[#808080] rounded-lg border border-gray-300 text-white text-lg w-[166px] h-[54px]">ยกเลิก</button></a>
+            <a href="./confirmBooking.html"><button class="bg-[#20B2AA] rounded-lg border border-gray-300 text-white text-lg w-[166px] h-[54px]">ยืนยัน</button></a>
         </div>
     </div>
 </body>

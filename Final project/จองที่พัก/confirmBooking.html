@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dormybook</title>
     <link rel="icon" href="../picture/logoh.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body class="bg-cover w-screen h-screen justify-center items-center overflow-x-hidden" style="background-color: #fadec8;">
     <nav class="flex flex-col bg-white w-full h-[220px] relative">
@@ -37,14 +39,14 @@
             <div class="relative ml-[-15%]">
                 <button id="profileButton" class="flex items-center space-x-2 bg-white px-4 py-2 gap-3">
                     <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                        <i class="fa-regular fa-circle-user text-[45px]"></i>
+                        <i class='bx bxs-user-circle  text-[45px]'></i>
                     </div>
                     <span class="text-black text-2xl">XXXXXX</span>
                     <img id="dropdownIcon" src="../picture/down.png" alt="Dropdown Icon" class="w-4 h-4 transition-transform duration-300">
                 </button>
 
                 <div id="dropdownMenu" class="absolute right-2 mt-2 w-[150px] h-[40px] bg-[#FA0624] rounded-xl hidden">
-                    <button class="w-full h-full rounded-xl px-4 py-2 text-white font-semibold hover:bg-red-400">ออกจากระบบ</button>
+                    <a href="../Home/Home.html"><button class="w-full h-full rounded-xl px-4 py-2 text-white font-semibold hover:bg-red-400">ออกจากระบบ</button></a>
                 </div>
             </div>
         </div>
@@ -68,8 +70,8 @@
     </div>
 
     <div class="flex justify-center gap-[100px] mt-[130px]">
-        <button class="bg-[#20B2AA] w-[310px] h-[75px] rounded-full text-white text-[20px] flex justify-center items-center">ดูรายละเอียดการจอง</button>
-        <button class="bg-[#20B2AA] w-[310px] h-[75px] rounded-full text-white text-[20px] flex justify-center items-center">กลับไปหน้า Home</button>
+        <a href="./booking detail.html"><button class="bg-[#20B2AA] w-[310px] h-[75px] rounded-full text-white text-[20px] flex justify-center items-center">ดูรายละเอียดการจอง</button></a>
+        <a href="../../Dormybook/index/index.html"><button class="bg-[#20B2AA] w-[310px] h-[75px] rounded-full text-white text-[20px] flex justify-center items-center">กลับไปหน้า Home</button></a>
     </div>
 
     <script>
