@@ -45,7 +45,7 @@
                 </button>
 
                 <div id="dropdownMenu" class="absolute right-2 mt-2 w-[150px] h-[40px] bg-[#FA0624] rounded-xl hidden">
-                    <a href="../Home/Home.html"><button class="w-full h-full rounded-xl px-4 py-2 text-white font-semibold hover:bg-red-400">ออกจากระบบ</button></a>
+                    <a href="../Home/Homenot-login.html"><button class="w-full h-full rounded-xl px-4 py-2 text-white font-semibold hover:bg-red-400">ออกจากระบบ</button></a>
                 </div>
             </div>
         </div>
@@ -65,6 +65,28 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const profileButton = document.getElementById("profileButton");
+            const dropdownMenu = document.getElementById("dropdownMenu");
+            const dropdownIcon = document.getElementById("dropdownIcon");
+    
+            profileButton.addEventListener("click", (event) => {
+                event.stopPropagation(); // ป้องกัน event bubbling
+                dropdownMenu.classList.toggle("hidden");
+                dropdownIcon.classList.toggle("rotate-180");
+            });
+    
+            document.addEventListener("click", (event) => {
+                if (!profileButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add("hidden");
+                    dropdownIcon.classList.remove("rotate-180");
+                }
+            });
+        });
+        function toggleDropdown() {
+        const dropdown = document.getElementById('bankDropdown');
+        dropdown.classList.toggle('hidden');
+    }
         var qrcode = new QRCode(document.getElementById("qrcode"), {
             text: "00020101021229370016A000000677010111011300668294587005802TH530376454072500.0063044B37",
             width: 400,
