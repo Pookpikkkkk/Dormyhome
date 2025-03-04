@@ -5,6 +5,7 @@ This project is part of the Frontend Software Development and Software Requireme
  - Completed Functions
  - Incomplete Functions
  - Tech stack Frontend
+  - คู่มือการใช้งาน
  - Team Job position
  - Demo
  - Contact
@@ -27,6 +28,8 @@ This project is part of the Frontend Software Development and Software Requireme
 -   css  <a href="https://www.w3.org/TR/CSS/#css"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="30" height="20" /> </a> 
 -   javascript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="30" height="20" /> </a> 
 -  Google map <a href="https://maps.google.com/">![Image](https://github.com/user-attachments/assets/06ac31af-d0ec-4908-aa32-6a08ebdbbde9)</a> 
+## คู่มือการใช้งาน
+https://liveupac-my.sharepoint.com/:w:/g/personal/67023008_up_ac_th/Ec-nDwem9H5Gt5xSb7f3dx4B8T2QOZ9f6SSFrXLB9ytvXw?e=vai7qC
 ## Team Job position
 | **Student ID** | **Name**                  | **Position**                           |
 |-----------------|---------------------------|---------------------------------------|
