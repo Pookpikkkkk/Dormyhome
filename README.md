@@ -2,13 +2,13 @@
 โปรเจกต์นี้เป็นส่วนหนึ่งของรายวิชา Frontend Software Development และ Software Requirement โดยเป็นเว็บไซต์สำหรับการจองหอพักนักศึกษาที่พัฒนาโดย คนดีSE จากสาขาวิศวกรรมซอฟต์แวร์ มหาวิทยาลัยพะเยา สำหรับปีการศึกษา 2567 โดยมีวัตถุประสงค์เพื่ออำนวยความสะดวกในการจองหอพัก ลดความซับซ้อนของกระบวนการจอง และเพิ่มประสิทธิภาพในการบริหารจัดการข้อมูลหอพักผ่านระบบออนไลน์ เว็บไซต์นี้พัฒนาด้วยเทคโนโลยีสมัยใหม่ที่เหมาะสำหรับการใช้งานจริง พร้อมทั้งเปิดโอกาสให้นักศึกษาได้ฝึกฝนและประยุกต์ใช้ความรู้ทางด้านวิศวกรรมซอฟต์แวร์ในสถานการณ์จริง
 This project is part of the Frontend Software Development and Software Requirement courses. It is a student dormitory reservation website developed by KondeeSE from the Software Engineering Department, University of Phayao, for the academic year 2024. The project aims to facilitate dormitory reservations, simplify the booking process, and enhance the efficiency of dormitory management through an online system. The website is developed using modern technologies suitable for real-world applications, providing students with the opportunity to practice and apply their software engineering knowledge in real-life scenarios.
 ## Table of Contents
- - Completed Functions
- - Incomplete Functions
- - Tech stack Frontend
- - คู่มือการใช้งาน
- - Team Job position
- - Demo
- - Contact
+ - [Completed Functions](#completed-functions)
+ - [Incomplete Functions](#incomplete-functions)
+ - [Tech stack Frontend](#tech-stack-frontend)
+ - [คู่มือการใช้งาน](#คู่มือการใช้งาน)
+ - [Team Job position](#team-job-position)
+ - [Demo](#demo)
+ - [Contact](#contact)
 ## Completed Functions
 -  **ระบบชำระเงิน** : เป็นฟังก์ชันสำคัญที่ทำให้การจองหอพักสมบูรณ์ นักศึกษาต้องสามารถชำระค่าจองหรือค่าหอพักได้สะดวกและปลอดภัย
 
