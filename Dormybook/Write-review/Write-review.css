@@ -145,6 +145,9 @@ button:active {
 .bx-map{
     font-size: 20px;
 }
+.lo{
+    width: 80%;
+}
 .type{
     font-size: 20px;
     margin: 10px 0 5px;
