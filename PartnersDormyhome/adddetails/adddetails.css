@@ -131,8 +131,13 @@ button:active {
 .main-name {
     font-size: 26px;
     font-weight: 800;
+    display: flex;
 }
-
+.main-name p{
+    font-size: 18px;
+    margin: 0 5px;
+    color: red;
+}
 .row {
     display: flex;
     gap: 10px;

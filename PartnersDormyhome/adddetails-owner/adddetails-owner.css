@@ -120,6 +120,12 @@ button:active {
 .main-name{
     font-size: 28px;
     font-weight: 700;
+    display: flex;
+}
+.main-name p{
+    font-size: 18px;
+    margin: 0 5px;
+    color: red;
 }
 .preview-container {
     background: #D9D9D9;

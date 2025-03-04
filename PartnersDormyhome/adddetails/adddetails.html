@@ -32,7 +32,7 @@
         <div class="main-sub">โปรดตรวจสอบข้อมูลพื้นฐานให้ถูกต้องข้อมูลเหล่านี้สามารถแก้ไขได้ในภายหลัง</div>
         <div class="main-grid">
             <div class="main-item">
-                <div class="main-name">ชื่อหอพัก</div>
+                <div class="main-name">ชื่อหอพัก <p>*</p></div>
                 <div class="input-container">
                     <input type="text" placeholder="ระบุชื่อหอพัก" id="doom">
                     <small id="char-count">0/20</small>
@@ -40,7 +40,7 @@
                 <small id="doom-error" class="error-message"></small>
             </div>
             <div class="main-item">
-                    <div class="main-name">จำนวนห้องพัก</div>
+                    <div class="main-name">จำนวนห้องพัก <p>*</p></div>
                     <input type="number" placeholder="ระบุจำนวนห้องพัก" id="room" min="0">
             </div>
             <div class="main-item">
@@ -64,26 +64,26 @@
                 <div class="main-subname">สามารถเช็คอินได้ 24 ชั่วโมง<i class='bx bxs-toggle-left' id="toggle-hour"></i></div>
             </div>
             <div class="main-item">
-                <div class="main-name">เบอร์โทรของหอพัก</div>
+                <div class="main-name">เบอร์โทรของหอพัก <p>*</p></div>
                 <div class="main-subname">เบอร์โทรที่ให้ลูกค้าเห็น</div>
                 <input type="number" placeholder="ระบุเบอร์โทร" id="phone" maxlength="10" oninput="validatePhone()" >
                 <small id="phone-error" class="error-message"></small>
             </div>
             <div class="main-item">
-                <div class="main-name">สถานที่ใกล้เคียงหอพัก</div>
+                <div class="main-name">สถานที่ใกล้เคียงหอพัก <p>*</p></div>
                 <input type="text" placeholder="ระบุสถานที่ใกล้เคียง" id="nearbyPlace">
             </div>
             <div class="main-item">
-                <div class="main-name">การแจ้งเตือน</div>
+                <div class="main-name">การแจ้งเตือน <p>*</p></div>
                 <div class="main-subname">คุณจำเป็นต้องได้รับการแจ้งเตือนล่วงหน้านานเพียงใดก่อนผู้เช่ามาถึง</div>
                 <input type="number" placeholder="วัน" min="0" id="notification">
             </div>
             <div class="main-item">
-                <div class="main-name">ผู้เช่าสามารถจองที่พักล่วงหน้าได้นานเท่าใด</div>
+                <div class="main-name">ผู้เช่าสามารถจองที่พักล่วงหน้าได้นานเท่าใด <p>*</p></div>
                 <input type="number" placeholder="เดือน" min="0" id="booking">
             </div>
             <div class="main-item">
-                <div class="main-name">ระยะเวลาของสัญญาเช่าเท่าใด</div>
+                <div class="main-name">ระยะเวลาของสัญญาเช่าเท่าใด <p>*</p></div>
                 <input type="number" placeholder="เดือน" min="0" id="contract">
             </div>
         </div>
