@@ -5,7 +5,7 @@ This project is part of the Frontend Software Development and Software Requireme
  - Completed Functions
  - Incomplete Functions
  - Tech stack Frontend
-  - คู่มือการใช้งาน
+ - คู่มือการใช้งาน
  - Team Job position
  - Demo
  - Contact
