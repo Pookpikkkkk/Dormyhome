@@ -23,9 +23,17 @@ This project is part of the Frontend Software Development and Software Requireme
 - **การเพิ่มข้อมูลแต่ละประเภทของหอพักแล้วสามารถลงประกาศได้ทันที** : เป็นฟังก์ชันที่ช่วยให้เจ้าของหอพักสามารถลงข้อมูลและให้ผู้ใช้ค้นหาได้อย่างรวดเร็ว เพิ่มโอกาสในการปล่อยเช่า
 -  **การคำนวณรายได้จากการจองและการยกเลิก** : เป็นฟังก์ชันที่ช่วยให้เจ้าของหอพักสามารถติดตามรายได้และบริหารการเงินได้ง่ายขึ้น แม้จะมีประโยชน์มาก แต่ไม่ได้กระทบต่อกระบวนการจองโดยตรง จึงอยู่ในลำดับสุดท้าย
 ## Tech stack Frontend
--
+- HTML <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="30" height="20" /> </a> 
+-   css  <a href="https://www.w3.org/TR/CSS/#css"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="30" height="20" /> </a> 
+-   javascript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="30" height="20" /> </a> 
+-  Google map <a href="https://maps.google.com/">![Image](https://github.com/user-attachments/assets/06ac31af-d0ec-4908-aa32-6a08ebdbbde9)</a> 
 ## Team Job position
-
+| **Student ID** | **Name**                  | **Position**                           |
+|-----------------|---------------------------|---------------------------------------|
+| 67023008        | Apinya Sanghong           | UX/UI Design & Front-End Developer    |
+| 67023109        | Inthitanan Pankaew        | Front-End Developer                   |
+| 67026449        | Mutsaya Hwangji          | UX/UI Design                           |
+| 67022614        | Natthapong Ainkham   | Front-End Developer                        |
 ## Demo
 https://dormyhome.onrender.com
 
