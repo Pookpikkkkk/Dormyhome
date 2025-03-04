@@ -197,7 +197,7 @@ input[type="number"] {
     width: 25%;
     border-radius: 10px;
 }
-#descriptionInput,#securityInput,#rulesInput{
+#descriptionInput,#securityInput,#rulesInput,#centerInput{
     width: 50%;
     height: 25px;
     border: none;
@@ -220,7 +220,7 @@ input[type="number"] {
     background-color: #D9D9D9;
     color: rgb(255, 255, 255);
     border-radius: 100px;
-    border-width: 0.25px;
+    border: none;
     width: 250px;
     height: 65px;
     font-size: 20px;
